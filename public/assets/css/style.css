@@ -1,16 +1,294 @@
-.navbar-yellow {
-    background-color: #FFF94D;
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    border-radius: 0;
-    border-bottom: 2px solid black;
+.zoom {
+    font-size: 2em;
 }
-.navbar-brand img {
-    max-height: 100%;
-    transition: 0.8s;
+
+.normal {
+    font-size: 1.3em;
 }
-.navbar-brand:hover img {
-    transform: rotate(360deg);
+
+/* First navbar */
+
+.phone a {
+    font-size: 1.7em;
 }
+
+#scrollspy {
+    background: #ff7400;
+    /* Old browsers */
+}
+
+#btnurgent {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* second navbar */
+
+.navbar-fixed {
+    top: 0;
+    position: fixed;
+}
+
+#push {
+    height: 100px;
+}
+
+#push nav {
+    height: 7em;
+    line-height: 7em;
+}
+
+#push nav li a {
+    font-size: 1.6em;
+}
+
+#navbardeux {
+    background-color: white;
+}
+
+.darklink {
+    color: black;
+}
+
+.nav-wrapper span {
+    position: absolute;
+    font-size: 0.8em;
+    padding-left: 10px;
+}
+
+#logo {
+    padding-left: 50px;
+    height: 100px;
+}
+
+#logo img {
+    padding-top: 5px;
+    width: 90px;
+    height: 90px;
+}
+
+.mobmenu {
+    width: 200px;
+}
+
+/* title and paragraph */
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+
+/* Slider */
+
+.rowAccueil {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  top: 30%;
+}
+
+.messageAccueil {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 50%;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  transition: box-shadow .25s;
+  border-radius: 2px;
+  position: relative;
+}
+
+.welcome {
+  font-size: 6vw;
+  color: black;
+  text-shadow: 4px 4px 3px rgba(129, 129, 129, 1);
+}
+
+.message {
+  font-size: 4vw;
+  color: black;
+  text-shadow: 4px 4px 3px rgba(129, 129, 129, 1);
+}
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: -40px;
+  z-index: -1;
+  }
+
+.rslides li {
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+#btnurgent {
+  position: absolute;
+  top: 75%;
+  z-index: 10;
+  width: 100%;
+}
+
+.btn-large {
+  width: 20%;
+  height: 100px;
+  line-height: 40px;
+  z-index: 10;
+  background-color: #FF7400;
+
+}
+
+
+/* carousel stats */
+
+#stats {
+    background-image: url(../img/slider.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70vw;
+    height: 40vh;
+}
+
+#slider2 {
+    height: 100%;
+}
+
+#stats a {
+    top: 80px;
+    width: 250px;
+}
+
+@media screen and (max-width: 500px) {
+    #stats {
+        width: 90vw;
+        height: 35vh;
+    }
+    #stats h1 {
+        font-size: 1.7em;
+    }
+    #stats p {
+        font-size: 1.0em;
+    }
+    #stats i {
+        font-size: 4rem;
+    }
+    #stats a {
+        top: 90px;
+    }
+}
+
+/* footer */
+
+.footerp {
+    font-size: 0.8em;
+}
+
+#bottomNavbar {
+  background-color: #ff7400;
+}
+
+
+/* Global view */
+
+.description img {
+    margin: 0 10px 0 10px;
+}
+
+.description {
+    font-size: 1.2rem;
+}
+
+.section {
+    min-height: 80vh;
+}
+
+.circle.responsive-img {
+    width: 85%;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 560px) {
+    #bottomNavbar {
+        height: 80px;
+        line-height: 40px;
+    }
+    #bottomBar {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+    }
+    #bottomBar .right {
+        width: 100%;
+    }
+    .btn-large {
+      z-index:10;
+      width: 100%;
+      height: 70px;
+      margin: 10px 0px 10px 0px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        height: 80px;
+        line-height: 40px;
+    }
+    #logo img {
+        width: 65%;
+        height: 90%;
+    }
+    .phone a #logo span {
+        font-size: 0.8em;
+    }
+    nav i.material-icons {
+        height: 40px;
+        line-height: normal;
+    }
+    .nav-wrapper span {
+        position: absolute;
+        font-size: 0.7em;
+        width: 250px;
+        padding: 30px 0 0 10px;
+        line-height: normal;
+        white-space: normal;
+    }
+    #scrollspy {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+    }
+    #scrollspy .right {
+        width: 100%;
+    }
+
+  }

@@ -1,23 +1,82 @@
-<div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-        <h2>Create a new todo</h2>
-        <form class="form-inline">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Todo" ng-model='vm.todo'>
-            </div>
-            <button ng-click='vm.create()' class="btn btn-default">Add</button>
-        </form>
-        <h2 ng-show='vm.todos.length>0'>My todos</h2>
-        <div class="panel panel-default" ng-repeat='todo in vm.todos | orderBy: "description"'>
-            <div class="panel-body">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Todo" ng-model='todo.description'>
-                    </div>
-                    <button ng-click='vm.update(todo)' class="btn btn-default">Edit</button>
-                    <button ng-click='vm.delete(todo)' class="btn btn-danger">Delete</button>
-                </form>
+<div class="carousel carousel-slider center" data-indicators="true">
+    <div class="carousel-fixed-item  center">
+        <div class="row">
+            <a class="btn-large disabled">Bienvenue au centre hospitalier de La Loupe</a>
+        </div>
+        <a class="btn waves-effect red white-text darken-text-2">J'ai un rendez-vous</a>
+        <a class="btn waves-effect red white-text darken-text-2">Je vais être hospitalisé</a>
+        <a class="btn waves-effect red white-text darken-text-2">Je vais voir un patient</a>
+        <a class="btn waves-effect red white-text darken-text-2">Je veux être résident</a>
+    </div>
+
+    <div class="carousel-item" href="#one!">
+        <img src="http://enfermeriairlanda.com/wp-content/uploads/2015/01/three-nurses-L-F60.jpg" alt=""/>
+        <p class="white-text">This is your first panel</p>
+    </div>
+    <div class="carousel-item" href="#two!">
+        <img src="http://www.miglanihospitaladampur.com/img/creative2.jpg" alt=""/>
+        <p class="white-text">This is your second panel</p>
+    </div>
+    <div class="carousel-item" href="#three!">
+        <img src="https://d1hw6n3yxknhky.cloudfront.net/025629785_prevstill.jpeg" alt=""/>
+        <p class="white-text">This is your third panel</p>
+    </div>
+</div>
+
+<!-- Fin Slider -->
+
+<!-- Début Description -->
+<div class="container textevue presentation">
+    <div class="col s12 m7 textevue">
+        <h2 class="header center-align textevue">Centre Hospitalier de La Loupe</h2>
+        <div class="card horizontal">
+            <div class="card-stacked">
+                <div class="card-content">
+                    <p class="flow-text center-align textevue">
+                        Madame, Mademoiselle, Monsieur,
+                        <br>
+                        Vous entrez au Centre Hospitalier de La Loupe. Soyez assuré que tout sera mis en oeuvre pour que votre séjour se passe dans les meilleures conditions.
+                        <br>
+                        Le personnel de l'hôpital sera à vos côtés, disponible et attentif à vos demandes. Il mettra en oeuvre toutes ses compétences et son expérience pour que votre séjour soit le plus agréable possible.
+                        <br>
+                        Que votre séjour soit le plus confortable possible.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Fin Description -->
+
+<!-- Slider Stats -->
+
+<div class="container white-text center-align" id="stats">
+    <div id="slider2" class="carousel textevue">
+        <h1>Le centre hospitalier en quelques chiffres</h1>
+        <a class="carousel-item textevue" href="#one!">
+            <i class="large material-icons white-text">tag_faces</i>
+            <p class="white-text">200 professionnels disponibles</p>
+        </a>
+        <a class="carousel-item textevue" href="#two!!">
+            <i class="large material-icons white-text">insert_chart</i>
+            <p class="white-text">A.H.P.A.D : taux d'occuptaion 99.05%
+            </p>
+        </a>
+        <a class="carousel-item textevue" href="#three!">
+            <i class="large material-icons white-text">hotel</i>
+            <p class="white-text">223 lits</p>
+        </a>
+        <a class="carousel-item textevue" href="#four!">
+            <i class="large material-icons white-text">insert_chart</i>
+            <p class="white-text">S.S.I.A.D : taux d'occuptaion 94.13%
+            </p>
+        </a>
+        <a class="carousel-item textevue" href="#five!">
+            <i class="large material-icons white-text">enhanced_encryption</i>
+            <p class="white-text">Hospitalisation 2015 : 392
+            </p>
+        </a>
+    </div>
+</div>
+<hr>

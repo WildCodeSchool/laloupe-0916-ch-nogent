@@ -4,10 +4,10 @@ const routes = ($routeProvider, $httpProvider) => {
         .when('/', {
             templateUrl: 'views/main.html',
             controller: 'mainController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            controllerAs: 'vm'
+        })
+        .when('/legals', {
+            templateUrl: 'views/mentions/legals.html'
         })
         .when('/login', {
             templateUrl: 'views/login.html',
@@ -33,7 +33,7 @@ const routes = ($routeProvider, $httpProvider) => {
             responseError(response) {
                 if (response.status === 401 || response.status === 403) {
                     $rootScope.$emit('loginStatusChanged', false);
-                    $location.path('/login')
+                    //$location.path('/login')
                 }
                 return $q.reject(response)
             }

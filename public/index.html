@@ -10,20 +10,21 @@
 
         <title>MEAN Starter ES6</title>
 
-        <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" media="screen,projection"/>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/style.css">
 
     </head>
     <body>
 
-        <ng-include src="'views/navbar.html'"></ng-include>
+      <ng-include src="'views/navbar.html'"></ng-include>
 
-        <div class="container">
-            <ng-view></ng-view>
-        </div>
+      <ng-view></ng-view>
+
+      <ng-include src="'views/footer.html'"></ng-include>
 
         <script src="vendor/jquery/dist/jquery.min.js"></script>
-        <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
         <script src="vendor/angular/angular.min.js"></script>
         <script src="vendor/angular-route/angular-route.min.js"></script>

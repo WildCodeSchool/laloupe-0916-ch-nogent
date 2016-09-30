@@ -1,32 +1,75 @@
-<nav class="navbar navbar-inverse navbar-yellow" role="navigation" ng-controller='navbarController as vm'>
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#/"><img src="assets/img/logo.png"/></a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active" ng-show='vm.isLogged'>
-                    <a href="#/"><span class="glyphicon glyphicon-book"></span>&nbsp;Todos</a>
-                </li>
-                <li class='disabled' ng-show='vm.sessionFactory.user.isAdmin'>
-                    <a href="#/"><span class="glyphicon glyphicon-dashboard"></span>&nbsp;Admin</a>
-                </li>
-                <li class='disabled' ng-show='vm.isLogged'>
-                    <a href="#/"><span class="glyphicon glyphicon-user"></span>&nbsp;My account</a>
-                </li>
-                <li ng-show='vm.isLogged'>
-                    <a href="" ng-click='vm.logout()'><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign out</a>
-                </li>
-                <li class='active' ng-hide='vm.isLogged'>
-                    <a href="#/login"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Sign in</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<nav>
+<div class="nav-wrapper" id="scrollspy">
+
+          <ul class="left textevue">
+              <li class="phone textevue">
+                  <a href="#">
+                      <i class="material-icons phoneIcon left">call</i>
+                      02 37 29 33 11</a>
+              </li>
+              <li>
+                  <a href="#" class="zoom textevue hide-on-small-only">A</a>
+              </li>
+              <li>
+                  <a href="#" class="normal hide-on-small-only">a</a>
+              </li>
+          </ul>
+          <ul class="right textevue">
+              <li>
+                  <a href="#" class="textevue">Urgence</a>
+              </li>
+              <li>
+                  <a href="#" class="textevue">Recrutement</a>
+              </li>
+              <li>
+                  <a href="#" class="textevue">Presse</a>
+              </li>
+              <li></li>
+          </ul>
+      </div>
+  </nav>
+
+  <!-- Fin premier Menu Navigation -->
+
+  <!-- Début deuxieme Menu Navigation -->
+
+  <div id="push">
+      <nav>
+          <div id="navbardeux" class="nav-wrapper textevue">
+              <a href="index.html" class="brand-logo left" id="logo"><img src="assets/img/logo.gif" alt=""/>
+                  <span class="darklink">Centre hospitalié de La Loupe</span>
+              </a>
+              <a href="#" data-activates="mobile-demo" class="button-collapse darklink">
+                  <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down textevue">
+                  <li>
+                      <a class="darklink textevue" href="index.html">Accueil</a>
+                  </li>
+                  <li>
+                      <a class="darklink textevue" href="badges.html">À propos</a>
+                  </li>
+                  <li>
+                      <a class="darklink textevue" href="collapsible.html">Actualités</a>
+                  </li>
+                  <li>
+                      <a class="darklink textevue" href="mobile.html">Nos services</a>
+                  </li>
+              </ul>
+              <ul class="side-nav flow-text mobmenu" id="mobile-demo">
+                  <li>
+                      <a class="darklink textevue" href="index.html">Accueil</a>
+                  </li>
+                  <li>
+                      <a class="darklink textevue" href="badges.html">À propos</a>
+                  </li>
+                  <li>
+                      <a class="darklink textevue" href="collapsible.html">Actualités</a>
+                  </li>
+                  <li>
+                      <a class="darklink" href="mobile.html">Nos services</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+  </div>
