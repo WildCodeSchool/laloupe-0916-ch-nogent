@@ -15,9 +15,9 @@ class mainController {
         }
     });
 
-    $('.carousel.carousel-slider').carousel({
-        full_width: true
-    });
+    $('.slider').slider({full_width: true, height: ($(window).height()/100*80)});
+
+    
     var first = true;
     autoplay1();
 
