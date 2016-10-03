@@ -79,14 +79,18 @@ p {
 }
 
 .group-btn {
-  margin-top: 25%;
+  margin-top: 15%;
 }
 
 .btn {
-  height: 70px;
   margin: 2% 0 2% 0;
-  line-height: 1.4em;
+  height: inherit;
+  line-height: inherit;
   background-color: #ff7400;
+}
+
+.group-btn .btn i{
+  font-size: 4em;
 }
 
 .message {
@@ -96,11 +100,14 @@ p {
   text-shadow: 4px 4px 3px rgba(129, 129, 129, 1);
 }
 
-#welcome {
-  top: 10%;
-  left: 5%;
-  width: 90%;
+.message h3 {
+  font-size: 5em;
 }
+
+ .message h5 {
+   font-size: 4em;
+ }
+
 /* carousel stats */
 
 #stats {
@@ -118,25 +125,6 @@ p {
 #stats a {
     top: 80px;
     width: 250px;
-}
-
-@media screen and (max-width: 500px) {
-    #stats {
-        width: 90vw;
-        height: 35vh;
-    }
-    #stats h1 {
-        font-size: 1.7em;
-    }
-    #stats p {
-        font-size: 1.0em;
-    }
-    #stats i {
-        font-size: 4rem;
-    }
-    #stats a {
-        top: 90px;
-    }
 }
 
 /* footer */
@@ -170,8 +158,34 @@ p {
 
 
 /* Responsive */
+@media screen and (max-width: 770px){
+  .message h3 {
+    font-size: 4em;
+  }
+   .message h5 {
+     font-size: 3em;
+   }
+}
 
 @media screen and (max-width: 560px) {
+  .group-btn {
+    margin-top: 15%;
+  }
+  .btn {
+    height: 25%;
+    margin: 2% 0 2% 0;
+    line-height: 1em;
+  }
+  .group-btn .btn i {
+    font-size: 2.5em;
+    padding-top: 20px;
+  }
+  .message h3 {
+    font-size: 3em;
+  }
+   .message h5 {
+     font-size: 2em;
+   }
     #bottomNavbar {
         height: 80px;
         line-height: 40px;
@@ -218,13 +232,38 @@ p {
     #scrollspy .right {
         width: 100%;
     }
-    .group-btn {
-      margin-top: 15%;
+    .message h3 {
+      font-size: 2em;
     }
-
-    .btn {
-      height: 50px;
-      margin: 2% 0 2% 0;
-      line-height: 1.4em;
+     .message h5 {
+       font-size: 1.5em;
+     }
+     .group-btn {
+       margin-top: 15%;
+     }
+     .btn {
+       height: 15%;
+       margin: 1% 0 1% 0;
+       line-height: 1em;
+     }
+     .group-btn .btn i {
+       font-size: 1.5em;
+       padding-top: 12px;
+     }
+    #stats {
+        width: 90vw;
+        height: 35vh;
+    }
+    #stats h1 {
+        font-size: 1.7em;
+    }
+    #stats p {
+        font-size: 1.0em;
+    }
+    #stats i {
+        font-size: 4rem;
+    }
+    #stats a {
+        top: 90px;
     }
   }
