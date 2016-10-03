@@ -86,8 +86,21 @@ p {
   height: 70px;
   margin: 2% 0 2% 0;
   line-height: 1.4em;
+  background-color: #ff7400;
 }
 
+.message {
+  /*box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  transition: box-shadow .25s;*/
+  color: black;
+  text-shadow: 4px 4px 3px rgba(129, 129, 129, 1);
+}
+
+#welcome {
+  top: 10%;
+  left: 5%;
+  width: 90%;
+}
 /* carousel stats */
 
 #stats {
