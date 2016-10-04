@@ -112,7 +112,16 @@ p {
  .message h5 {
    font-size: 4em;
  }
+/* page de contact*/
+.input-field
+{
+  height:35px;
+}
 
+.nouscontacter
+{
+  text-align:center;
+}
 /* carousel stats */
 
 #stats {

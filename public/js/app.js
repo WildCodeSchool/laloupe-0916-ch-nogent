@@ -5,6 +5,7 @@ angular.module('app', ['ngRoute'])
         .controller('mainController', mainController)
         .controller('navbarController', navbarController)
         .controller('loginController', loginController)
+        .controller('contactController', contactController)
         .config(routes)
         .run(loginStatus)
         ;
