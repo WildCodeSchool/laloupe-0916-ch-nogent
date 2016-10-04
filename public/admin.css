@@ -1,0 +1,37 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    background: #33CE74;
+}
+
+#login-page {
+    width: 500px;
+}
+
+.card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#forget {
+  float: right;
+}
+
+.btn {
+  background-color: #ff7400;
+}
+
+h1 {
+  font-size: 2em;
+}

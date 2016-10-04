@@ -74,12 +74,8 @@ p {
 
 /* Slider */
 
-.row {
-  width: 100%;
-}
-
 .group-btn {
-  margin-top: 15%;
+  margin-top: 13%;
 }
 
 .btn {
@@ -90,7 +86,15 @@ p {
 }
 
 .group-btn .btn i{
-  font-size: 4em;
+  font-size:3.5em;
+}
+
+.title {
+  position: absolute;
+  z-index: 10;
+  width:90%;
+  top: 10%;
+  left: 5%;
 }
 
 .message {
@@ -242,7 +246,7 @@ p {
        margin-top: 15%;
      }
      .btn {
-       height: 15%;
+       height: 70px;
        margin: 1% 0 1% 0;
        line-height: 1em;
      }
@@ -268,6 +272,7 @@ p {
     }
   }
 
+<<<<<<< HEAD
 #modal1
 {
   width: 45%
@@ -277,3 +282,25 @@ p {
 {
   margin: 0
 }
+=======
+  @media screen and (max-width: 500px){
+    .message h3 {
+      font-size: 1.5em;
+    }
+     .message h5 {
+       font-size: 1.2em;
+     }
+     .group-btn {
+       margin-top: 15%;
+     }
+     .btn {
+       height: 60px;
+       margin: 1% 0 1% 0;
+       line-height: 1em;
+     }
+     .group-btn .btn i {
+       font-size: 1.3em;
+       padding-top: 10px;
+     }
+  }
+>>>>>>> 8e7fde360a1c49d029b9ae73c0e4192ff95865cf

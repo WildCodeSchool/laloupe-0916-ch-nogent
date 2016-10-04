@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>admlist</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <style>
+            #supModal {
+                padding: 60px;
+            }
+            #warning {
+                margin-bottom: 40px;
+            }
+            .warning {
+                color: red;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col l10 offset-l1">
+                    <h3 class="center-align">Liste des utilisateurs</h3>
+                    <table>
+                        <thead>
+                            <tr class="bordered">
+                                <th data-field="checkbox">Selection</th>
+                                <th data-field="id">Code</th>
+                                <th data-field="lastname">Nom</th>
+                                <th data-field="name">Prénom</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <form action="#">
+                                        <p>
+                                            <input type="checkbox" id="check1"/>
+                                            <label for="check1"></label>
+                                        </p>
+                                    </form>
+                                </td>
+                                <td>ADM</td>
+                                <td>Administrateur</td>
+                                <td>Administrateur</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <form action="#">
+                                        <p>
+                                            <input type="checkbox" id="check2"/>
+                                            <label for="check2"></label>
+                                        </p>
+                                    </form>
+                                </td>
+                                <td>U01</td>
+                                <td>N-U01</td>
+                                <td>P-U01</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <form action="#">
+                                        <p>
+                                            <input type="checkbox" id="check3"/>
+                                            <label for="check3"></label>
+                                        </p>
+                                    </form>
+                                </td>
+                                <td>123456</td>
+                                <td>12345678901234567890</td>
+                                <td>12345678901234567890</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <a class="waves-effect waves-light btn col l2 offset-l1">Ajouter</a>
+                        <a class="waves-effect waves-light btn col l2 offset-l2">Modifier</a>
+                        <a class="modal-trigger waves-effect waves-light btn col l2 offset-l2" href="#modal_warning">Supprimer</a>
+                        <div id="modal_warning" class="modal">
+                            <div class="modal-content" id="supModal">
+                                <h4 class="center-align" id="warning">
+                                    <i class="small material-icons warning">warning</i>
+                                    Attention !
+                                    <i class="small material-icons warning">warning</i>
+                                </h4>
+                                <p class="center-align">La suppression d'un utilisateur est irréversible.<br>
+                                    Confirmez-vous la suppression de l'utilisateur ? :</p>
+
+                                <p class="center-align">
+                                    [Code] - [Nom] [Prénom]
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right blue-grey lighten-5">Annuler</a>
+                                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat left red white-text">Confirmer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('.modal-trigger').leanModal();
+            });
+
+        </script>
+
+    </body>
+</html>
