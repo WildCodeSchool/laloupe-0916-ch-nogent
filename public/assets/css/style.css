@@ -74,12 +74,17 @@ p {
 
 /* Slider */
 
+.slider .slides li .caption {
+  left:5%;
+  width: 90%;
+}
+
 .row {
   width: 100%;
 }
 
 .group-btn {
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 .btn {
@@ -90,7 +95,7 @@ p {
 }
 
 .group-btn .btn i{
-  font-size: 4em;
+  font-size:3.5em;
 }
 
 .message {
