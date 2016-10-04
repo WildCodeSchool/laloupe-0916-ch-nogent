@@ -267,3 +267,13 @@ p {
         top: 90px;
     }
   }
+
+#modal1
+{
+  width: 45%
+}
+
+#modal1 p
+{
+  margin: 0
+}
