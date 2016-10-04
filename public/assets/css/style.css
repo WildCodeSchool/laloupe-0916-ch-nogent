@@ -74,17 +74,8 @@ p {
 
 /* Slider */
 
-.slider .slides li .caption {
-  left:5%;
-  width: 90%;
-}
-
-.row {
-  width: 100%;
-}
-
 .group-btn {
-  margin-top: 10%;
+  margin-top: 13%;
 }
 
 .btn {
@@ -96,6 +87,14 @@ p {
 
 .group-btn .btn i{
   font-size:3.5em;
+}
+
+.title {
+  position: absolute;
+  z-index: 10;
+  width:90%;
+  top: 10%;
+  left: 5%;
 }
 
 .message {
@@ -247,7 +246,7 @@ p {
        margin-top: 15%;
      }
      .btn {
-       height: 15%;
+       height: 70px;
        margin: 1% 0 1% 0;
        line-height: 1em;
      }
@@ -271,4 +270,25 @@ p {
     #stats a {
         top: 90px;
     }
+  }
+
+  @media screen and (max-width: 500px){
+    .message h3 {
+      font-size: 1.5em;
+    }
+     .message h5 {
+       font-size: 1.2em;
+     }
+     .group-btn {
+       margin-top: 15%;
+     }
+     .btn {
+       height: 60px;
+       margin: 1% 0 1% 0;
+       line-height: 1em;
+     }
+     .group-btn .btn i {
+       font-size: 1.3em;
+       padding-top: 10px;
+     }
   }
