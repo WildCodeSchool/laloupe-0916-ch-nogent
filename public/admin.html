@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Administration</title>
+        <meta charset="utf-8">
+        <title>Hopital de la Loupe - Administration</title>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" media="screen,projection"/>
+        <link rel="stylesheet" href="admin.css" media="screen" title="no title">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+
+        <div id="login-page" class="row">
+            <div class="col s12 z-depth-6 card-panel">
+                <form class="login-form">
+                    <div class="row">
+                        <h1 class="center-align">Administration</h1>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mail_outline</i>
+                            <input class="validate" id="email" type="email">
+                            <label for="email" data-error="wrong" data-success="right">Identifiant</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock_outline</i>
+                            <input id="password" type="password">
+                            <label for="password">Mot de passe</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m12 l12  login-text">
+                            <input type="checkbox" id="remember-me"/>
+                            <label for="remember-me">Se rappeler de moi</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <a href="#" class="btn waves-effect waves-light col s12">Se connecter</a>
+                        </div>
+                    </div>
+                    <div id="forget" class="input-field col s6 m6 l6">
+                        <p class="margin right-align medium-small">
+                            <a href="#">Mot de passe oublié ?</a>
+                        </p>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script>
+        $('input.autocomplete').autocomplete({
+            data: {
+                "Apple": null,
+                "Microsoft": null,
+                "Google": 'http://placehold.it/250x250'
+            }
+        });
+    </script>
+</body>
+</html>

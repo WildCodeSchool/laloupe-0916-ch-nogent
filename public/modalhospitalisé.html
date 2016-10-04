@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Je vais être hospitalisé</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+        <style>
+            .modal-content {
+                text-align: justify;
+            }
+
+            h5 {
+                color: #9CC6DF;
+                text-align: center;
+                text-decoration: underline;
+
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <!-- Modal Trigger -->
+        <a class="modal-trigger waves-effect waves-light red white-text darken-text-2 btn" href="#boutonrouge1">Je vais être hospitalisé</a>
+
+        <!-- Modal Structure -->
+        <div id="boutonrouge1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+
+                <h5>
+                    Admission programmée
+                </h5>
+
+                <p>
+                    Si votre hospitalisation est programmée, vous devez procéder à une pré-admission en vous présentant à l'accueil afin de constituer votre dossier administratif.</p>
+
+                <h5>Frais de Séjour
+                </h5>
+
+                <p>Le prix de journée fixé par arrêté du Directeur de l'ARS (Agence Régionale de Santé) tarif 1er juin 2016 :</p>
+                <ul>
+                    <li>
+                        - Médecine: 556,65 € /jour
+                    </li>
+                    <li>
+                        - Chirurgie Ambulatoire: 863,14 € /jour
+                    </li>
+                    <li>
+                        - Urgences: 556,65 € /jour (Nogent-Le-Rotrou)</li>
+                    <li>
+                        - Soins de Suite : 214,75 € /jour</li>
+                    <li>
+                        - Le forfait journalier fixé à 18 € au 1er janvier 2016 (institué par la loi du 19 janvier 1983, il représente votre contribution aux dépenses hôtelières).</li>
+                </ul>
+
+                <p>Dans le cas général, ces frais sont pris en charge :</p>
+                <ul>
+                    <li>
+                        - à 80 % par les organismes d'Assurances Maladie.</li>
+                    <li>
+                        - les 20 % restants (ticket modérateur) sont à la charge du patient ou de son organisme d'Assurance Complémentaire.</li>
+                </ul>
+
+                <h5>Votre sortie</h5>
+
+                <p>La date de votre sortie est fixée par le médecin responsable au moment de votre prise en charge dans le service. Avant de quitter l'établissement, assurez-vous de n'avoir oublié aucun objet personnel dans votre chambre.</p><br/>
+
+                <h5>
+                    Effets personnels
+                </h5>
+
+                <p>Il vous appartient d'apporter vos effets personnels lors de votre hospitalisation: nécessaire de toilette, linge de nuit, robe de chambre, pantoufles, ... Durant votre séjour à l'Hôpital, nous vous invitons :
+                </p>
+                <ul>
+                    <li>
+                        - à ne garder aucun bijou, chéquier, carte bancaire, argent liquide.</li>
+                    <li>
+                        - Les confier, si possible, aux membres de votre famille.
+                    </li>
+                </ul>
+                <p>Le port de bijoux est notamment incompatible avec les examens radiologiques et les interventions chirurgicales. Si au moment de votre admission, vous êtes en possession de telles valeurs, vous pouvez les déposer au coffre de l'établissement. Une
+                    quittance vous sera délivrée après le dépôt. Celle-ci devra être présentée au moment du retrait. La procédure de retrait des dépôts vous sera communiquée lors du dépot. Le Centre Hospitalier n'est pas responsable des vols ou des pertes des valeurs et
+                    objets non déposés.</p>
+
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Fermer</a>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+                $('.modal-trigger').leanModal();
+            });
+        </script>
+
+    </body>
+</html>

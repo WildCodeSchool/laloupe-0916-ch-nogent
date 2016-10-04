@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Je vais voir un patient</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+        <style>
+          .modal-content {
+            text-align: justify;;
+
+          }
+
+          h5 {
+            color : #9CC6DF;
+            text-align: center;
+            text-decoration: underline;
+
+          }
+        </style>
+
+    </head>
+    <body>
+        <!-- Modal Trigger -->
+        <a class="modal-trigger waves-effect waves-light red white-text darken-text-2 btn" href="#boutonrouge1">Je vais voir un patient</a>
+
+        <!-- Modal Structure -->
+        <div id="boutonrouge1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+
+                <h5>Visiter un patient </h5>
+
+                <p>Vous souhaitez rendre visite à l'un de vos proches, voici quelques renseignements utiles : </p>
+                <ul>
+
+                  <li> - Les visites sont autorisées tous les jours de 12h00 à 20h00. </li>
+                  <li> - Il est conseillé d'éviter les visites trops longues et en groupe.</li>
+                  <li> - Nous vous remercions de bien vouloir respecter ces consignes pour le confort des patients.</li>
+                  <li> - Si vous souhaitez offrir des fleurs à la personne hospitalisée, seules les fleurs coupées sont autorisées. </li>
+
+                </ul>
+
+                <h5> Envoyer/recevoir du Courrier</h5>
+
+               <p>La distribution du courrier est assurée une fois  par jour par le personnel soignant. Il est souhaitable d'indiquer sur l'enveloppe le service d'hospitalisation et le numéro de chambrede votre correspondant.</p>
+
+               <p>Pendant votre hospitalisation, il vous est possible de recevoir et d'expédier du courrier. Si vous souhaitez expédier du courrier, veuillez le remettre affranchi au secrétariat médical du service qui se chargera de son acheminement.</p>
+
+
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Fermer</a>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+                $('.modal-trigger').leanModal();
+            });
+        </script>
+
+    </body>
+</html>
