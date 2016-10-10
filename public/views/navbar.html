@@ -35,6 +35,18 @@
   <!-- Début deuxieme Menu Navigation -->
 
   <div id="push">
+    <!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+<li><a href="#!">Médecine</a></li>
+<li><a href="#!">Soins palliatifs</a></li>
+<li><a href="#!">Soins de Suite et réadaptation</a></li>
+<li><a href="#!">Soins de Longue durée</a></li>
+<li><a href="#!">E.H.P.A.D (maison de retraite)</a></li>
+<li><a href="#!">Centre d'Accueil de Jour Heizeimer</a></li>
+<li><a href="#!">SSIAD</a></li>
+<li><a href="#!">Rééducation</a></li>
+<li><a href="#!">Autres intervenants</a></li>
+</ul>
       <nav>
           <div id="navbardeux" class="nav-wrapper textevue">
               <a href="/#/" class="brand-logo left" id="logo"><img src="assets/img/logo.gif" alt=""/>
@@ -54,7 +66,8 @@
                       <a class="darklink textevue" href="collapsible.html">Actualités</a>
                   </li>
                   <li>
-                      <a class="darklink textevue" href="mobile.html">Nos services</a>
+                    <!-- Dropdown Trigger -->
+                    <a id="dropservice"class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">arrow_drop_down</i>Nos services</a>
                   </li>
               </ul>
               <ul class="side-nav flow-text mobmenu" id="mobile-demo">
@@ -74,3 +87,7 @@
           </div>
       </nav>
   </div>
+<script>
+  $(".dropdown-button").dropdown();
+
+</script>
