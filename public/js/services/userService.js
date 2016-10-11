@@ -5,27 +5,27 @@ class userService {
     }
 
     connect(data) {
-        return this.$http.post('/api/login', data)
+        return this.$http.post('/api/login', data);
     }
 
     create(user) {
-        return this.$http.post('/api/users', user)
+        return this.$http.post('/api/users', user);
     }
 
     getAll() {
-        return this.$http.get('/api/users')
+        return this.$http.get('/api/users');
     }
 
     getOne(id) {
-        return this.$http.get('/api/users/' + id)
+        return this.$http.get('/api/users/' + id);
     }
 
     update(id, user) {
-        return this.$http.put('/api/users/' + id, user)
+        return this.$http.put('/api/users/' + id, user);
     }
 
     delete(id) {
-        return this.$http.put('/api/users/' + id)
+        return this.$http.put('/api/users/' + id);
     }
 
 }
