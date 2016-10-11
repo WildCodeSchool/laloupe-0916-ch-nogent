@@ -22,6 +22,11 @@ const routes = ($routeProvider, $httpProvider) => {
         .otherwise({
             redirectTo: '/'
         })
+        .when('/annuaire', {
+            templateUrl: 'views/annuaire/annuaire.html',
+            controller: 'mainController',
+            controllerAs: 'vm'
+        })
 
     $httpProvider.interceptors.push(($q, $location, $rootScope, $window, sessionFactory) => {
         return {

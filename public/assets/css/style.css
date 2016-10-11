@@ -1,3 +1,17 @@
+
+.annu {
+    min-height: 84px;
+    padding-left: 72px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.alpha
+{
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+}
+
 /* First navbar */
 
 .phone a {
@@ -89,12 +103,12 @@ nav ul a.btn-urgence:hover {
 
 /* title and paragraph */
 
-h1 {
+.presentation h1 {
     font-size: 2.5em;
     font-weight: 300;
 }
 
-p {
+.presentation p {
     font-size: 1.5em;
 }
 
@@ -151,7 +165,7 @@ p {
   font-size:4em;
 }
 
-.title {
+.titlepres {
   position: absolute;
   z-index: 10;
   width:90%;
@@ -382,7 +396,7 @@ p {
         line-height: normal;
         white-space: normal;
     }
-    .title{
+    .titlepres{
       margin-top: 0;
     }
     .group-btn {
