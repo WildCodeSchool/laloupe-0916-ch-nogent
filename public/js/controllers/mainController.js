@@ -15,9 +15,9 @@ class mainController {
         }
     });
 
-    $('.slider').slider({full_width: true, height: ($(window).height()/100*80)});
+    $('.slider').slider({full_width: false, height: ($(window).height()/100*80)});
 
-    
+
     var first = true;
     autoplay1();
 
