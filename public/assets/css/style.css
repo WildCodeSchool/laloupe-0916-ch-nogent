@@ -71,9 +71,16 @@ nav ul a.btn-urgence:hover {
     width: 90px;
     height: 90px;
 }
-#dropdown1
+.dropdown1
 {
   font-size: 0.5em;;
+    width: 213px;
+    max-height: 314px;
+    position: absolute;
+    top: 100px;
+    left: 1073.36px;
+    opacity: 1;
+    display: none;
 }
 #dropservice
 {
