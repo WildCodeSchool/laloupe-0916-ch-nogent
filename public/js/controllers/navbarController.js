@@ -9,7 +9,7 @@ class navbarController {
         $rootScope.$on('loginStatusChanged', (event, isLogged) => {
             this.isLogged = isLogged;
             this.user = sessionFactory.user;
-        })
+        });
     }
 
     logout() {
