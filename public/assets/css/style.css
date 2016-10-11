@@ -85,9 +85,8 @@ nav ul a.btn-urgence:hover {
     width: 90px;
     height: 90px;
 }
-.dropdown1
-{
-  font-size: 0.5em;;
+.dropdown1{
+    font-size: 0.5em;;
     width: 213px;
     max-height: 314px;
     position: absolute;
@@ -160,7 +159,13 @@ nav ul a.btn-urgence:hover {
 .cont-btn-blue:hover {
     background-color: rgba(0, 158, 160, 1)
 }
-
+.consultation {
+  z-index: 20;
+  display: none;
+}
+.cont-btn:target .consultation {
+  display: block;
+}
 .group-btn .btn i{
   font-size:4em;
 }
