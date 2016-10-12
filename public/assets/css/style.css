@@ -24,7 +24,7 @@
   width:15px;
 }
 #scrollspy {
-    background: rgba(0, 158, 160, 0.8);
+    background-color: rgba(0, 158, 160, 0.8);
 }
 .btn-urgence {
   background-color: rgb(255,0,0);
@@ -227,7 +227,7 @@ nav ul a.btn-urgence:hover {
 }
 
 #bottomNavbar {
-  background-color: #ff7400;
+  background-color: rgba(0, 158, 160, 0.8);
 }
 
 
