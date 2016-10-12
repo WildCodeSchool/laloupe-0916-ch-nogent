@@ -14,6 +14,9 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'contactController',
             controllerAs: 'vm'
         })
+        .when('/ehpad', {
+            templateUrl: 'views/ehpad/ehpad.html',
+        })
         .when('/login', {
             templateUrl: 'views/login.html',
             controller: 'loginController',
@@ -26,7 +29,7 @@ const routes = ($routeProvider, $httpProvider) => {
             templateUrl: 'views/annuaire/annuaire.html',
             controller: 'mainController',
             controllerAs: 'vm'
-        })
+        });
 
     $httpProvider.interceptors.push(($q, $location, $rootScope, $window, sessionFactory) => {
         return {
