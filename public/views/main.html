@@ -1,4 +1,5 @@
 <div id="topFixed"></div>
+<div  ng-controller='mainController as vm'>
 <div class="slider">
   <div class="caption center-align titlepres">
     <div class="message">
@@ -33,21 +34,43 @@
       <a class="btn cont-btn-blue waves-effect"><i class="material-icons iconButton">transfer_within_a_station</i></br><span>Je vais voir un patient</span></a>
     </div>
   </div>
-  <div ng-controller='mainController as vm' class="container-fluid sub-menu-consultation">
+  <div class="container-fluid sub-menu-consultation">
     <div ng-show='vm.isLoad'>
-        <div class="container">
-          <div class="row">
-            <div class="col s12 m6 l4">
+        <div class="row col s12 m4 l3">
+            <div class="blocconsultation">
               <div id="consultation">
-                  <a href="#">Consultation</a>
+                  <a href="#">Consultations spécialisées</a>
+                    <ul>
+                      <li><a href="#">Vasculaire</a></li>
+                      <li><a href="#">Urologie</a></li>
+                      <li><a href="#">Chirurgie de la Main</a></li>
+                      <li><a href="#">O.R. L</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="#">Viscéral</a></li>
+                      <li><a href="#">Ophtalmologie</a></li>
+                      <li><a href="#">Anesthésie</a></li>
+                      <li><a href="#">Néphrologie</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="#">Cardiologie</a></li>
+                      <li><a href="#">Endocrinologie</a></li>
+                      <li><a href="#">Neurologie</a></li>
+                      <li><a href="#">Stomatologie</a></li>
+                    </ul>
               </div>
-              <div id="chirurgie">
-                  <a href="#">Imagerie</a>
+              <div id="imagerie">
+                <a href="#">Imagerie</a>
+                <ul>
+                  <li><a href="#">Imagerie</a></>
+                </ul>
               </div>
-              <div id="genico">
-                  <a href="#">Gynécologie</a>
+              <div id="perinatal">
+                <a href="#">Centre périnatal de proximité</a>
+                <ul>
+                  <li><a href="#">Centre périnatal de proximité</a></li>
+                </ul>
               </div>
-          </div>
           </div>
         </div>
     </div>
@@ -108,5 +131,6 @@
             </p>
         </a>
     </div>
+</div>
 </div>
 <hr>

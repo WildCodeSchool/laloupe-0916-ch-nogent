@@ -2,6 +2,21 @@
 #urgencies {
   background-color: rgb(216, 8, 8);
 }
+
+/* Menu sous bouton */
+.blocconsultation {
+  display: flex;
+  width: 100%;
+}
+
+.blocconsultation #consultation {
+  display: flex;
+}
+#consultation, #imagerie, #perinatal {
+  width: 30%;
+}
+
+
 .annu {
     min-height: 84px;
     padding-left: 72px;
