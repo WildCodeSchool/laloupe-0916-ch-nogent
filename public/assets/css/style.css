@@ -1,4 +1,7 @@
-
+/* Urgencies */
+#urgencies {
+  background-color: rgb(216, 8, 8);
+}
 .annu {
     min-height: 84px;
     padding-left: 72px;
@@ -29,6 +32,9 @@
 .btn-urgence {
   background-color: rgb(255,0,0);
 }
+.bolder {
+  font-weight: bold;
+}
 nav ul a.btn-urgence:hover {
   background-color: rgba(255,0,0,0.8);
   outline: 0;
@@ -46,15 +52,6 @@ nav ul a.btn-urgence:hover {
 .navbar-fixed {
     top: 0;
     position: fixed;
-}
-
-#push {
-    height: 100px;
-}
-
-#push nav {
-    height: 7em;
-    line-height: 7em;
 }
 
 #push nav li a {
@@ -85,17 +82,12 @@ nav ul a.btn-urgence:hover {
     width: 90px;
     height: 90px;
 }
-.dropdown1{
-    font-size: 0.5em;;
-    width: 213px;
-    max-height: 314px;
-    position: absolute;
-    top: 100px;
-    opacity: 1;
-    display: none;
+
+#dropdown1 {
+    font-size: 0.5em;
 }
-#dropservice
-{
+
+#dropservice{
   color:black;
 }
 
@@ -143,6 +135,7 @@ nav ul a.btn-urgence:hover {
 .cont-btn-blue {
     background-color: rgba(0, 158, 160, 0.8)
 }
+
 .cont-btn-green:hover {
     background-color: rgba(96, 142, 58, 1)
 }
@@ -158,13 +151,7 @@ nav ul a.btn-urgence:hover {
 .cont-btn-blue:hover {
     background-color: rgba(0, 158, 160, 1)
 }
-.consultation {
-  z-index: 20;
-  display: none;
-}
-.cont-btn:target .consultation {
-  display: block;
-}
+
 .group-btn .btn i{
   font-size:4em;
 }
@@ -177,28 +164,28 @@ nav ul a.btn-urgence:hover {
   left: 5%;
 }
 
-.message {
-  /*box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-  transition: box-shadow .25s;*/
-  color: black;
-  text-shadow: 4px 4px 3px rgba(129, 129, 129, 1);
-}
-
 .message h3 {
-  font-size: 5em;
+  font-size: 6em;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 4px black,
+      4px 0 black, 0 -1px black
 }
 
  .message h5 {
-   font-size: 4em;
+   font-size: 8em;
+   color: white;
+   font-weight: bold;
+   text-shadow: -1px 0 black, 0 4px black,
+       4px 0 black, 0 -1px black
  }
 /* page de contact*/
-.input-field
-{
+
+.input-field {
   height:35px;
 }
 
-.nouscontacter
-{
+.nouscontacter {
   text-align:center;
 }
 /* carousel stats */
@@ -230,7 +217,6 @@ nav ul a.btn-urgence:hover {
   background-color: rgba(0, 158, 160, 0.8);
 }
 
-
 /* Global view */
 
 .description img {
@@ -248,6 +234,7 @@ nav ul a.btn-urgence:hover {
 .circle.responsive-img {
     width: 85%;
 }
+
 @media screen and (max-width: 990px){
   .group-btn {
     position: relative;
@@ -281,7 +268,6 @@ nav ul a.btn-urgence:hover {
 }
 
 @media screen and (max-width: 600px) {
-
   .btn {
     height: 120px;
   }
@@ -354,7 +340,6 @@ nav ul a.btn-urgence:hover {
      .message h5 {
        font-size: 2.5em;
      }
-
      .btn {
        height: 100px;
        line-height: inherit;
@@ -407,13 +392,11 @@ nav ul a.btn-urgence:hover {
       margin-top: 5%;
     }
   }
-#modal1
-{
+#modal1 {
   width: 40%;
 }
 
-#modal1 p
-{
+#modal1 p {
   margin: 0;
 }
 /* view ehpad */

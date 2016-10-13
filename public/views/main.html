@@ -21,7 +21,7 @@
   </div>
   <div class="row col l3 m12 group-btn">
     <div class="cont-btn col l3 m6 s12">
-      <a class="btn consult cont-btn-green waves-effect"><i class="material-icons iconButton">insert_invitation</i></br><span>J'ai un rendez-vous</span></a>
+      <a class="btn consult cont-btn-green waves-effect" ng-click='vm.toggleConsultation()'><i class="material-icons iconButton">insert_invitation</i></br><span>J'ai un rendez-vous</span></a>
     </div>
     <div class="cont-btn col l3 m6 s12">
       <a class="btn cont-btn-violet waves-effect"><i class="material-icons iconButton">local_hospital</i></br><span>Je vais être hospitalisé</span></a>
@@ -33,17 +33,23 @@
       <a class="btn cont-btn-blue waves-effect"><i class="material-icons iconButton">transfer_within_a_station</i></br><span>Je vais voir un patient</span></a>
     </div>
   </div>
-  <div class="container-fluid consultation">
-    <div class="row consultation">
-      <div class="general">
-        <a href="#">Général</a>
-      </div>
-      <div class="chirurgie">
-        <a href="#">Chirurgie</a>
-      </div>
-      <div class="genico">
-        <a href="#">Gynécologie</a>
-      </div>
+  <div ng-controller='mainController as vm' class="container-fluid sub-menu-consultation">
+    <div ng-show='vm.isLoad'>
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m6 l4">
+              <div id="consultation">
+                  <a href="#">Consultation</a>
+              </div>
+              <div id="chirurgie">
+                  <a href="#">Imagerie</a>
+              </div>
+              <div id="genico">
+                  <a href="#">Génicologie</a>
+              </div>
+          </div>
+          </div>
+        </div>
     </div>
 
   </div>
