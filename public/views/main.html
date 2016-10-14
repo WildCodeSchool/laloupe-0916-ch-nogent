@@ -1,131 +1,302 @@
 <div id="topFixed"></div>
-<div  ng-controller='mainController as vm'>
-<div class="slider">
-  <div class="caption center-align titlepres">
-    <div class="message">
-      <h3 class="welcome">Bienvenue</h3>
-      <h5 class="text-lighten-3 hospitalName">au Centre Hospitalier de Nogent-le-Rotrou</h5>
-    </div>
+<div >
+    <div class="slider">
+        <div class="caption center-align titlepres">
+            <div class="message">
+                <h3 class="welcome">Bienvenue</h3>
+                <h5 class="text-lighten-3 hospitalName">au Centre Hospitalier de Nogent-le-Rotrou</h5>
+            </div>
 
-  </div>
-    <ul class="slides">
-      <li>
-        <img src="../assets/img/photo1.jpg"> <!-- random image -->
-      </li>
-      <li>
-        <img src="../assets/img/photo2.jpg"> <!-- random image -->
-      </li>
-<!--      <li>
-        <img src="../assets/img/photo3.jpg">
-      </li> -->
-    </ul>
-  </div>
-  <div class="row col l3 m12 group-btn">
-    <div class="cont-btn col l3 m6 s12">
-      <a class="btn consult cont-btn-green waves-effect" ng-click='vm.toggleConsultation()'><i class="material-icons iconButton">insert_invitation</i></br><span>J'ai un rendez-vous</span></a>
+        </div>
+        <ul class="slides">
+            <li>
+                <img src="../assets/img/photo1.jpg">
+                <!-- random image -->
+            </li>
+            <li>
+                <img src="../assets/img/photo2.jpg">
+                <!-- random image -->
+            </li>
+        </ul>
     </div>
-    <div class="cont-btn col l3 m6 s12">
-      <a class="btn cont-btn-violet waves-effect"><i class="material-icons iconButton">local_hospital</i></br><span>Je vais être hospitalisé</span></a>
-    </div>
-    <div class="cont-btn col l3 m6 s12">
-      <a class="btn cont-btn-orange waves-effect"><i class="material-icons iconButton">local_hotel</i></br><span>Je vais entrer en EHPAD</span></a>
-    </div>
-    <div class="cont-btn col l3 m6 s12">
-      <a class="btn cont-btn-blue waves-effect"><i class="material-icons iconButton">transfer_within_a_station</i></br><span>Je vais voir un patient</span></a>
-    </div>
-  </div>
-  <div class="container-fluid sub-menu-consultation">
-    <div ng-show='vm.isLoad'>
-        <div class="row col s12 m4 l3">
-            <div class="blocconsultation">
-              <div id="consultation">
-                  <a href="#">Consultations spécialisées</a>
-                    <ul>
-                      <li><a href="#">Vasculaire</a></li>
-                      <li><a href="#">Urologie</a></li>
-                      <li><a href="#">Chirurgie de la Main</a></li>
-                      <li><a href="#">O.R. L</a></li>
-                    </ul>
-                    <ul>
-                      <li><a href="#">Viscéral</a></li>
-                      <li><a href="#">Ophtalmologie</a></li>
-                      <li><a href="#">Anesthésie</a></li>
-                      <li><a href="#">Néphrologie</a></li>
-                    </ul>
-                    <ul>
-                      <li><a href="#">Cardiologie</a></li>
-                      <li><a href="#">Endocrinologie</a></li>
-                      <li><a href="#">Neurologie</a></li>
-                      <li><a href="#">Stomatologie</a></li>
-                    </ul>
-              </div>
-              <div id="imagerie">
-                <a href="#">Imagerie</a>
-                <ul>
-                  <li><a href="#">Imagerie</a></>
-                </ul>
-              </div>
-              <div id="perinatal">
-                <a href="#">Centre périnatal de proximité</a>
-                <ul>
-                  <li><a href="#">Centre périnatal de proximité</a></li>
-                </ul>
-              </div>
-          </div>
+    <div class="row col l3 m12 group-btn">
+        <div class="cont-btn col l3 m6 s12">
+            <a class="btn consult cont-btn-green waves-effect" ng-click='vm.toggleConsultation()'>
+                <i class="material-icons iconButton">insert_invitation</i><br>
+                <span>J'ai un rendez-vous</span>
+            </a>
+        </div>
+        <div class="cont-btn col l3 m6 s12">
+            <a class="btn cont-btn-violet waves-effect" ng-click='vm.toggleHospitalise()'>
+                <i class="material-icons iconButton">local_hospital</i><br>
+                <span>Je vais être hospitalisé</span>
+            </a>
+        </div>
+        <div class="cont-btn col l3 m6 s12">
+            <a class="btn cont-btn-orange waves-effect" ng-click='vm.toggleEhpad()'>
+                <i class="material-icons iconButton">home</i><br>
+                <span>Je vais entrer en EHPAD</span>
+            </a>
+        </div>
+        <div class="cont-btn col l3 m6 s12">
+            <a class="btn cont-btn-blue waves-effect" ng-click='vm.togglePatient()'>
+                <i class="material-icons iconButton">transfer_within_a_station</i><br>
+                <span>Je vais voir un patient</span>
+            </a>
         </div>
     </div>
+    <!--div ng-show "j'ai un rendez-vous"-->
+    <div class="container-fluid sub-menu-consultation" id="scroll1">
+        <div ng-show='vm.isLoad'>
+            <div class="row consults">
+                <div class="blocconsultation">
+                    <div class="col s12 m4 l4 flow-text " id="consultation">
+                        <div class="card cardconsults green">
+                            <div class="card-content white-text">
+                                <a class="black-text" href="#">Consultations spécialisées</a>
+                                <ul>
+                                    <li>
+                                        <a class="white-text" href="#">Vasculaire</a>
+                                    </li>
+                                    <li>
+                                        <a class="white-text" href="#">Urologie</a>
+                                    </li>
+                                    <li>
+                                        <a class="white-text" href="#">Chirurgie de la Main</a>
+                                    </li>
+                                    <li>
+                                        <a class="white-text" href="#">O.R. L</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a class="white-text" href="#">Viscéral</a>
+                                    </li>
+                                    <li>
+                                        <a class="white-text" href="#">Ophtalmologie</a>
+                                    </li>
+                                    <li>
+                                        <a class="white-text" href="#">Anesthésie</a>
+                                    </li>
+                                    <li>
+                                        <a class="white-text" href="#">Néphrologie</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a class="white-text" href="#">Cardiologie</a>
+                                    </li>
+                                    <li>
+                                        <a class="white-text" href="#">Endocrinologie</a>
+                                    </li>
+                                    <li>
+                                        <a class="white-text" href="#">Neurologie</a>
+                                    </li>
+                                    <li>
+                                        <a class="white-text" href="#">Stomatologie</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4 flow-text" id="imagerie">
+                        <div class="card cardconsults green">
+                            <div class="card-content white-text">
+                                <a class="black-text" href="#">Imagerie</a>
+                                <ul>
+                                    <li>
+                                        <a class="white-text" href="#">Imagerie</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4 flow-text" id="perinatal">
+                        <div class="card cardconsults green">
+                            <div class="card-content">
+                                <a class="black-text" href="#">Centre périnatal de proximité</a>
+                                <ul>
+                                    <li>
+                                        <a class="white-text" href="#">Centre périnatal de proximité</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  </div>
-<!-- Fin Slider -->
+    </div>
 
-<!-- Début Description -->
-<div class="container textevue presentation">
-    <div class="col s12 m7 textevue">
-        <h2 class="header center-align textevue">Centre Hospitalier de Nogent-le-Rotrou</h2>
-        <div class="card horizontal">
-            <div class="card-stacked">
-                <div class="card-content">
-                    <p class="flow-text center-align textevue">
-                        Madame, Mademoiselle, Monsieur,
-                        <br>
-                        Vous entrez au Centre Hospitalier de Nogent-le-Rotrou. Soyez assuré que tout sera mis en oeuvre pour que votre séjour se passe dans les meilleures conditions.
-                        <br>
-                        Le personnel de l'hôpital sera à vos côtés, disponible et attentif à vos demandes. Il mettra en oeuvre toutes ses compétences et son expérience pour que votre séjour soit le plus agréable possible.
-                        <br>
-                        Que votre séjour soit le plus confortable possible.
-                    </p>
+    <!--div ng-show "je vais etre hospitalisé"-->
+    <div class="container-fluid sub-menu-hospitalise" id="scroll2">
+        <div ng-show='vm.isLoad1'>
+            <div class="row hospitalise">
+                <div class="blochospitalise">
+                    <div class="col s12 m4 l4 flow-text " id="medecine">
+                        <div class="card cardconsults purple lighten-1">
+                            <div class="card-content white-text">
+                                <a class="black-text" href="#">Médecine</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4 flow-text" id="ssr">
+                        <div class="card cardconsults purple lighten-1">
+                            <div class="card-content white-text">
+                                <a class="black-text" href="#">SSR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4 flow-text" id="chirurgieambulatoire">
+                        <div class="card cardconsults purple lighten-1">
+                            <div class="card-content">
+                                <a class="black-text" href="#">Chirurgie ambulatoire</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--div ng-show "je vais entrer en ehpad"-->
+    <div class="container-fluid sub-menu-ehpad" id="scroll3">
+        <div ng-show='vm.isLoad2'>
+            <div class="row ehpad">
+                <div class="blocehpad">
+                    <div class="col s12 m4 l4 flow-text ">
+                        <div class="card cardconsults orange lighten-1">
+                            <div class="card-content white-text">
+                                <a class="black-text" href="#">A compléter</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4 flow-text">
+                        <div class="card cardconsults orange lighten-1">
+                            <div class="card-content white-text">
+                                <a class="black-text" href="#">A compléter</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4 flow-text">
+                        <div class="card cardconsults orange lighten-1">
+                            <div class="card-content">
+                                <a class="black-text" href="#">A compléter</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--div ng-show "je vais voir un patient"-->
+    <div class="container-fluid sub-menu-patient" id="scroll4">
+        <div ng-show='vm.isLoad3'>
+            <div class="row patient">
+                <div class="blocpatient">
+                    <div class="col s12 m4 l4">
+                        <div class="card cardconsults teal lighten-1">
+                            <div class="card-content white-text">
+                                <a class="black-text flow-text" href="#">Visiter un patient</a>
+                                <p>
+                                    - Les visites sont autorisées tous les jours de 12h00 à 20h00.
+                                    <br/>
+                                    <br/>
+                                    - Il est conseillé d'éviter les visites trops longues et en groupe.
+                                    <br/>
+                                    <br/>
+                                    - Nous vous remercions de bien vouloir respecter ces consignes pour le confort des patients.
+                                    <br/>
+                                    <br/>
+                                    - Si vous souhaitez offrir des fleurs à la personne hospitalisée, seules les fleurs coupées sont autorisées.
+                                    <br/>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4">
+                        <div class="card cardconsults teal lighten-1">
+                            <div class="card-content white-text">
+                                <a class="black-text flow-text" href="#">
+                                    Envoyer/recevoir du Courrier</a>
+                                <p>
+                                    - La distribution du courrier est assurée une fois par jour par le personnel soignant. Il est souhaitable d'indiquer sur l'enveloppe le service d'hospitalisation et le numéro de chambre de votre correspondant.
+                                    <br/>
+                                    <br/>
+                                    - Pendant votre hospitalisation, il vous est possible de recevoir et d'expédier du courrier. Si vous souhaitez expédier du courrier, veuillez le remettre affranchi au secrétariat médical du service qui se chargera de son acheminement.<br/>
+                                    <br/>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4">
+                        <div class="card cardconsults teal lighten-1">
+                            <div class="card-content">
+                                <a class="black-text flow-text" href="#">A compléter</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Fin Slider -->
+
+    <!-- Début Description -->
+    <div class="container textevue presentation">
+        <div class="col s12 m7 textevue">
+            <h2 class="header center-align textevue">Centre Hospitalier de Nogent-le-Rotrou</h2>
+            <div class="card horizontal">
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p class="flow-text center-align textevue">
+                            Madame, Mademoiselle, Monsieur,
+                            <br>
+                            Vous entrez au Centre Hospitalier de Nogent-le-Rotrou. Soyez assuré que tout sera mis en oeuvre pour que votre séjour se passe dans les meilleures conditions.
+                            <br>
+                            Le personnel de l'hôpital sera à vos côtés, disponible et attentif à vos demandes. Il mettra en oeuvre toutes ses compétences et son expérience pour que votre séjour soit le plus agréable possible.
+                            <br>
+                            Que votre séjour soit le plus confortable possible.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Fin Description -->
+    <!-- Fin Description -->
 
-<!-- Slider Stats -->
+    <!-- Slider Stats -->
 
-<div class="container white-text center-align" id="stats">
-    <div id="slider2" class="carousel textevue">
-        <h1>Le centre hospitalier en quelques chiffres</h1>
-        <a class="carousel-item" href="#one!">
-            <i class="large material-icons white-text">tag_faces</i>
-            <p class="white-text textevue">351 professionnels à votre service</p>
-        </a>
-        <a class="carousel-item" href="#two!!">
-            <i class="large material-icons white-text">home</i>
-            <p class="white-text textevue">Nombres de places en EHPAD: 160
-            </p>
-        </a>
-        <a class="carousel-item" href="#three!">
-            <i class="large material-icons white-text">hotel</i>
-            <p class="white-text textevue">Nombre de lits en hospitalisation: 90</p>
-        </a>
-        <a class="carousel-item" href="#five!">
-            <i class="large material-icons white-text">local_hospital</i>
-            <p class="white-text textevue">15 898 entrées aux Urgences en 2015
-            </p>
-        </a>
+    <div class="container white-text center-align" id="stats">
+        <div id="slider2" class="carousel textevue">
+            <h1>Le centre hospitalier en quelques chiffres</h1>
+            <a class="carousel-item" href="#one!">
+                <i class="large material-icons white-text">tag_faces</i>
+                <p class="white-text textevue">351 professionnels à votre service</p>
+            </a>
+            <a class="carousel-item" href="#two!!">
+                <i class="large material-icons white-text">home</i>
+                <p class="white-text textevue">Nombres de places en EHPAD: 160
+                </p>
+            </a>
+            <a class="carousel-item" href="#three!">
+                <i class="large material-icons white-text">hotel</i>
+                <p class="white-text textevue">Nombre de lits en hospitalisation: 90</p>
+            </a>
+            <a class="carousel-item" href="#five!">
+                <i class="large material-icons white-text">local_hospital</i>
+                <p class="white-text textevue">15 898 entrées aux Urgences en 2015
+                </p>
+            </a>
+        </div>
     </div>
-</div>
 </div>
 <hr>

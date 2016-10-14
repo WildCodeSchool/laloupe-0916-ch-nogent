@@ -69,8 +69,14 @@ nav ul a.btn-urgence:hover {
     position: fixed;
 }
 
+#push nav{
+  height: 84px;
+  line-height: 84px;
+}
+
 #push nav li a {
-    font-size: 1.6em;
+    font-size: 1.3em;
+    color: black;
 }
 
 #navbardeux {
@@ -95,8 +101,8 @@ nav ul a.btn-urgence:hover {
 
 #logo img {
     padding-top: 5px;
-    width: 90px;
-    height: 90px;
+    width: 65px;
+    height: 65px;
 }
 
 #dropdown1 {
@@ -178,6 +184,61 @@ nav ul a.btn-urgence:hover {
   width:90%;
   top: 15%;
   left: 5%;
+}
+
+/* div ng-show "j'ai un rendez-vous" */
+
+.consults {
+  background-color: #81c784;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.cardconsults {
+  min-height: 60vh;
+}
+
+/* div ng-show "je vais etre hospitalisé" */
+
+.hospitalise {
+  background-color: #b39ddb;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+/* div ng-show "je vais entrer en ehpad" */
+
+.ehpad {
+  background-color: #ffb38a;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+/* div ng-show "je vais voir un patient" */
+
+.patient {
+  background-color: #bae8e5;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.blocpatient p {
+  padding-top: 3%;
+  padding-left:3%;
+  padding-right:3%;
+  padding-bottom:3%;
+}
+
+.blocpatient a {
+  padding-left: 4%;
 }
 
 .message h3 {
@@ -325,7 +386,7 @@ nav ul a.btn-urgence:hover {
 @media screen and (max-width: 500px) {
     nav {
         height: 80px;
-        line-height: 40px;
+        line-height: 0px;
     }
     #logo img {
         width: 65%;
