@@ -1,21 +1,24 @@
 /* Urgencies */
+
 #urgencies {
-  background-color: rgb(216, 8, 8);
+    background-color: rgb(216, 8, 8);
 }
 
+
 /* Menu sous bouton */
+
 .blocconsultation {
-  display: flex;
-  width: 100%;
+    display: flex;
+    width: 100%;
 }
 
 .blocconsultation #consultation {
-  display: flex;
-}
-#consultation, #imagerie, #perinatal {
-  width: 30%;
+    display: flex;
 }
 
+#consultation, #imagerie, #perinatal {
+    width: 30%;
+}
 
 .annu {
     min-height: 84px;
@@ -24,37 +27,46 @@
     margin-bottom: 50px;
 }
 
-.alpha
-{
-  margin-left: 0.3em;
-  margin-right: 0.3em;
+.alpha {
+    margin-left: 0.3em;
+    margin-right: 0.3em;
 }
+
 
 /* First navbar */
 
 .phone a {
     font-size: 1.7em;
 }
+
 .access {
-  width:30px;
+    width: 30px;
 }
+
 #separator {
-  width:15px;
+    width: 15px;
 }
+
 #scrollspy {
     background-color: rgba(0, 158, 160, 0.8);
 }
+
 .btn-urgence {
-  background-color: rgb(255,0,0);
+    background-color: rgb(255, 0, 0);
 }
+
 .bolder {
-  font-weight: bold;
+    font-weight: bold;
 }
+
 nav ul a.btn-urgence:hover {
-  background-color: rgba(255,0,0,0.8);
-  outline: 0;
+    background-color: rgba(255, 0, 0, 0.8);
+    outline: 0;
 }
+
+
 /* Accessibilité */
+
 .zoom {
     font-size: 2em;
 }
@@ -62,6 +74,8 @@ nav ul a.btn-urgence:hover {
 .normal {
     font-size: 1.3em;
 }
+
+
 /* second navbar */
 
 .navbar-fixed {
@@ -69,9 +83,9 @@ nav ul a.btn-urgence:hover {
     position: fixed;
 }
 
-#push nav{
-  height: 84px;
-  line-height: 84px;
+#push nav {
+    height: 84px;
+    line-height: 84px;
 }
 
 #push nav li a {
@@ -109,12 +123,14 @@ nav ul a.btn-urgence:hover {
     font-size: 0.5em;
 }
 
-#dropservice{
-  color:black;
+#dropservice {
+    color: black;
 }
+
 .material-icons.right {
-  margin-top: 8px;
+    margin-top: 8px;
 }
+
 
 /* title and paragraph */
 
@@ -133,24 +149,27 @@ h1 {
     font-size: 1.5em;
 }
 
+
 /* Slider */
+
 .group-btn {
-  position: absolute;
-  z-index: 20;
-  top: 75%;
-  width: 100%;
+    position: absolute;
+    z-index: 20;
+    top: 75%;
+    width: 100%;
 }
 
 .btn {
-  height: 180px;
-  line-height: inherit;
-  width: 100%;
-  background-color: transparent;
+    height: 180px;
+    line-height: inherit;
+    width: 100%;
+    background-color: transparent;
 }
 
 .btn span {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
+
 .cont-btn-green {
     background-color: rgba(96, 142, 58, 0.8)
 }
@@ -183,97 +202,103 @@ h1 {
     background-color: rgba(0, 158, 160, 1)
 }
 
-.group-btn .btn i{
-  font-size:4em;
+.group-btn .btn i {
+    font-size: 4em;
 }
 
 .titlepres {
-  position: absolute;
-  z-index: 10;
-  width:90%;
-  top: 15%;
-  left: 5%;
+    position: absolute;
+    z-index: 10;
+    width: 90%;
+    top: 15%;
+    left: 5%;
 }
+
 
 /* div ng-show "j'ai un rendez-vous" */
 
 .consults {
-  background-color: #81c784;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  padding-left: 3%;
-  padding-right: 3%;
+    background-color: #81c784;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .cardconsults {
-  min-height: 60vh;
+    min-height: 60vh;
 }
+
 
 /* div ng-show "je vais etre hospitalisé" */
 
 .hospitalise {
-  background-color: #b39ddb;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  padding-left: 3%;
-  padding-right: 3%;
+    background-color: #b39ddb;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
+
 
 /* div ng-show "je vais entrer en ehpad" */
 
 .ehpad {
-  background-color: #ffb38a;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  padding-left: 3%;
-  padding-right: 3%;
+    background-color: #ffb38a;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
+
 
 /* div ng-show "je vais voir un patient" */
 
 .patient {
-  background-color: #bae8e5;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  padding-left: 3%;
-  padding-right: 3%;
+    background-color: #bae8e5;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .blocpatient p {
-  padding-top: 3%;
-  padding-left:3%;
-  padding-right:3%;
-  padding-bottom:3%;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
 }
 
 .blocpatient a {
-  padding-left: 4%;
+    padding-left: 4%;
 }
 
 .message h3 {
-  font-size: 6em;
-  color: white;
-  font-weight: bold;
-  text-shadow: -1px 0 black, 0 4px black,
-      4px 0 black, 0 -1px black
+    font-size: 6em;
+    color: white;
+    font-weight: bold;
+    text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black
 }
 
- .message h5 {
-   font-size: 8em;
-   color: white;
-   font-weight: bold;
-   text-shadow: -1px 0 black, 0 4px black,
-       4px 0 black, 0 -1px black
- }
+.message h5 {
+    font-size: 8em;
+    color: white;
+    font-weight: bold;
+    text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black
+}
+
+
 /* page de contact*/
 
 .input-field {
-  height:35px;
+    height: 35px;
 }
 
 .nouscontacter {
-  text-align:center;
+    text-align: center;
 }
+
+
 /* carousel stats */
 
 #stats {
@@ -294,6 +319,7 @@ h1 {
     width: 25%;
 }
 
+
 /* footer */
 
 .footerp {
@@ -301,11 +327,13 @@ h1 {
 }
 
 #bottomNavbar {
-  background-color: rgba(0, 158, 160, 0.8);
+    background-color: rgba(0, 158, 160, 0.8);
 }
-#bottomNavbar a{
-  font-size: 1.6em;
+
+#bottomNavbar a {
+    font-size: 1.6em;
 }
+
 
 /* Global view */
 
@@ -325,59 +353,61 @@ h1 {
     width: 85%;
 }
 
-@media screen and (max-width: 990px){
-  .group-btn {
-    position: relative;
-  }
+@media screen and (max-width: 990px) {
+    .group-btn {
+        position: relative;
+    }
 }
 
+
 /* Responsive */
-@media screen and (max-width: 770px){
-  .message h3 {
-    font-size: 4.5em;
-  }
-   .message h5 {
-     font-size: 3.5em;
-   }
-   .group-btn {
-     position: relative;
-     width: 100%;
-   }
-   .group-btn .btn {
-     display: flex;
-     text-align: left;
-   }
-   .group-btn .btn i {
-     font-size: 7em;
-  }
-  .group-btn .btn span {
-    margin-top: 50px;
-    margin-left: 5px;
-    font-size: 1.4em;
-  }
+
+@media screen and (max-width: 770px) {
+    .message h3 {
+        font-size: 4.5em;
+    }
+    .message h5 {
+        font-size: 3.5em;
+    }
+    .group-btn {
+        position: relative;
+        width: 100%;
+    }
+    .group-btn .btn {
+        display: flex;
+        text-align: left;
+    }
+    .group-btn .btn i {
+        font-size: 7em;
+    }
+    .group-btn .btn span {
+        margin-top: 50px;
+        margin-left: 5px;
+        font-size: 1.4em;
+    }
 }
 
 @media screen and (max-width: 600px) {
-  .btn {
-    height: 120px;
-  }
-  .group-btn .btn i {
-    font-size: 6em;
-  }
-  .group-btn .btn span {
-    margin-top: 50px;
-    margin-left: 10px;
-    font-size: 1.7em;
-  }
-  .group-btn {
-    width: 100%;
-  }
-  .message h3 {
-    font-size: 4em;
-  }
-   .message h5 {
-     font-size: 3em;
-   }
+    .btn {
+        height: 120px;
+    }
+    .group-btn .btn i {
+        font-size: 6em;
+    }
+    .group-btn .btn span {
+        margin-top: 50px;
+        margin-left: 10px;
+        font-size: 1.7em;
+    }
+    .group-btn {
+        width: 100%;
+    }
+    .message h3 {
+        font-size: 4em;
+    }
+    .message h5 {
+        font-size: 3em;
+    }
     #bottomNavbar {
         height: 80px;
         line-height: 40px;
@@ -425,23 +455,23 @@ h1 {
         width: 100%;
     }
     .message h3 {
-      font-size: 3.5em;
+        font-size: 3.5em;
     }
-     .message h5 {
-       font-size: 2.5em;
-     }
-     .btn {
-       height: 100px;
-       line-height: inherit;
-     }
-     .group-btn .btn i {
-       font-size: 4em;
-     }
-     .group-btn .btn span {
-       margin-top: 35px;
-       margin-left: 10px;
-       font-size: 1.5em;
-     }
+    .message h5 {
+        font-size: 2.5em;
+    }
+    .btn {
+        height: 100px;
+        line-height: inherit;
+    }
+    .group-btn .btn i {
+        font-size: 4em;
+    }
+    .group-btn .btn span {
+        margin-top: 35px;
+        margin-left: 10px;
+        font-size: 1.5em;
+    }
     #stats {
         width: 90vw;
         height: 35vh;
@@ -458,10 +488,11 @@ h1 {
     #stats a {
         top: 90px;
     }
-  }
-  @media screen and (max-width: 400px) {
+}
+
+@media screen and (max-width: 400px) {
     #push {
-      height: 80px;
+        height: 80px;
     }
     #logo img {
         width: 45%;
@@ -475,20 +506,15 @@ h1 {
         line-height: normal;
         white-space: normal;
     }
-    .titlepres{
-      margin-top: 0;
+    .titlepres {
+        margin-top: 0;
     }
     .group-btn {
-      margin-top: 5%;
+        margin-top: 5%;
     }
-  }
-#modal1 {
-  width: 40%;
 }
 
-#modal1 p {
-  margin: 0;
-}
+
 /* view ehpad */
 
 .card {
@@ -503,6 +529,7 @@ h1 {
 .header {
     padding-top: 2%;
 }
+
 #cardtext {
     margin-left: 2%;
     margin-right: 2%;
