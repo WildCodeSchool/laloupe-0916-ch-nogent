@@ -1,7 +1,9 @@
 import mongoose from 'mongoose';
 
 const todoSchema = new mongoose.Schema({
-    description: String
+    name: String,
+    num:String,
+    spec:String
 });
 
 let model = mongoose.model('Todo', todoSchema);
@@ -30,7 +32,10 @@ export default class Todo {
 
     create(req, res) {
         model.create({
-                description: req.body.description
+                name: req.body.name,
+                num: req.body.num,
+                spec: req.body.spec
+
             },
             (err, todo) => {
                 if (err) {
@@ -45,7 +50,9 @@ export default class Todo {
         model.update({
             _id: req.params.id
         }, {
-            description: req.body.description
+                name: req.body.name,
+                num: req.body.num,
+                spec: req.body.spec
         }, (err, todo) => {
             if (err || !todo) {
                 res.status(500).send(err.message);

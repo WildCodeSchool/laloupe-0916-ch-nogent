@@ -6,6 +6,11 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'mainController',
             controllerAs: 'vm'
         })
+        .when('/annuaire', {
+            templateUrl: 'views/annuaire/annuaire.html',
+            controller: 'mainController',
+            controllerAs: 'vm'
+        })
         .when('/legals', {
             templateUrl: 'views/mentions/legals.html'
         })
@@ -19,6 +24,11 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'mainController',
             controllerAs: 'vm'
         })
+        .when('/adddoctor', {
+            templateUrl: 'views/annuaire/adddoctor.html',
+            controller: 'mainController',
+            controllerAs: 'vm'
+        })
         .when('/ehpad', {
             templateUrl: 'views/ehpad/ehpad.html',
         })
@@ -29,11 +39,6 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .otherwise({
             redirectTo: '/'
-        })
-        .when('/annuaire', {
-            templateUrl: 'views/annuaire/annuaire.html',
-            controller: 'mainController',
-            controllerAs: 'vm'
         });
 
     $httpProvider.interceptors.push(($q, $location, $rootScope, $window, sessionFactory) => {

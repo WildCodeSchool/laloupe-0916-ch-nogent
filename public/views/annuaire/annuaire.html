@@ -58,64 +58,21 @@
       <a href="#">z</a>
     </div>
   </div>
-<div class="row col s8  ">
-<ul class="collection">
-  <li class="collection-item avatar annu">
-        <i class="material-icons circle green">insert_chart</i>
-    <span class="title">Adrien ANAKIN</span>
-    <p>Chirurgien <br>
-       0123456789
-    </p>
-  </li>
-  <li class="collection-item avatar annu">
-    <i class="material-icons circle pink">insert_chart</i>
-    <span class="title">Antoinette ARNOLD</span>
-    <p>Medecin généraliste <br>
-       0123456789
-    </p>
-  </li>
-  <li class="collection-item avatar annu">
-    <i class="material-icons circle green">insert_chart</i>
-    <span class="title">Arnaud AMDOULA</span>
-    <p>O.R.L <br>
-       0123456789
-    </p>
-  </li>
-  <li class="collection-item avatar annu">
-    <i class="material-icons circle green">insert_chart</i>
-    <span class="title">Alexis ARBRE</span>
-    <p>Psycologue <br>
-       0123456789
-    </p>
-  </li>
-  <li class="collection-item avatar annu">
-    <i class="material-icons circle green">insert_chart</i>
-    <span class="title">Alexis ARBRE</span>
-    <p>Psycologue <br>
-       0123456789
-    </p>
-  </li>
-  <li class="collection-item avatar annu">
-    <i class="material-icons circle green">insert_chart</i>
-    <span class="title">Alexis ARBRE</span>
-    <p>Psycologue <br>
-       0123456789
-    </p>
-  </li>
-  <li class="collection-item avatar annu">
-    <i class="material-icons circle green">insert_chart</i>
-    <span class="title">Alexis ARBRE</span>
-    <p>Psycologue <br>
-       0123456789
-    </p>
-  </li>
-  <li class="collection-item avatar annu">
-    <i class="material-icons circle green">insert_chart</i>
-    <span class="title">Alexis ARBRE</span>
-    <p>Psycologue <br>
-       0123456789
-    </p>
-  </li>
-</ul>
+<div class="row">
+  <div class="col s4 offset-s4 panel panel-default" ng-repeat='todo in vm.todos | orderBy: "description"'>
+      <div class="panel-body">
+          <form class="form-inline">
+              <div class="form-group">
+                  <i class="large material-icons">contact_phone</i>
+                  <p>Nom : {{todo.name}}</p>
+                  <p>Spécialité : {{todo.spec}}</p>
+                  <p>Numero : {{todo.num}}</p>
+              </div>
+              <br>
+              <hr/><!--<button ng-click='vm.delete(todo)' class="btn btn-danger">Delete</button>-->
+          </form>
+      </div>
+  </div>
+
 </div>
 </div>

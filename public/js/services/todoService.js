@@ -6,7 +6,9 @@ class todoService {
 
     create(data) {
         return this.$http.post('/api/todos', {
-            description: data
+            name: data.name,
+            num: data.num,
+            spec: data.spec
         });
     }
 
@@ -20,7 +22,9 @@ class todoService {
 
     update(id, data) {
         return this.$http.put('/api/todos/' + id, {
-            description: data
+            name: data.name,
+            num : data.num,
+            spec: data.spec
         });
     }
 
