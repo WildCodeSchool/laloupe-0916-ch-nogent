@@ -1,50 +1,46 @@
 import mongoose from 'mongoose';
 
-const categorieSchema = new mongoose.Schema({
-    titre: String,
-    photo: String,
+const marcheSchema = new mongoose.Schema({
     texte: String,
-    idparent: String,
+    titre: String,
     lien: String
 });
 
-let model = mongoose.model('Categorie', categorieSchema);
+let model = mongoose.model('Marche', marcheSchema);
 
-export default class Categorie {
+export default class Marche {
 
     findAll(req, res) {
-        model.find({}, (err, categories) => {
+        model.find({}, (err, marches) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(categories);
+                res.json(marches);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, categorie) => {
-            if (err || !categorie) {
+        model.findById(req.params.id, (err, marche) => {
+            if (err || !marche) {
                 res.sendStatus(403);
             } else {
-                res.json(categorie);
+                res.json(marche);
             }
         });
     }
 
     create(req, res) {
         model.create({
-                titre: req.body.titre,
-                photo: req.body.photo,
                 texte: req.body.texte,
-                idparent: req.body.idparent,
+                titre: req.body.titre,
                 lien: req.body.lien
             },
-            (err, categorie) => {
+            (err, marche) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(categorie);
+                    res.json(marche);
                 }
             });
     }
@@ -53,16 +49,14 @@ export default class Categorie {
         model.update({
             _id: req.params.id
         }, {
-            titre: req.body.titre,
-            photo: req.body.photo,
             texte: req.body.texte,
-            idparent: req.body.idparent,
+            titre: req.body.titre,
             lien: req.body.lien
-        }, (err, categorie) => {
-            if (err || !categorie) {
+        }, (err, marche) => {
+            if (err || !marche) {
                 res.status(500).send(err.message);
             } else {
-                res.json(categorie);
+                res.json(marche);
             }
         });
     }

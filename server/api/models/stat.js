@@ -1,46 +1,42 @@
 import mongoose from 'mongoose';
 
-const modalSchema = new mongoose.Schema({
-    texte: String,
-    titre: String,
-    idparent: String
+const statSchema = new mongoose.Schema({
+    texte: String
 });
 
-let model = mongoose.model('Modal', modalSchema);
+let model = mongoose.model('Stat', statSchema);
 
-export default class Modal {
+export default class Stat {
 
     findAll(req, res) {
-        model.find({}, (err, modals) => {
+        model.find({}, (err, stats) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(modals);
+                res.json(stats);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, modal) => {
-            if (err || !modal) {
+        model.findById(req.params.id, (err, stat) => {
+            if (err || !stat) {
                 res.sendStatus(403);
             } else {
-                res.json(modal);
+                res.json(stat);
             }
         });
     }
 
     create(req, res) {
         model.create({
-                texte: req.body.texte,
-                titre: req.body.titre,
-                idparent: req.body.idparent
+                texte: req.body.texte
             },
-            (err, modal) => {
+            (err, stat) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(modal);
+                    res.json(stat);
                 }
             });
     }
@@ -49,14 +45,12 @@ export default class Modal {
         model.update({
             _id: req.params.id
         }, {
-            texte: req.body.texte,
-            titre: req.body.titre,
-            idparent: req.body.idparent
-        }, (err, modal) => {
-            if (err || !modal) {
+            texte: req.body.texte
+        }, (err, stat) => {
+            if (err || !stat) {
                 res.status(500).send(err.message);
             } else {
-                res.json(modal);
+                res.json(stat);
             }
         });
     }
