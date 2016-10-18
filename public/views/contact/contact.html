@@ -1,93 +1,16 @@
 <div class="row">
     <div class="col l6 s12">
         <h2 class="nouscontacter">Téléphone</h2>
-
         <ul class="collapsible" data-collapsible="accordion">
 
-            <li>
+            <li ng-repeat='contact in vm.contacts | orderBy: "description"'>
                 <div class="collapsible-header">
-                    <i class="material-icons">call</i>STANDARD</div>
+                    <i class="material-icons">call</i>{{contact.nom}}</div>
                 <div class="collapsible-body">
-                    <p class="phone">02 37 29 33 36</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>Médecine</div>
-                <div class="collapsible-body">
-                    <p class="phone">Service :<br/>
-                        02 37 29 33 36</p>
-                    <p class="phone">Responsable :<br/>
-                        02 37 29 33 72</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>Soins de suites et de réadaptation</div>
-                <div class="collapsible-body">
-                    <p class="phone">Service : 02 37 29 33 53</p>
-                    <p class="phone">Responsable : 02 37 29 33 18</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>Soins de longue durée</div>
-                <div class="collapsible-body">
-                    <p class="phone">Service : 02 37 29 33 39</p>
-                    <p class="phone">Responsable : 02 37 29 33 62</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>S.S.I.A.D</div>
-                <div class="collapsible-body">
-                    <p class="phone">Service : 02 37 81 33 44</p>
-                    <p class="phone">Responsable : 02 37 29 33 79</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>E.H.P.A.D</div>
-                <div class="collapsible-body">
-                    <p class="phone">Collines du Perche : 02 37 29 33 19</p>
-                    <p class="phone">Orée du Bois : 02 37 29 33 78</p>
-                    <p class="phone">Responsable : 02 37 29 33 67</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>C.A.J.A</div>
-                <div class="collapsible-body">
-                    <p class="phone">Service : 02 37 29 33 75</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>Animation</div>
-                <div class="collapsible-body">
-                    <p class="phone">Service et responsable : 02 37 29 33 12</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>Rééducation</div>
-                <div class="collapsible-body">
-                    <p class="phone">
-                        <p class="phone">Kinésithérapeute : 02 37 29 33 60</p>
-                        <p class="phone">Ergothérapeute : 02 37 29 33 65</p>
+                        <p>Numéro :{{contact.telephone}}</p>
                     </div>
                 </li>
-
             </ul>
-
         </div>
 
         <div class="col m6 s12">
@@ -96,17 +19,9 @@
                     <h2 class="nouscontacter">Nous contacter</h2>
 
                     <div class="row">
-                      <label>Service que vous voulez contacter</label>
+                        <label>Service que vous voulez contacter</label>
                         <select class="browser-default">
-                                      <option value="">STANDARD</option>
-                                      <option value="1">E.H.P.A.D</option>
-                                      <option value="2">Rééducation</option>
-                                      <option value="3">S.S.I.A.D</option>
-                                      <option value="4">C.A.J.A</option>
-                                      <option value="5">Animation</option>
-                                      <option value="6">Soins de longue durée</option>
-                                      <option value="7">Soins de suite et de réadaptation</option>
-                                      <option value="8">Médecine</option>
+                            <option value="" ng-repeat='contact in vm.contacts | orderBy: "description"'>{{contact.nom}}</option>
 
                         </select>
                     </div>
@@ -157,7 +72,7 @@
                     <br/>
 
                     <div class="input-field col s12">
-                      <i class="material-icons prefix">comment</i>
+                        <i class="material-icons prefix">comment</i>
                         <select multiple>
                             <option value="" disabled selected>Contact par</option>
                             <option value="1">email</option>

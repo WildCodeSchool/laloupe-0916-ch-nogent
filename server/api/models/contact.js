@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
 
 const contactSchema = new mongoose.Schema({
-    texte: String,
-    titre: String
+    nom: String,
+    telephone: String
 });
 
 let model = mongoose.model('Contact', contactSchema);
@@ -31,8 +31,8 @@ export default class Contact {
 
     create(req, res) {
         model.create({
-                texte: req.body.texte,
-                titre: req.body.titre
+                nom: req.body.nom,
+                telephone: req.body.telephone
             },
             (err, contact) => {
                 if (err) {
