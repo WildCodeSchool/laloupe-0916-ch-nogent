@@ -59,14 +59,14 @@
     </div>
   </div>
 <div class="row">
-  <div class="col s4 offset-s4 panel panel-default" ng-repeat='todo in vm.todos | orderBy: "description"'>
+  <div class="col s4 offset-s4 panel panel-default" ng-repeat='annuaire in vm.annuaires | orderBy: "description"'>
       <div class="panel-body">
           <form class="form-inline">
               <div class="form-group">
                   <i class="large material-icons">contact_phone</i>
-                  <p>Nom : {{todo.name}}</p>
-                  <p>Spécialité : {{todo.spec}}</p>
-                  <p>Numero : {{todo.num}}</p>
+                  <p>Nom : {{annuaire.nom}}</p>
+                  <p>Spécialité : {{annuaire.fonction}}</p>
+                  <p>Numero : {{annuaire.telephone}}</p>
               </div>
               <br>
               <hr/><!--<button ng-click='vm.delete(todo)' class="btn btn-danger">Delete</button>-->

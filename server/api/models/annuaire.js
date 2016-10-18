@@ -54,14 +54,7 @@ export default class Annuaire {
     update(req, res) {
         model.update({
             _id: req.params.id
-        }, {
-            nom: req.body.nom,
-            prenom: req.body.prenom,
-            fonction: req.body.fonction,
-            email: req.body.email,
-            telephone: req.body.telephone,
-            lien: req.body.lien
-        }, (err, annuaire) => {
+        }, req.body, (err, annuaire) => {
             if (err || !annuaire) {
                 res.status(500).send(err.message);
             } else {
