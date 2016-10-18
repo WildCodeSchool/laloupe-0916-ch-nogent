@@ -84,12 +84,12 @@ nav ul a.btn-urgence:hover {
 }
 
 #push nav {
-    height: 84px;
-    line-height: 84px;
+    height: 100px;
+    line-height: 100px;
 }
 
 #push nav li a {
-    font-size: 1.3em;
+    font-size: 1.8em;
     color: black;
 }
 
@@ -115,8 +115,8 @@ nav ul a.btn-urgence:hover {
 
 #logo img {
     padding-top: 5px;
-    width: 65px;
-    height: 65px;
+    width: 100px;
+    height: 100px;
 }
 
 #dropdown1 {
