@@ -20,7 +20,7 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
         .when('/addcontact', {
-            templateUrl: 'views/contact/addcontact.html',
+            templateUrl: 'views/admin/addcontact.html',
             controller: 'contactController',
             controllerAs: 'vm'
         })
@@ -30,7 +30,7 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
         .when('/adddoctor', {
-            templateUrl: 'views/annuaire/adddoctor.html',
+            templateUrl: 'views/admin/adddoctor.html',
             controller: 'annuaireController',
             controllerAs: 'vm'
         })

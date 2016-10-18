@@ -3,11 +3,12 @@
         <h2 class="nouscontacter">Téléphone</h2>
         <ul class="collapsible" data-collapsible="accordion">
 
-            <li ng-repeat='contact in vm.contacts | orderBy: "description"'>
+            <li ng-repeat='contact in vm.contacts | orderBy: "+nom"'>
                 <div class="collapsible-header">
                     <i class="material-icons">call</i>{{contact.nom}}</div>
                 <div class="collapsible-body">
                         <p>Numéro :{{contact.telephone}}</p>
+                        <!--<button ng-click='vm.delete(contact)' class="btn btn-danger">Delete</button>-->
                     </div>
                 </li>
             </ul>
@@ -21,7 +22,7 @@
                     <div class="row">
                         <label>Service que vous voulez contacter</label>
                         <select class="browser-default">
-                            <option value="" ng-repeat='contact in vm.contacts | orderBy: "description"'>{{contact.nom}}</option>
+                            <option value="" ng-repeat='contact in vm.contacts | orderBy: "+nom"'>{{contact.nom}}</option>
 
                         </select>
                     </div>
