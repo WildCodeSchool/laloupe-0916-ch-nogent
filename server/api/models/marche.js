@@ -48,11 +48,7 @@ export default class Marche {
     update(req, res) {
         model.update({
             _id: req.params.id
-        }, {
-            texte: req.body.texte,
-            titre: req.body.titre,
-            lien: req.body.lien
-        }, (err, marche) => {
+        }, req.body, (err, marche) => {
             if (err || !marche) {
                 res.status(500).send(err.message);
             } else {

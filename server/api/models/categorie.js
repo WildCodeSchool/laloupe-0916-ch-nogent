@@ -52,13 +52,7 @@ export default class Categorie {
     update(req, res) {
         model.update({
             _id: req.params.id
-        }, {
-            titre: req.body.titre,
-            photo: req.body.photo,
-            texte: req.body.texte,
-            idparent: req.body.idparent,
-            lien: req.body.lien
-        }, (err, categorie) => {
+        }, req.body, (err, categorie) => {
             if (err || !categorie) {
                 res.status(500).send(err.message);
             } else {

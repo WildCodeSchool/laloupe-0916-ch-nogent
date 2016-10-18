@@ -48,11 +48,7 @@ export default class Modal {
     update(req, res) {
         model.update({
             _id: req.params.id
-        }, {
-            texte: req.body.texte,
-            titre: req.body.titre,
-            idparent: req.body.idparent
-        }, (err, modal) => {
+        }, req.body, (err, modal) => {
             if (err || !modal) {
                 res.status(500).send(err.message);
             } else {

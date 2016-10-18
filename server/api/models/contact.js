@@ -46,10 +46,7 @@ export default class Contact {
     update(req, res) {
         model.update({
             _id: req.params.id
-        }, {
-            texte: req.body.texte,
-            titre: req.body.titre
-        }, (err, contact) => {
+        }, req.body, (err, contact) => {
             if (err || !contact) {
                 res.status(500).send(err.message);
             } else {
