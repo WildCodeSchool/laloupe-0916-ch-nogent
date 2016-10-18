@@ -1,24 +1,16 @@
 <div class="row">
     <div class="col l6 s12">
         <h2 class="nouscontacter">Téléphone</h2>
-
         <ul class="collapsible" data-collapsible="accordion">
 
-          <div class="col s4 offset-s4 panel panel-default" ng-repeat='contact in vm.contacts | orderBy: "description"'>
-              <div class="panel-body">
-                  <form class="form-inline">
-                      <div class="form-group">
-                          <i class="large material-icons">contact_phone</i>
-                          <p>Nom : {{contact.nom}}</p>
-                          <p>Numero : {{contact.telephone}}</p>
-                      </div>
-                      <br>
-                      <hr/><!--<button ng-click='vm.delete(todo)' class="btn btn-danger">Delete</button>-->
-                  </form>
-              </div>
-          </div>
-        </ul>
-
+            <li ng-repeat='contact in vm.contacts | orderBy: "description"'>
+                <div class="collapsible-header">
+                    <i class="material-icons">call</i>{{contact.nom}}</div>
+                <div class="collapsible-body">
+                        <p>Numéro :{{contact.telephone}}</p>
+                    </div>
+                </li>
+            </ul>
         </div>
 
         <div class="col m6 s12">
@@ -27,17 +19,9 @@
                     <h2 class="nouscontacter">Nous contacter</h2>
 
                     <div class="row">
-                      <label>Service que vous voulez contacter</label>
+                        <label>Service que vous voulez contacter</label>
                         <select class="browser-default">
-                                      <option value="">STANDARD</option>
-                                      <option value="1">E.H.P.A.D</option>
-                                      <option value="2">Rééducation</option>
-                                      <option value="3">S.S.I.A.D</option>
-                                      <option value="4">C.A.J.A</option>
-                                      <option value="5">Animation</option>
-                                      <option value="6">Soins de longue durée</option>
-                                      <option value="7">Soins de suite et de réadaptation</option>
-                                      <option value="8">Médecine</option>
+                            <option value="" ng-repeat='contact in vm.contacts | orderBy: "description"'>{{contact.nom}}</option>
 
                         </select>
                     </div>
@@ -88,7 +72,7 @@
                     <br/>
 
                     <div class="input-field col s12">
-                      <i class="material-icons prefix">comment</i>
+                        <i class="material-icons prefix">comment</i>
                         <select multiple>
                             <option value="" disabled selected>Contact par</option>
                             <option value="1">email</option>
