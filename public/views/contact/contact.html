@@ -4,89 +4,20 @@
 
         <ul class="collapsible" data-collapsible="accordion">
 
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>STANDARD</div>
-                <div class="collapsible-body">
-                    <p class="phone">02 37 29 33 36</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>Médecine</div>
-                <div class="collapsible-body">
-                    <p class="phone">Service :<br/>
-                        02 37 29 33 36</p>
-                    <p class="phone">Responsable :<br/>
-                        02 37 29 33 72</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>Soins de suites et de réadaptation</div>
-                <div class="collapsible-body">
-                    <p class="phone">Service : 02 37 29 33 53</p>
-                    <p class="phone">Responsable : 02 37 29 33 18</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>Soins de longue durée</div>
-                <div class="collapsible-body">
-                    <p class="phone">Service : 02 37 29 33 39</p>
-                    <p class="phone">Responsable : 02 37 29 33 62</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>S.S.I.A.D</div>
-                <div class="collapsible-body">
-                    <p class="phone">Service : 02 37 81 33 44</p>
-                    <p class="phone">Responsable : 02 37 29 33 79</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>E.H.P.A.D</div>
-                <div class="collapsible-body">
-                    <p class="phone">Collines du Perche : 02 37 29 33 19</p>
-                    <p class="phone">Orée du Bois : 02 37 29 33 78</p>
-                    <p class="phone">Responsable : 02 37 29 33 67</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>C.A.J.A</div>
-                <div class="collapsible-body">
-                    <p class="phone">Service : 02 37 29 33 75</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>Animation</div>
-                <div class="collapsible-body">
-                    <p class="phone">Service et responsable : 02 37 29 33 12</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">call</i>Rééducation</div>
-                <div class="collapsible-body">
-                    <p class="phone">
-                        <p class="phone">Kinésithérapeute : 02 37 29 33 60</p>
-                        <p class="phone">Ergothérapeute : 02 37 29 33 65</p>
-                    </div>
-                </li>
-
-            </ul>
+          <div class="col s4 offset-s4 panel panel-default" ng-repeat='contact in vm.contacts | orderBy: "description"'>
+              <div class="panel-body">
+                  <form class="form-inline">
+                      <div class="form-group">
+                          <i class="large material-icons">contact_phone</i>
+                          <p>Nom : {{contact.nom}}</p>
+                          <p>Numero : {{contact.telephone}}</p>
+                      </div>
+                      <br>
+                      <hr/><!--<button ng-click='vm.delete(todo)' class="btn btn-danger">Delete</button>-->
+                  </form>
+              </div>
+          </div>
+        </ul>
 
         </div>
 
