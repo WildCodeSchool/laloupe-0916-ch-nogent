@@ -1,6 +1,6 @@
 const routes = ($routeProvider, $httpProvider) => {
 
-    $routeProvider 
+    $routeProvider
         .when('/', {
             templateUrl: 'views/main.html',
             controller: 'mainController',
@@ -14,6 +14,16 @@ const routes = ($routeProvider, $httpProvider) => {
         .when('/admin/praticien', {
             templateUrl: 'views/admin/adddoctor.html',
             controller: 'annuaireController',
+            controllerAs: 'vm'
+        })
+        .when('/apropos', {
+            templateUrl: 'views/apropos/apropos.html',
+            controller: 'aproposController',
+            controllerAs: 'vm'
+        })
+        .when('/admin/apropos', {
+            templateUrl: 'views/admin/adminapropos.html',
+            controller: 'aproposController',
             controllerAs: 'vm'
         })
         .when('/annuaire', {
