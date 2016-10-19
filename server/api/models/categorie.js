@@ -22,12 +22,25 @@ export default class Categorie {
         });
     }
 
+
     findById(req, res) {
         model.findById(req.params.id, (err, categorie) => {
             if (err || !categorie) {
                 res.sendStatus(403);
             } else {
                 res.json(categorie);
+            }
+        });
+    }
+
+    findParent(req, res) {
+        model.find({
+            idparent: req.params.idparent
+        }, (err, categories) => {
+            if (err) {
+                res.sendStatus(403);
+            } else {
+                res.json(categories);
             }
         });
     }

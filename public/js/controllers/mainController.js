@@ -2,7 +2,7 @@ class mainController {
 
     constructor(todoService) {
       this.todoService = todoService;
-      this.load();
+      //this.load();
 
             $(".button-collapse").sideNav();
 

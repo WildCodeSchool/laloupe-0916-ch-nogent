@@ -1,14 +1,15 @@
 class navbarController {
 
-    constructor(sessionFactory, $rootScope, $window, $location) {
+    constructor(sessionFactory, $rootScope, $window, $location, categorieService) {
+        this.categorieService = categorieService;
+        this.loadCategories();
         this.isLogged = sessionFactory.isLogged;
         this.sessionFactory = sessionFactory;
         this.$rootScope = $rootScope;
         this.$location = $location;
 
-        $(document).ready(function (){
-            $(".dropdown-button").dropdown();
-        });
+
+
 
         $rootScope.$on('loginStatusChanged', (event, isLogged) => {
             this.isLogged = isLogged;
@@ -16,7 +17,7 @@ class navbarController {
         });
         this.isToggled = false;
         this.toggleEmergencies = function() {
-          this.isToggled = !this.isToggled;
+            this.isToggled = !this.isToggled;
         };
     }
 
@@ -27,6 +28,15 @@ class navbarController {
         this.$rootScope.$emit('loginStatusChanged', false);
         this.isLogged = false;
         this.$location.path('/login');
+    }
+
+    loadCategories() {
+        this.categorieService.getParent('0').then((res) => {
+            this.categories = res.data;
+            setTimeout(function() {
+                $(".dropdown-button").dropdown();
+            }, 0);
+        });
     }
 
 }
