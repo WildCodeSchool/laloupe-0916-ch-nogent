@@ -8,7 +8,7 @@
     <label> <input placeholder="Nom,prenom ou spécialité du praticien" ng-model="searchText" style="width:30%;margin-left:35%"></label>
   </div>
 <div class="row">
-  <div class="col s4 offset-s4 panel panel-default" ng-repeat='annuaire in vm.annuaires | filter:searchText | orderBy:"+annuaire"'>
+  <div class="col s3 offset-s1 panel panel-default" ng-repeat='annuaire in vm.annuaires | filter:searchText | orderBy:"+annuaire"'>
       <div class="panel-body">
           <form class="form-inline">
               <div class="form-group">
