@@ -10,6 +10,8 @@ module.exports = (app) => {
 
     router.get('/', categorie.findAll);
 
+    router.get('/by-parent/:idparent', categorie.findParent);
+
     router.get('/:id', categorie.findById);
 
     router.post('/', categorie.create);
