@@ -1,6 +1,6 @@
 const routes = ($routeProvider, $httpProvider) => {
 
-    $routeProvider
+    $routeProvider 
         .when('/', {
             templateUrl: 'views/main.html',
             controller: 'mainController',
