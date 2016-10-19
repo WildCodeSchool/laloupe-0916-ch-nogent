@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 
 const contactSchema = new mongoose.Schema({
     nom: String,
-    telephone: String
+    telephone: String,
+    email: String
 });
 
 let model = mongoose.model('Contact', contactSchema);
@@ -32,7 +33,8 @@ export default class Contact {
     create(req, res) {
         model.create({
                 nom: req.body.nom,
-                telephone: req.body.telephone
+                telephone: req.body.telephone,
+                email: req.body.email
             },
             (err, contact) => {
                 if (err) {
