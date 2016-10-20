@@ -2,9 +2,10 @@
 <div >
     <div class="slider">
         <div class="caption center-align titlepres">
-          <div class="message">
-            <h1>Bienvenue<br>au Centre Hospitalier de <br>Nogent-le-Rotrou</h1>
-          </div>
+            <div class="message">
+                <h1>Bienvenue<br>au Centre Hospitalier de
+                    <br>Nogent-le-Rotrou</h1>
+            </div>
 
         </div>
         <ul class="slides">
@@ -46,206 +47,175 @@
     </div>
     <!--div ng-show "j'ai un rendez-vous"-->
     <div class="container-fluid sub-menu-consultation" id="scroll1">
-        <div ng-show='vm.isLoad'>
-            <div class="row consults">
-                <div class="blocconsultation">
-                    <div class="col s12 m4 l4 flow-text " id="consultation">
-                        <div class="card cardconsults green">
-                            <div class="card-content white-text">
-                                <a class="black-text" href="#">Consultations spécialisées</a>
-                                <ul>
-                                    <li>
-                                        <a class="white-text" href="#">Vasculaire</a>
-                                    </li>
-                                    <li>
-                                        <a class="white-text" href="#">Urologie</a>
-                                    </li>
-                                    <li>
-                                        <a class="white-text" href="#">Chirurgie de la Main</a>
-                                    </li>
-                                    <li>
-                                        <a class="white-text" href="#">O.R. L</a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <a class="white-text" href="#">Viscéral</a>
-                                    </li>
-                                    <li>
-                                        <a class="white-text" href="#">Ophtalmologie</a>
-                                    </li>
-                                    <li>
-                                        <a class="white-text" href="#">Anesthésie</a>
-                                    </li>
-                                    <li>
-                                        <a class="white-text" href="#">Néphrologie</a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <a class="white-text" href="#">Cardiologie</a>
-                                    </li>
-                                    <li>
-                                        <a class="white-text" href="#">Endocrinologie</a>
-                                    </li>
-                                    <li>
-                                        <a class="white-text" href="#">Neurologie</a>
-                                    </li>
-                                    <li>
-                                        <a class="white-text" href="#">Stomatologie</a>
-                                    </li>
-                                </ul>
-                            </div>
+    <div ng-show='vm.isLoad'>
+        <div class="row consults">
+            <div class="blocconsultation">
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults green">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Spécialités</h6>
+                            <p class="rdv1">
+                                {{vm.btn1.texte1}}
+                          </p>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4 flow-text" id="imagerie">
-                        <div class="card cardconsults green">
-                            <div class="card-content white-text">
-                                <a class="black-text" href="#">Imagerie</a>
-                                <ul>
-                                    <li>
-                                        <a class="white-text" href="#">Imagerie</a>
-                                    </li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults green">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Contact</h6>
+                            <p class="rdv2">
+                                {{vm.btn1.texte2}}
+                          </p>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4 flow-text" id="perinatal">
-                        <div class="card cardconsults green">
-                            <div class="card-content">
-                                <a class="black-text" href="#">Centre périnatal de proximité</a>
-                                <ul>
-                                    <li>
-                                        <a class="white-text" href="#">Centre périnatal de proximité</a>
-                                    </li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults green">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Documents à apporter</h6>
+                            <p class="rdv3">
+                                {{vm.btn1.texte3}}
+                          </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+</div>
 
-    <!--div ng-show "je vais etre hospitalisé"-->
-    <div class="container-fluid sub-menu-hospitalise" id="scroll2">
-        <div ng-show='vm.isLoad1'>
-            <div class="row hospitalise">
-                <div class="blochospitalise">
-                    <div class="col s12 m4 l4 flow-text " id="medecine">
-                        <div class="card cardconsults purple lighten-1">
-                            <div class="card-content white-text">
-                                <a class="black-text" href="#">Médecine</a>
-                            </div>
+<!--div ng-show "je vais etre hospitalisé"-->
+<div class="container-fluid sub-menu-hospitalise" id="scroll2">
+    <div ng-show='vm.isLoad1'>
+        <div class="row hospitalise">
+            <div class="blochospitalise">
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults purple lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Votre entrée</h6>
+                            <p class="hosp1">
+                                {{vm.btn2.texte1}}
+                          </p>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4 flow-text" id="ssr">
-                        <div class="card cardconsults purple lighten-1">
-                            <div class="card-content white-text">
-                                <a class="black-text" href="#">SSR</a>
-                            </div>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults purple lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Votre séjour</h6>
+                            <p class="hosp2">
+                                {{vm.btn2.texte2}}
+                          </p>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4 flow-text" id="chirurgieambulatoire">
-                        <div class="card cardconsults purple lighten-1">
-                            <div class="card-content">
-                                <a class="black-text" href="#">Chirurgie ambulatoire</a>
-                            </div>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults purple lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Votre sortie</h6>
+                            <p class="hosp3">
+                                {{vm.btn2.texte3}}
+                          </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
-    <!--div ng-show "je vais entrer en ehpad"-->
-    <div class="container-fluid sub-menu-ehpad" id="scroll3">
-        <div ng-show='vm.isLoad2'>
-            <div class="row ehpad">
-                <div class="blocehpad">
-                    <div class="col s12 m4 l4 flow-text ">
-                        <div class="card cardconsults orange lighten-1">
-                            <div class="card-content white-text">
-                                <a class="black-text" href="#">A compléter</a>
-                            </div>
+</div>
+
+<!--div ng-show "je vais entrer en ehpad"-->
+<div class="container-fluid sub-menu-ehpad" id="scroll3">
+    <div ng-show='vm.isLoad2'>
+        <div class="row ehpad">
+            <div class="blocehpad">
+                <div class="col s12 m6 l3">
+                    <div class="card cardconsults orange lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Votre entrée</h6>
+                            <p class="ehpad1">
+                                {{vm.btn3.texte1}}
+                          </p>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4 flow-text">
-                        <div class="card cardconsults orange lighten-1">
-                            <div class="card-content white-text">
-                                <a class="black-text" href="#">A compléter</a>
-                            </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card cardconsults orange lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Votre sortie</h6>
+                            <p class="ehpad2">
+                                {{vm.btn3.texte2}}
+                          </p>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4 flow-text">
-                        <div class="card cardconsults orange lighten-1">
-                            <div class="card-content">
-                                <a class="black-text" href="#">A compléter</a>
-                            </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card cardconsults orange lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Animations</h6>
+                            <p class="ehpad3">
+                                {{vm.btn3.texte3}}
+                          </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card cardconsults orange lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">À télécharger</h6>
+                            <p class="ehpad4">
+                                {{vm.btn3.texte4}}
+                          </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+</div>
 
-    <!--div ng-show "je vais voir un patient"-->
-    <div class="container-fluid sub-menu-patient" id="scroll4">
-        <div ng-show='vm.isLoad3'>
-            <div class="row patient">
-                <div class="blocpatient">
-                    <div class="col s12 m4 l4">
-                        <div class="card cardconsults teal lighten-1">
-                            <div class="card-content white-text">
-                                <a class="black-text flow-text" href="#">Visiter un patient</a>
-                                <p>
-                                    - Les visites sont autorisées tous les jours de 12h00 à 20h00.
-                                    <br/>
-                                    <br/>
-                                    - Il est conseillé d'éviter les visites trops longues et en groupe.
-                                    <br/>
-                                    <br/>
-                                    - Nous vous remercions de bien vouloir respecter ces consignes pour le confort des patients.
-                                    <br/>
-                                    <br/>
-                                    - Si vous souhaitez offrir des fleurs à la personne hospitalisée, seules les fleurs coupées sont autorisées.
-                                    <br/>
-                                </p>
-
-                            </div>
+<!--div ng-show "je vais voir un patient"-->
+<div class="container-fluid sub-menu-patient" id="scroll4">
+    <div ng-show='vm.isLoad3'>
+        <div class="row patient">
+            <div class="blocpatient">
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults teal lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Mes visites</h6>
+                              <p class="visiter1">
+                                  {{vm.btn4.texte1}}
+                            </p>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4">
-                        <div class="card cardconsults teal lighten-1">
-                            <div class="card-content white-text">
-                                <a class="black-text flow-text" href="#">
-                                    Envoyer/recevoir du Courrier</a>
-                                <p>
-                                    - La distribution du courrier est assurée une fois par jour par le personnel soignant. Il est souhaitable d'indiquer sur l'enveloppe le service d'hospitalisation et le numéro de chambre de votre correspondant.
-                                    <br/>
-                                    <br/>
-                                    - Pendant votre hospitalisation, il vous est possible de recevoir et d'expédier du courrier. Si vous souhaitez expédier du courrier, veuillez le remettre affranchi au secrétariat médical du service qui se chargera de son acheminement.<br/>
-                                    <br/>
-
-                                </p>
-                            </div>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults teal lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text"> Le parking</h6>
+                            <p class= "visiter2">
+                                  {{vm.btn4.texte2}}
+                            </p>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4">
-                        <div class="card cardconsults teal lighten-1">
-                            <div class="card-content">
-                                <a class="black-text flow-text" href="#">A compléter</a>
-                            </div>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults teal lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text"> Le parking</h6>
+                            <p class= "visiter2">
+                                  {{vm.btn4.texte3}}
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+
+</div>
     <!-- Fin Slider -->
 
     <!-- Début Description -->
@@ -256,7 +226,14 @@
                 <div class="card-stacked">
                     <div class="card-content">
                         <p class="flow-text center-align textevue">
-                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Faezfefezfadzdza%2F&tabs=timeline&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                            <iframe
+                                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Faezfefezfadzdza%2F&tabs=timeline&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                                width="340"
+                                height="500"
+                                style="border:none;overflow:hidden"
+                                scrolling="no"
+                                frameborder="0"
+                                allowTransparency="true"></iframe>
                         </p>
                     </div>
                 </div>

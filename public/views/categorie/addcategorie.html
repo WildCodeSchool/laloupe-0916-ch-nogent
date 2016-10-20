@@ -1,16 +1,16 @@
 <div class="row">
     <div class="col-xs-12 col-md-10 col-md-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-        <h2>Ajouter une catégorie </h2>
+        <h2>Ajouter une catégorie
+        </h2>
         <form class="form-inline">
             <div class="form-group">
+                <p><input type="text" class="form-control" placeholder="Id_Parent" ng-model='vm.categorie.idparent'></p>
                 <p><input type="text" class="form-control" placeholder="titre" ng-model='vm.categorie.titre'></p>
-                <p><input type="text" class="form-control" placeholder="Spécialisation" ng-model='vm.categorie.photo'></p>
-                <p><input type="text" class="form-control" placeholder="Numéro" ng-model='vm.categorie.texte'></p>
-                <p><input type="text" class="form-control" placeholder="Numéro" ng-model='vm.categorie.idparent'></p>
-                <p><input type="text" class="form-control" placeholder="Numéro" ng-model='vm.categorie.lien'></p>
+                <p><input type="text" class="form-control" placeholder="photo" ng-model='vm.categorie.photo'></p>
+                <p><input type="text" class="form-control" placeholder="texte" ng-model='vm.categorie.texte'></p>
+                <p><input type="text" class="form-control" placeholder="lien" ng-model='vm.categorie.lien'></p>
             </div>
             <button ng-click='vm.create()' class="btn btn-default">Ajouter</button>
         </form>
-
     </div>
 </div>
