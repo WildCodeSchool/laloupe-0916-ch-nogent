@@ -22,6 +22,7 @@ angular.module('app', ['ngRoute'])
         .controller('btn2Controller', btn2Controller)
         .controller('btn3Controller', btn3Controller)
         .controller('btn4Controller', btn4Controller)
+        .controller('statController', statController)
         .config(routes)
         .run(loginStatus)
         ;

@@ -13,7 +13,7 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/admin/stat', {
             templateUrl: 'views/admin/stat.html',
-            controller: 'mainController',
+            controller: 'statController',
             controllerAs: 'vm'
         })
         .when('/admin/praticien', {
