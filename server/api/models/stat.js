@@ -1,7 +1,10 @@
 import mongoose from 'mongoose';
 
 const statSchema = new mongoose.Schema({
-    texte: String
+    texte1: String,
+    texte2: String,
+    texte3: String,
+    texte4: String
 });
 
 let model = mongoose.model('Stat', statSchema);
@@ -30,7 +33,10 @@ export default class Stat {
 
     create(req, res) {
         model.create({
-                texte: req.body.texte
+                texte1: req.body.texte1,
+                texte2: req.body.texte2,
+                texte3: req.body.texte3,
+                texte4: req.body.texte4
             },
             (err, stat) => {
                 if (err) {
@@ -45,7 +51,10 @@ export default class Stat {
         model.update({
             _id: req.params.id
         }, {
-            texte: req.body.texte
+          texte1: req.body.texte1,
+          texte2: req.body.texte2,
+          texte3: req.body.texte3,
+          texte4: req.body.texte4
         }, (err, stat) => {
             if (err || !stat) {
                 res.status(500).send(err.message);

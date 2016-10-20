@@ -11,6 +11,11 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'contactController',
             controllerAs: 'vm'
         })
+        .when('/admin/stat', {
+            templateUrl: 'views/admin/stat.html',
+            controller: 'mainController',
+            controllerAs: 'vm'
+        })
         .when('/admin/praticien', {
             templateUrl: 'views/admin/adddoctor.html',
             controller: 'annuaireController',
