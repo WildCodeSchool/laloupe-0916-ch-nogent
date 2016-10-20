@@ -1,21 +1,13 @@
 class mainController {
 
-<<<<<<< HEAD
-    constructor(statService) {
-        this.statService = statService;
-        this.load();
-=======
-    constructor(btn1Service, btn2Service, btn3Service, btn4Service) {
-        //this.todoService = todoService;
-        //this.load();
-
+    constructor(btn1Service, btn2Service, btn3Service, btn4Service, statService) {
         this.btn1Service = btn1Service;
         this.btn2Service = btn2Service;
         this.btn3Service = btn3Service;
         this.btn4Service = btn4Service;
+            this.statService = statService;
         this.load();
 
->>>>>>> f0ba19abb2ff0a6f37788ce0202b0d2556aef7bd
         $(".button-collapse").sideNav();
 
         $(window).scroll(function() {
@@ -163,15 +155,11 @@ class mainController {
         };
 
     }
-<<<<<<< HEAD
     load() {
         this.statService.getAll().then((res) => {
             this.stat = res.data;
             this.stats = res.data[0];
-            debugger;
-=======
-
-    load() {
+        });
         this.btn1Service.getAll().then((res) => {
             this.btn1s = res.data;
             this.btn1 = this.btn1s[0];
@@ -190,53 +178,25 @@ class mainController {
         });
 
     }
-    /*
-    load() {
-        this.todoService.getAll().then((res) => {
-            this.todos = res.data;
->>>>>>> f0ba19abb2ff0a6f37788ce0202b0d2556aef7bd
-        });
-    }
-
     create() {
-<<<<<<< HEAD
         if (this.stat.length > 0) this.stat.forEach((v, i) => {
             this.delete(v);
         });
         this.statService.create(this.stats).then(() => {
 
             this.stats = {};
-=======
-        this.todoService.create(this.todo).then(() => {
-
-            this.todo = {};
->>>>>>> f0ba19abb2ff0a6f37788ce0202b0d2556aef7bd
             this.load();
         });
     }
-
-<<<<<<< HEAD
     update(stat) {
         this.statService.update(stat._id, stat).then(() => {
-=======
-    update(todo) {
-        this.todoService.update(todo._id, todo).then(() => {
->>>>>>> f0ba19abb2ff0a6f37788ce0202b0d2556aef7bd
             this.load();
         });
     }
 
-<<<<<<< HEAD
     delete(stat) {
         this.statService.delete(stat._id).then(() => {
             this.load();
         });
     }
-=======
-    delete(todo) {
-        this.todoService.delete(todo._id).then(() => {
-            this.load();
-        });
-    }*/
->>>>>>> f0ba19abb2ff0a6f37788ce0202b0d2556aef7bd
 }
