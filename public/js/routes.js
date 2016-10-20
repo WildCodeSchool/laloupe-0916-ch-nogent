@@ -62,6 +62,26 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'loginController',
             controllerAs: 'vm'
         })
+        .when('/btn1', {
+            templateUrl: 'views/addMainBtn/btn1.html',
+            controller: 'btn1Controller',
+            controllerAs: 'vm'
+        })
+        .when('/btn2', {
+            templateUrl: 'views/addMainBtn/btn2.html',
+            controller: 'btn2Controller',
+            controllerAs: 'vm'
+        })
+        .when('/btn3', {
+            templateUrl: 'views/addMainBtn/btn3.html',
+            controller: 'btn3Controller',
+            controllerAs: 'vm'
+        })
+        .when('/btn4', {
+            templateUrl: 'views/addMainBtn/btn4.html',
+            controller: 'btn4Controller',
+            controllerAs: 'vm'
+        })
         .otherwise({
             redirectTo: '/'
         });
