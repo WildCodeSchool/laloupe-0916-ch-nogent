@@ -9,10 +9,15 @@ class categorieController {
     }
     load() {
         this.categorieService.getOne(this.$routeParams.id).then((res) => {
-            this.categorie = res.data;
-        });
-        this.categorieService.getParent(this.$routeParams.idparent).then((res) => {
-            this.categorie = res.data;
+            this.categorie = res.data; //1x actuelle
+            this.categorieService.getChildrenOf(this.categorie._id).then((res) => {
+                this.categoriesEnfant = res.data; //Xx les enfants de actuelle
+            });
+            if(this.categorie.parent != "0") {
+                this.categorieService.getOne(this.categorie.parent).then((res) => {
+                    this.categorieParent = res.data; //1x le parent de actuelle SI != de 0
+                });
+            }
         });
     }
 

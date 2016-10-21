@@ -31,7 +31,7 @@ class navbarController {
     }
 
     loadCategories() {
-        this.categorieService.getParent('0').then((res) => {
+        this.categorieService.getChildrenOf('0').then((res) => {
             this.categories = res.data;
             setTimeout(function() {
                 $(".dropdown-button").dropdown();

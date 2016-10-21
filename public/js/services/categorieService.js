@@ -23,7 +23,7 @@ class categorieService {
         return this.$http.get('/api/categories/' + id);
     }
 
-    getParent(idparent) {
+    getChildrenOf(idparent) {
         return this.$http.get('/api/categories/by-parent/' + idparent);
     }
 
