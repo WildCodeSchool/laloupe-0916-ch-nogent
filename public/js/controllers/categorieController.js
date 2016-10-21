@@ -11,6 +11,9 @@ class categorieController {
         this.categorieService.getOne(this.$routeParams.id).then((res) => {
             this.categorie = res.data;
         });
+        this.categorieService.getParent(this.$routeParams.idparent).then((res) => {
+            this.categorie = res.data;
+        });
     }
 
     create() {
