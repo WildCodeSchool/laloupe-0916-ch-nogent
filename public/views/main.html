@@ -244,29 +244,30 @@
     <!-- Fin Description -->
 
     <!-- Slider Stats -->
-
+<div ng-controller='statController as vm'>
     <div class="container white-text center-align" id="stats">
         <div id="slider2" class="carousel textevue">
             <h2>Le centre hospitalier en quelques chiffres</h2>
             <a class="carousel-item" href="#one!">
                 <i class="large material-icons white-text">tag_faces</i>
-                <p class="white-text textevue">351 professionnels à votre service</p>
+                <p class="white-text textevue">{{vm.stats.texte1}}</p>
             </a>
             <a class="carousel-item" href="#two!!">
                 <i class="large material-icons white-text">home</i>
-                <p class="white-text textevue">Nombres de places en EHPAD: 160
+                <p class="white-text textevue">{{vm.stats.texte2}}
                 </p>
             </a>
             <a class="carousel-item" href="#three!">
                 <i class="large material-icons white-text">hotel</i>
-                <p class="white-text textevue">Nombre de lits en hospitalisation: 90</p>
+                <p class="white-text textevue">{{vm.stats.texte3}}</p>
             </a>
             <a class="carousel-item" href="#five!">
                 <i class="large material-icons white-text">local_hospital</i>
-                <p class="white-text textevue">15 898 entrées aux Urgences en 2015
+                <p class="white-text textevue">{{vm.stats.texte4}}
                 </p>
             </a>
         </div>
     </div>
+</div>
 </div>
 <hr>

@@ -11,6 +11,16 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'contactController',
             controllerAs: 'vm'
         })
+        .when('/admin/actualite', {
+            templateUrl: 'views/admin/adminactualite.html',
+            controller: 'actualiteController',
+            controllerAs: 'vm'
+        })
+        .when('/admin/stat', {
+            templateUrl: 'views/admin/stat.html',
+            controller: 'statController',
+            controllerAs: 'vm'
+        })
         .when('/admin/praticien', {
             templateUrl: 'views/admin/adddoctor.html',
             controller: 'annuaireController',
@@ -44,6 +54,11 @@ const routes = ($routeProvider, $httpProvider) => {
         .when('/contact', {
             templateUrl: 'views/contact/contact.html',
             controller: 'contactController',
+            controllerAs: 'vm'
+        })
+        .when('/actualite', {
+            templateUrl: 'views/actualite/actualite.html',
+            controller: 'actualiteController',
             controllerAs: 'vm'
         })
         .when('/editor', {

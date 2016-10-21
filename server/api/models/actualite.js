@@ -1,48 +1,44 @@
 import mongoose from 'mongoose';
 
-const statSchema = new mongoose.Schema({
-    texte1: String,
-    texte2: String,
-    texte3: String,
-    texte4: String
+const actualiteSchema = new mongoose.Schema({
+    titre: String,
+    texte: String
 });
 
-let model = mongoose.model('Stat', statSchema);
+let model = mongoose.model('Actualite', actualiteSchema);
 
-export default class Stat {
+export default class Actualite {
 
     findAll(req, res) {
-        model.find({}, (err, stats) => {
+        model.find({}, (err, actualites) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(stats);
+                res.json(actualites);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, stat) => {
-            if (err || !stat) {
+        model.findById(req.params.id, (err, actualite) => {
+            if (err || !actualite) {
                 res.sendStatus(403);
             } else {
-                res.json(stat);
+                res.json(actualite);
             }
         });
     }
 
     create(req, res) {
         model.create({
-                texte1: req.body.texte1,
-                texte2: req.body.texte2,
-                texte3: req.body.texte3,
-                texte4: req.body.texte4
+                titre: req.body.titre,
+                texte: req.body.texte
             },
-            (err, stat) => {
+            (err, actualite) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(stat);
+                    res.json(actualite);
                 }
             });
     }
@@ -50,16 +46,11 @@ export default class Stat {
     update(req, res) {
         model.update({
             _id: req.params.id
-        }, {
-          texte1: req.body.texte1,
-          texte2: req.body.texte2,
-          texte3: req.body.texte3,
-          texte4: req.body.texte4
-        }, (err, stat) => {
-            if (err || !stat) {
+        }, req.body, (err, actualite) => {
+            if (err || !actualite) {
                 res.status(500).send(err.message);
             } else {
-                res.json(stat);
+                res.json(actualite);
             }
         });
     }

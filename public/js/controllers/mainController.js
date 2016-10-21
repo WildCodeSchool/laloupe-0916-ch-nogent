@@ -1,13 +1,11 @@
 class mainController {
 
-    constructor(btn1Service, btn2Service, btn3Service, btn4Service) {
-        //this.todoService = todoService;
-        //this.load();
-
+    constructor(btn1Service, btn2Service, btn3Service, btn4Service, statService) {
         this.btn1Service = btn1Service;
         this.btn2Service = btn2Service;
         this.btn3Service = btn3Service;
         this.btn4Service = btn4Service;
+            this.statService = statService;
         this.load();
 
         $(".button-collapse").sideNav();
@@ -157,8 +155,11 @@ class mainController {
         };
 
     }
-
     load() {
+        this.statService.getAll().then((res) => {
+            this.stat = res.data;
+            this.stats = res.data[0];
+        });
         this.btn1Service.getAll().then((res) => {
             this.btn1s = res.data;
             this.btn1 = this.btn1s[0];
@@ -177,30 +178,25 @@ class mainController {
         });
 
     }
-    /*
-    load() {
-        this.todoService.getAll().then((res) => {
-            this.todos = res.data;
-        });
-    }
-
     create() {
-        this.todoService.create(this.todo).then(() => {
+        if (this.stat.length > 0) this.stat.forEach((v, i) => {
+            this.delete(v);
+        });
+        this.statService.create(this.stats).then(() => {
 
-            this.todo = {};
+            this.stats = {};
+            this.load();
+        });
+    }
+    update(stat) {
+        this.statService.update(stat._id, stat).then(() => {
             this.load();
         });
     }
 
-    update(todo) {
-        this.todoService.update(todo._id, todo).then(() => {
+    delete(stat) {
+        this.statService.delete(stat._id).then(() => {
             this.load();
         });
     }
-
-    delete(todo) {
-        this.todoService.delete(todo._id).then(() => {
-            this.load();
-        });
-    }*/
 }
