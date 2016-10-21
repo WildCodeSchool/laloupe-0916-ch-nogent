@@ -32,7 +32,7 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
         .when('/admin/categorie', {
-            templateUrl: 'views/categorie/addcategorie.html',
+            templateUrl: 'views/admin/addcategorie.html',
             controller: 'categorieController',
             controllerAs: 'vm'
         })
