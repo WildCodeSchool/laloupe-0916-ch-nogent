@@ -1,7 +1,7 @@
-class contactController {
+class actualiteController {
 
-    constructor(contactService) {
-        this.contactService = contactService;
+    constructor(actualiteService) {
+        this.actualiteService = actualiteService;
         this.load();
         $(document).ready(function() {
             $('.collapsible').collapsible({
@@ -14,8 +14,9 @@ class contactController {
         });
     }
     load() {
-        this.contactService.getAll().then((res) => {
-            this.contacts = res.data;
+        this.actualiteService.getAll().then((res) => {
+            this.actualite = res.data;
+            this.actualites = res.data[0];
         });
     }
 }

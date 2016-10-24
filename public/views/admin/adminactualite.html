@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-12 col-md-10 col-md-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+        <h2>Editer la page Actualité </h2>
+        <form class="form-inline">
+            <div class="form-group">
+                <p>Titre de la page Actualité<input type="text" class="form-control" placeholder="Titre de la page Actualité" ng-model='vm.actualites.titre'></p>
+                <p>Contenu de la page Actualité</p><textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.actualites.texte'></textarea>
+            </div>
+            <button ng-click='vm.create2()' class="btn btn-default">Enregistrer</button>
+        </form>
+
+    </div>
+</div>

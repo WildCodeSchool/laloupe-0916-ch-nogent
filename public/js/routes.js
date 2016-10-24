@@ -8,17 +8,22 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/admin/contact', {
             templateUrl: 'views/admin/addcontact.html',
-            controller: 'contactController',
+            controller: 'admin/contactController',
+            controllerAs: 'vm'
+        })
+        .when('/admin/actualite', {
+            templateUrl: 'views/admin/adminactualite.html',
+            controller: 'admin/actualiteController',
             controllerAs: 'vm'
         })
         .when('/admin/stat', {
             templateUrl: 'views/admin/stat.html',
-            controller: 'statController',
+            controller: 'admin/statController',
             controllerAs: 'vm'
         })
         .when('/admin/praticien', {
             templateUrl: 'views/admin/adddoctor.html',
-            controller: 'annuaireController',
+            controller: 'admin/annuaireController',
             controllerAs: 'vm'
         })
         .when('/apropos', {
@@ -28,7 +33,7 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/admin/apropos', {
             templateUrl: 'views/admin/adminapropos.html',
-            controller: 'aproposController',
+            controller: 'admin/aproposController',
             controllerAs: 'vm'
         })
         .when('/annuaire', {
@@ -37,8 +42,8 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
         .when('/admin/categorie', {
-            templateUrl: 'views/categorie/addcategorie.html',
-            controller: 'categorieController',
+            templateUrl: 'views/admin/addcategorie.html',
+            controller: 'admin/categorieController',
             controllerAs: 'vm'
         })
         .when('/service/:id', {
@@ -51,6 +56,11 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'contactController',
             controllerAs: 'vm'
         })
+        .when('/actualite', {
+            templateUrl: 'views/actualite/actualite.html',
+            controller: 'actualiteController',
+            controllerAs: 'vm'
+        })
         .when('/editor', {
             templateUrl: 'views/admin/editor.html',
             controller: 'mainController',
@@ -60,7 +70,9 @@ const routes = ($routeProvider, $httpProvider) => {
             templateUrl: 'views/ehpad/ehpad.html',
         })
         .when('/legals', {
-            templateUrl: 'views/mentions/legals.html'
+            templateUrl: 'views/mentions/legals.html',
+            controller: 'aproposController',
+            controllerAs: 'vm'
         })
         .when('/login', {
             templateUrl: 'views/login.html',
@@ -69,22 +81,22 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/btn1', {
             templateUrl: 'views/addMainBtn/btn1.html',
-            controller: 'btn1Controller',
+            controller: 'admin/btn1Controller',
             controllerAs: 'vm'
         })
         .when('/btn2', {
             templateUrl: 'views/addMainBtn/btn2.html',
-            controller: 'btn2Controller',
+            controller: 'admin/btn2Controller',
             controllerAs: 'vm'
         })
         .when('/btn3', {
             templateUrl: 'views/addMainBtn/btn3.html',
-            controller: 'btn3Controller',
+            controller: 'admin/btn3Controller',
             controllerAs: 'vm'
         })
         .when('/btn4', {
             templateUrl: 'views/addMainBtn/btn4.html',
-            controller: 'btn4Controller',
+            controller: 'admin/btn4Controller',
             controllerAs: 'vm'
         })
         .otherwise({

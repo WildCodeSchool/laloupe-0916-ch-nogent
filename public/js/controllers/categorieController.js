@@ -1,33 +1,23 @@
 class categorieController {
 
-    constructor(categorieService) {
-      this.categorieService = categorieService;
-      this.load();
+    constructor(categorieService, $routeParams) {
+        this.$routeParams = $routeParams;
 
-        }
-        load() {
-            this.categorieService.getAll().then((res) => {
-                this.categories = res.data;
+        this.categorieService = categorieService;
+        this.load();
+
+    }
+    load() {
+        this.categorieService.getOne(this.$routeParams.id).then((res) => {
+            this.categorie = res.data; //1x actuelle
+            this.categorieService.getChildrenOf(this.categorie._id).then((res) => {
+                this.categoriesEnfant = res.data; //Xx les enfants de actuelle
             });
-        }
-
-        create() {
-            this.categorieService.create(this.categorie).then(() => {
-
-                this.categorie = {};
-                this.load();
-            });
-        }
-
-        update(categorie) {
-            this.categorieService.update(categorie._id, categorie).then(() => {
-                this.load();
-            });
-        }
-
-        delete(categorie) {
-            this.categorieService.delete(categorie._id).then(() => {
-                this.load();
-            });
-        }
+            if(this.categorie.parent != "0") {
+                this.categorieService.getOne(this.categorie.idparent).then((res) => {
+                    this.categorieParent = res.data; //1x le parent de actuelle SI != de 0
+                });
+            }
+        });
+    }
 }

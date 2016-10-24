@@ -8,7 +8,20 @@ class navbarController {
         this.$rootScope = $rootScope;
         this.$location = $location;
 
-
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > $('#scrollspy').height()) {
+                $('#push').addClass('navbar-fixed');
+                $('#topFixed').css({
+                    'margin-top': '100px'
+                });
+            }
+            if ($(window).scrollTop() < $('#scrollspy').height()) {
+                $('#push').removeClass('navbar-fixed');
+                $('#topFixed').css({
+                    'margin-top': '0'
+                });
+            }
+        });
 
 
         $rootScope.$on('loginStatusChanged', (event, isLogged) => {
@@ -31,7 +44,7 @@ class navbarController {
     }
 
     loadCategories() {
-        this.categorieService.getParent('0').then((res) => {
+        this.categorieService.getChildrenOf('0').then((res) => {
             this.categories = res.data;
             setTimeout(function() {
                 $(".dropdown-button").dropdown();

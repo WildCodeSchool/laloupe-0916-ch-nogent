@@ -1,30 +1,30 @@
 import mongoose from 'mongoose';
 
-const aproposSchema = new mongoose.Schema({
+const actualiteSchema = new mongoose.Schema({
     titre: String,
     texte: String
 });
 
-let model = mongoose.model('Apropos', aproposSchema);
+let model = mongoose.model('Actualite', actualiteSchema);
 
-export default class Apropos {
+export default class Actualite {
 
     findAll(req, res) {
-        model.find({}, (err, aproposs) => {
+        model.find({}, (err, actualites) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(aproposs);
+                res.json(actualites);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, apropos) => {
-            if (err || !apropos) {
+        model.findById(req.params.id, (err, actualite) => {
+            if (err || !actualite) {
                 res.sendStatus(403);
             } else {
-                res.json(apropos);
+                res.json(actualite);
             }
         });
     }
@@ -34,24 +34,23 @@ export default class Apropos {
                 titre: req.body.titre,
                 texte: req.body.texte
             },
-            (err, apropos) => {
+            (err, actualite) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(apropos);
+                    res.json(actualite);
                 }
             });
     }
 
     update(req, res) {
         model.update({
-          titre: req.body.titre,
-          texte: req.body.texte
-        }, req.body, (err, apropos) => {
-            if (err || !apropos) {
+            _id: req.params.id
+        }, req.body, (err, actualite) => {
+            if (err || !actualite) {
                 res.status(500).send(err.message);
             } else {
-                res.json(apropos);
+                res.json(actualite);
             }
         });
     }

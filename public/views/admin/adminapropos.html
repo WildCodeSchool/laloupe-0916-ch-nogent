@@ -1,12 +1,12 @@
 <div class="row">
     <div class="col-xs-12 col-md-10 col-md-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-        <h2>Ajouter un apropos </h2>
+        <h2>Editer la page A propos </h2>
         <form class="form-inline">
             <div class="form-group">
-                <p>titre du service <input type="text" class="form-control" placeholder="titre du service" ng-model='vm.aproposs.titre'></p>
-                <p>Numero(s)<input type="text" class="form-control" placeholder="Tout les numéros, ex: NumeroDuService:0123456789, SecondNumeroDuService:0213456789" ng-model='vm.aproposs.texte'></p>
+                <p>Titre de la page A propos<input type="text" class="form-control" ng-model='vm.aproposs.titre'></p>
+                <p>Contenu de la page A propos</p><textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.aproposs.texte'></textarea>
             </div>
-            <button ng-click='vm.create2()' class="btn btn-default">Enregistrer</button>
+            <button ng-click='vm.create2(aproposs)' class="btn btn-default">Enregistrer</button>
         </form>
 
     </div>
