@@ -10,7 +10,8 @@
     "jquery": "^2.2.2",
     "angular": "^1.5.6",
     "angular-route": "^1.5.6",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "angular-sanitize": "^1.5.8"
   },
   "ignore": [
     "**/.*",
@@ -25,5 +26,8 @@
     "package.json",
     "_includes",
     "_layouts"
-  ]
+  ],
+  "devDependencies": {
+    "angular-ui-tinymce": "^0.0.17"
+  }
 }

@@ -57,7 +57,7 @@
                             <div class="card-content white-text">
                                 <h6 class="black-text flow-text">Spécialités</h6>
                                 <p class="rdv1">
-                                    {{vm.btn1.texte1}}
+                                    <div ng-bind-html='vm.btn1.texte1'></div>
                                 </p>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                             <div class="card-content white-text">
                                 <h6 class="black-text flow-text">Contact</h6>
                                 <p class="rdv2">
-                                    {{vm.btn1.texte2}}
+                                    <div ng-bind-html='vm.btn1.texte2'></div>
                                 </p>
                             </div>
                         </div>
@@ -77,7 +77,7 @@
                             <div class="card-content white-text">
                                 <h6 class="black-text flow-text">Documents à apporter</h6>
                                 <p class="rdv3">
-                                    {{vm.btn1.texte3}}
+                                    <div ng-bind-html='vm.btn1.texte3'></div>
                                 </p>
                             </div>
                         </div>
@@ -87,39 +87,38 @@
         </div>
     </div>
 
-    <!--div ng-show "je vais etre hospitalisé"-->
-    <div class="container-fluid sub-menu-hospitalise" id="scroll2">
-        <div ng-show='vm.isLoad1'>
-            <div class="row hospitalise">
-                <div class="blochospitalise">
-                    <div class="col s12 m4 l4">
-                        <div class="card cardconsults purple lighten-1">
-                            <div class="card-content white-text">
-                                <h6 class="black-text flow-text">Votre entrée</h6>
-                                <p class="hosp1">
-                                    {{vm.btn2.texte1}}
-                                </p>
-                            </div>
+<!--div ng-show "je vais etre hospitalisé"-->
+<div class="container-fluid sub-menu-hospitalise" id="scroll2">
+    <div ng-show='vm.isLoad1'>
+        <div class="row hospitalise">
+            <div class="blochospitalise">
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults purple lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Votre entrée</h6>
+                            <p class="hosp1">
+                                  <div ng-bind-html='vm.btn2.texte1'></div>
+                          </p>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4">
-                        <div class="card cardconsults purple lighten-1">
-                            <div class="card-content white-text">
-                                <h6 class="black-text flow-text">Votre séjour</h6>
-                                <p class="hosp2">
-                                    {{vm.btn2.texte2}}
-                                </p>
-                            </div>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults purple lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Votre séjour</h6>
+                            <p class="hosp2">
+                                <div ng-bind-html='vm.btn2.texte2'></div>
+                          </p>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4">
-                        <div class="card cardconsults purple lighten-1">
-                            <div class="card-content white-text">
-                                <h6 class="black-text flow-text">Votre sortie</h6>
-                                <p class="hosp3">
-                                    {{vm.btn2.texte3}}
-                                </p>
-                            </div>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults purple lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Votre sortie</h6>
+                            <p class="hosp3">
+                                <div ng-bind-html='vm.btn2.texte3'></div>
+                          </p>
                         </div>
                     </div>
                 </div>
@@ -128,49 +127,48 @@
 
     </div>
 
-    <!--div ng-show "je vais entrer en ehpad"-->
-    <div class="container-fluid sub-menu-ehpad" id="scroll3">
-        <div ng-show='vm.isLoad2'>
-            <div class="row ehpad">
-                <div class="blocehpad">
-                    <div class="col s12 m6 l3">
-                        <div class="card cardconsults orange lighten-1">
-                            <div class="card-content white-text">
-                                <h6 class="black-text flow-text">Votre entrée</h6>
-                                <p class="ehpad1">
-                                    {{vm.btn3.texte1}}
-                                </p>
-                            </div>
+<!--div ng-show "je vais entrer en ehpad"-->
+<div class="container-fluid sub-menu-ehpad" id="scroll3">
+    <div ng-show='vm.isLoad2'>
+        <div class="row ehpad">
+            <div class="blocehpad">
+                <div class="col s12 m6 l3">
+                    <div class="card cardconsults orange lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Votre entrée</h6>
+                            <p class="ehpad1">
+                                <div ng-bind-html='vm.btn3.texte1'></div>
+                          </p>
                         </div>
                     </div>
-                    <div class="col s12 m6 l3">
-                        <div class="card cardconsults orange lighten-1">
-                            <div class="card-content white-text">
-                                <h6 class="black-text flow-text">Votre sortie</h6>
-                                <p class="ehpad2">
-                                    {{vm.btn3.texte2}}
-                                </p>
-                            </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card cardconsults orange lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Votre sortie</h6>
+                            <p class="ehpad2">
+                                <div ng-bind-html='vm.btn3.texte2'></div>
+                          </p>
                         </div>
                     </div>
-                    <div class="col s12 m6 l3">
-                        <div class="card cardconsults orange lighten-1">
-                            <div class="card-content white-text">
-                                <h6 class="black-text flow-text">Animations</h6>
-                                <p class="ehpad3">
-                                    {{vm.btn3.texte3}}
-                                </p>
-                            </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card cardconsults orange lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Animations</h6>
+                            <p class="ehpad3">
+                                <div ng-bind-html='vm.btn3.texte3'></div>
+                          </p>
                         </div>
                     </div>
-                    <div class="col s12 m6 l3">
-                        <div class="card cardconsults orange lighten-1">
-                            <div class="card-content white-text">
-                                <h6 class="black-text flow-text">À télécharger</h6>
-                                <p class="ehpad4">
-                                    {{vm.btn3.texte4}}
-                                </p>
-                            </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card cardconsults orange lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">À télécharger</h6>
+                            <p class="ehpad4">
+                                <div ng-bind-html='vm.btn3.texte4'></div>
+                          </p>
                         </div>
                     </div>
                 </div>
@@ -178,41 +176,38 @@
         </div>
     </div>
 
-    <!--div ng-show "je vais voir un patient"-->
-    <div class="container-fluid sub-menu-patient" id="scroll4">
-        <div ng-show='vm.isLoad3'>
-            <div class="row patient">
-                <div class="blocpatient">
-                    <div class="col s12 m4 l4">
-                        <div class="card cardconsults teal lighten-1">
-                            <div class="card-content white-text">
-                                <h6 class="black-text flow-text">Mes visites</h6>
-                                <p class="visiter1">
-                                    {{vm.btn4.texte1}}
-                                </p>
-                            </div>
+<!--div ng-show "je vais voir un patient"-->
+<div class="container-fluid sub-menu-patient" id="scroll4">
+    <div ng-show='vm.isLoad3'>
+        <div class="row patient">
+            <div class="blocpatient">
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults teal lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text">Mes visites</h6>
+                              <p class="visiter1">
+                                  <div ng-bind-html='vm.btn4.texte1'></div>
+                            </p>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4">
-                        <div class="card cardconsults teal lighten-1">
-                            <div class="card-content white-text">
-                                <h6 class="black-text flow-text">
-                                    Le parking</h6>
-                                <p class="visiter2">
-                                    {{vm.btn4.texte2}}
-                                </p>
-                            </div>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults teal lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text"> Le parking</h6>
+                            <p class= "visiter2">
+                                  <div ng-bind-html='vm.btn4.texte2'></div>
+                            </p>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4">
-                        <div class="card cardconsults teal lighten-1">
-                            <div class="card-content white-text">
-                                <h6 class="black-text flow-text">
-                                    Le parking</h6>
-                                <p class="visiter2">
-                                    {{vm.btn4.texte3}}
-                                </p>
-                            </div>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="card cardconsults teal lighten-1">
+                        <div class="card-content white-text">
+                            <h6 class="black-text flow-text"> Le parking</h6>
+                            <p class= "visiter2">
+                                  <div ng-bind-html='vm.btn4.texte3'></div>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -230,14 +225,7 @@
                 <div class="card-stacked">
                     <div class="card-content">
                         <p class="flow-text center-align textevue">
-                            <iframe
-                                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Faezfefezfadzdza%2F&tabs=timeline&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                                width="340"
-                                height="500"
-                                style="border:none;overflow:hidden"
-                                scrolling="no"
-                                frameborder="0"
-                                allowTransparency="true"></iframe>
+
                         </p>
                     </div>
                 </div>

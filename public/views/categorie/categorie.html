@@ -9,7 +9,7 @@
               <div class="card-stacked">
                   <div class="card-content sidenav">
                       <img class="left responsive-img" ng-src="{{ vm.categorie.photo }}" alt="photo de l'hopital"/>
-                      <p id="cardtext" class="flow-text justify">
+                      <p id="cardtext" class="flow-text justify"><div ng-bind-html='vm.categorie.texte'></div>
                           {{ vm.categorie.texte }}
                       </p>
                       <a href="{{ vm.categorie.lien }}" class="vwtitle" target="_blank">{{ vm.categorie.lien }}</a>

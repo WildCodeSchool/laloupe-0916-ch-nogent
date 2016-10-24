@@ -4,7 +4,7 @@
         <form class="form-inline">
             <div class="form-group">
                 <p>Titre de la page Actualité<input type="text" class="form-control" placeholder="Titre de la page Actualité" ng-model='vm.actualites.titre'></p>
-                <p>Contenu de la page Actualité<input type="text" class="form-control" placeholder="Contenu de la page Actualité" ng-model='vm.actualites.texte'></p>
+                <p>Contenu de la page Actualité</p><textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.actualites.texte'></textarea>
             </div>
             <button ng-click='vm.create2()' class="btn btn-default">Enregistrer</button>
         </form>
