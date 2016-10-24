@@ -3,10 +3,10 @@
         <h2>Editer la page A propos </h2>
         <form class="form-inline">
             <div class="form-group">
-                <p>Titre de la page A propos<input type="text" class="form-control" placeholder="Titre de la page A propos" ng-model='vm.aproposs.titre'></p>
-                <p>Contenu de la page A propos<input type="text" class="form-control" placeholder="Contenu de la page A propos" ng-model='vm.aproposs.texte'></p>
+                <p>Titre de la page A propos<input type="text" class="form-control" ng-model='vm.aproposs.titre'></p>
+                <p>Contenu de la page A propos</p><textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.aproposs.texte'></textarea>
             </div>
-            <button ng-click='vm.create2()' class="btn btn-default">Enregistrer</button>
+            <button ng-click='vm.create2(aproposs)' class="btn btn-default">Enregistrer</button>
         </form>
 
     </div>

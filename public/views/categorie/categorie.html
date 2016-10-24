@@ -10,7 +10,7 @@
                 <div class="card-stacked">
                     <div class="card-content">
                         <img class="left responsive-img" ng-src="{{ vm.categorie.photo }}" alt="photo de l'hopital"/>
-                        <p id="cardtext" class="flow-text justify">{{ vm.categorie.texte }}</p>
+                        <p id="cardtext" class="flow-text justify"><div ng-bind-html='vm.categorie.texte'></div></p>
                     </div>
                 </div>
             </div>

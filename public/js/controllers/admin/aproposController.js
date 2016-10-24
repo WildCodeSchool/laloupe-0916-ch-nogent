@@ -2,16 +2,12 @@ class adminaproposController {
 
     constructor(aproposService) {
         this.aproposService = aproposService;
-        this.load();
-        $(document).ready(function() {
-            $('.collapsible').collapsible({
-                accordion: false
-            });
-            $(document).ready(function() {
-                $('select').material_select();
-            });
 
-        });
+        this.tinymceOptions = {
+            plugins: 'link image code',
+            toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
+        };
+        this.load();
     }
     load() {
         this.aproposService.getAll().then((res) => {

@@ -45,7 +45,8 @@ export default class Apropos {
 
     update(req, res) {
         model.update({
-            _id: req.params.id
+          titre: req.body.titre,
+          texte: req.body.texte
         }, req.body, (err, apropos) => {
             if (err || !apropos) {
                 res.status(500).send(err.message);
