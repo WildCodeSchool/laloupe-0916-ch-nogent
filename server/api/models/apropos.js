@@ -1,48 +1,44 @@
 import mongoose from 'mongoose';
 
-const statSchema = new mongoose.Schema({
-    texte1: String,
-    texte2: String,
-    texte3: String,
-    texte4: String
+const aproposSchema = new mongoose.Schema({
+    titre: String,
+    texte: String
 });
 
-let model = mongoose.model('Stat', statSchema);
+let model = mongoose.model('Apropos', aproposSchema);
 
-export default class Stat {
+export default class Apropos {
 
     findAll(req, res) {
-        model.find({}, (err, stats) => {
+        model.find({}, (err, aproposs) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(stats);
+                res.json(aproposs);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, stat) => {
-            if (err || !stat) {
+        model.findById(req.params.id, (err, apropos) => {
+            if (err || !apropos) {
                 res.sendStatus(403);
             } else {
-                res.json(stat);
+                res.json(apropos);
             }
         });
     }
 
     create(req, res) {
         model.create({
-                texte1: req.body.texte1,
-                texte2: req.body.texte2,
-                texte3: req.body.texte3,
-                texte4: req.body.texte4
+                titre: req.body.titre,
+                texte: req.body.texte
             },
-            (err, stat) => {
+            (err, apropos) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(stat);
+                    res.json(apropos);
                 }
             });
     }
@@ -50,16 +46,11 @@ export default class Stat {
     update(req, res) {
         model.update({
             _id: req.params.id
-        }, {
-          texte1: req.body.texte1,
-          texte2: req.body.texte2,
-          texte3: req.body.texte3,
-          texte4: req.body.texte4
-        }, (err, stat) => {
-            if (err || !stat) {
+        }, req.body, (err, apropos) => {
+            if (err || !apropos) {
                 res.status(500).send(err.message);
             } else {
-                res.json(stat);
+                res.json(apropos);
             }
         });
     }

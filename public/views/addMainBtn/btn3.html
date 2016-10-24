@@ -1,0 +1,54 @@
+<h4>Je entrer en EHPAD hospitalisé</h4>
+<div class="row">
+    <div class="col s12 m6 l3 ehpad1">
+        <h6>Votre entrée</h6>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea ng-model='vm.btn3.texte1' id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Saisir votre texte</label>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+
+    <div class="col s12 m6 l3 ehpad2">
+        <h6>Votre séjour</h6>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea ng-model='vm.btn3.texte2' id="textarea2" class="materialize-textarea"></textarea>
+                <label for="textarea1">Saisir votre texte</label>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+
+    <div class="col s12 m6 l3 ehpad3">
+        <h6>Animations</h6>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea ng-model='vm.btn3.texte3' id="textarea3" class="materialize-textarea"></textarea>
+                <label for="textarea1">Saisir votre texte</label>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    <div class="col s12 m6 l3 ehpad4">
+        <h6>A télécharger</h6>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea ng-model='vm.btn3.texte4' id="textarea3" class="materialize-textarea"></textarea>
+                <label for="textarea1">Saisir votre texte</label>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+</div>
+<div class="row">
+    <div class= "col s12 m4 l2 offset-l9">
+        <button ng-click='vm.create()' class="btn btn-default right" onclick="Materialize.toast('Contenu ajouté avec succès !', 4000, 'rounded')">Ajouter</button>
+    </div>
+</div>

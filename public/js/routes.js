@@ -1,6 +1,6 @@
 const routes = ($routeProvider, $httpProvider) => {
 
-    $routeProvider 
+    $routeProvider
         .when('/', {
             templateUrl: 'views/main.html',
             controller: 'mainController',
@@ -11,9 +11,24 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'contactController',
             controllerAs: 'vm'
         })
+        .when('/admin/stat', {
+            templateUrl: 'views/admin/stat.html',
+            controller: 'statController',
+            controllerAs: 'vm'
+        })
         .when('/admin/praticien', {
             templateUrl: 'views/admin/adddoctor.html',
             controller: 'annuaireController',
+            controllerAs: 'vm'
+        })
+        .when('/apropos', {
+            templateUrl: 'views/apropos/apropos.html',
+            controller: 'aproposController',
+            controllerAs: 'vm'
+        })
+        .when('/admin/apropos', {
+            templateUrl: 'views/admin/adminapropos.html',
+            controller: 'aproposController',
             controllerAs: 'vm'
         })
         .when('/annuaire', {
@@ -50,6 +65,26 @@ const routes = ($routeProvider, $httpProvider) => {
         .when('/login', {
             templateUrl: 'views/login.html',
             controller: 'loginController',
+            controllerAs: 'vm'
+        })
+        .when('/btn1', {
+            templateUrl: 'views/addMainBtn/btn1.html',
+            controller: 'btn1Controller',
+            controllerAs: 'vm'
+        })
+        .when('/btn2', {
+            templateUrl: 'views/addMainBtn/btn2.html',
+            controller: 'btn2Controller',
+            controllerAs: 'vm'
+        })
+        .when('/btn3', {
+            templateUrl: 'views/addMainBtn/btn3.html',
+            controller: 'btn3Controller',
+            controllerAs: 'vm'
+        })
+        .when('/btn4', {
+            templateUrl: 'views/addMainBtn/btn4.html',
+            controller: 'btn4Controller',
             controllerAs: 'vm'
         })
         .otherwise({

@@ -12,3 +12,20 @@
 
     </div>
 </div>
+<table ng-hide="vm.contacts.length < 1">
+   <tr>
+       <th>Nom </th>
+       <th>Numero</th>
+       <th>Adresse mail </th>
+       <th>Supprimer</th>
+       <th>Editer</th>
+   </tr>
+
+   <tr  ng-repeat='contact in vm.contacts | filter:searchText | orderBy:"+contact"'>
+        <td><input ng-model="contact.nom"></input></td>
+       <td><input ng-model="contact.telephone"></input></td>
+       <td><input ng-model="contact.email"></input></td>
+       <td><button ng-click='vm.delete(contact)' class="btn btn-danger">Delete</button></td>
+       <td><button ng-click='vm.update(contact)' class="btn btn-danger">Editer</button></td>
+   </tr>
+</table>

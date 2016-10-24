@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-xs-12 col-md-10 col-md-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-        <h2>Ajouter un docteur </h2>
+        <h2>Ajouter un praticien </h2>
         <form class="form-inline">
             <div class="form-group">
                 <p><input type="text" class="form-control" placeholder="Nom et prénom" ng-model='vm.annuaire.nom'></p>
@@ -12,3 +12,22 @@
 
     </div>
 </div>
+
+
+<table ng-hide="vm.annuaires.length < 1">
+   <tr>
+       <th>Nom </th>
+       <th>Specialité </th>
+       <th>Numero</th>
+       <th>Supprimer</th>
+       <th>Editer</th>
+   </tr>
+
+   <tr  ng-repeat='annuaire in vm.annuaires | filter:searchText | orderBy:"+annuaire"'>
+        <td><input ng-model="annuaire.nom"></input></td>
+       <td><input ng-model="annuaire.fonction"></input></td>
+       <td><input ng-model="annuaire.telephone"></input></td>
+       <td><button ng-click='vm.delete(annuaire)' class="btn btn-danger">Delete</button></td>
+       <td><button ng-click='vm.update(annuaire)' class="btn btn-danger">Editer</button></td>
+   </tr>
+</table>

@@ -4,62 +4,11 @@
 
 <div class="container">
   <div class="row col s8">
-    <div class="row col s10 offset-s1">
-      <a href="#">a</a>
-      <span class="alpha">-</span>
-      <a href="#">b</a>
-      <span class="alpha">-</span>
-      <a href="#">c</a>
-      <span class="alpha">-</span>
-      <a href="#">d</a>
-      <span class="alpha">-</span>
-      <a href="#">e</a>
-      <span class="alpha">-</span>
-      <a href="#">f</a>
-      <span class="alpha">-</span>
-      <a href="#">g</a>
-      <span class="alpha">-</span>
-      <a href="#">h</a>
-      <span class="alpha">-</span>
-      <a href="#">i</a>
-      <span class="alpha">-</span>
-      <a href="#">j</a>
-      <span class="alpha">-</span>
-      <a href="#">k</a>
-      <span class="alpha">-</span>
-      <a href="#">l</a>
-      <span class="alpha">-</span>
-      <a href="#">m</a>
-      <span class="alpha">-</span>
-      <a href="#">n</a>
-      <span class="alpha">-</span>
-      <a href="#">o</a>
-      <span class="alpha">-</span>
-      <a href="#">p</a>
-      <span class="alpha">-</span>
-      <a href="#">q</a>
-      <span class="alpha">-</span>
-      <a href="#">r</a>
-      <span class="alpha">-</span>
-      <a href="#">s</a>
-      <span class="alpha">-</span>
-      <a href="#">t</a>
-      <span class="alpha">-</span>
-      <a href="#">u</a>
-      <span class="alpha">-</span>
-      <a href="#">v</a>
-      <span class="alpha">-</span>
-      <a href="#">w</a>
-      <span class="alpha">-</span>
-      <a href="#">x</a>
-      <span class="alpha">-</span>
-      <a href="#">y</a>
-      <span class="alpha">-</span>
-      <a href="#">z</a>
-    </div>
+    <h4 style="text-align:center;color:red">Rechercher un praticien</h4>
+    <label> <input placeholder="Nom,prenom ou spécialité du praticien" ng-model="searchText" style="width:30%;margin-left:35%"></label>
   </div>
 <div class="row">
-  <div class="col s4 offset-s4 panel panel-default" ng-repeat='annuaire in vm.annuaires | orderBy: "description"'>
+  <div class="col s3 offset-s1 panel panel-default" ng-repeat='annuaire in vm.annuaires | filter:searchText | orderBy:"+annuaire"'>
       <div class="panel-body">
           <form class="form-inline">
               <div class="form-group">
@@ -69,7 +18,7 @@
                   <p>Numero : {{annuaire.telephone}}</p>
               </div>
               <br>
-              <hr/><!--<button ng-click='vm.delete(todo)' class="btn btn-danger">Delete</button>-->
+              <hr/>
           </form>
       </div>
   </div>

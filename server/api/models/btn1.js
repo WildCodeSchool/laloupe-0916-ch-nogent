@@ -1,32 +1,31 @@
 import mongoose from 'mongoose';
 
-const statSchema = new mongoose.Schema({
+const btn1Schema = new mongoose.Schema({
     texte1: String,
     texte2: String,
-    texte3: String,
-    texte4: String
+    texte3: String
 });
 
-let model = mongoose.model('Stat', statSchema);
+let model = mongoose.model('Btn1', btn1Schema);
 
-export default class Stat {
+export default class Btn1 {
 
     findAll(req, res) {
-        model.find({}, (err, stats) => {
+        model.find({}, (err, btn1s) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(stats);
+                res.json(btn1s);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, stat) => {
-            if (err || !stat) {
+        model.findById(req.params.id, (err, btn1) => {
+            if (err || !btn1) {
                 res.sendStatus(403);
             } else {
-                res.json(stat);
+                res.json(btn1);
             }
         });
     }
@@ -35,14 +34,13 @@ export default class Stat {
         model.create({
                 texte1: req.body.texte1,
                 texte2: req.body.texte2,
-                texte3: req.body.texte3,
-                texte4: req.body.texte4
+                texte3: req.body.texte3
             },
-            (err, stat) => {
+            (err, btn1) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(stat);
+                    res.json(btn1);
                 }
             });
     }
@@ -51,15 +49,14 @@ export default class Stat {
         model.update({
             _id: req.params.id
         }, {
-          texte1: req.body.texte1,
-          texte2: req.body.texte2,
-          texte3: req.body.texte3,
-          texte4: req.body.texte4
-        }, (err, stat) => {
-            if (err || !stat) {
+            texte1: req.body.texte1,
+            text2: req.body.texte2,
+            texte: req.body.texte3
+        }, (err, btn1) => {
+            if (err || !btn1) {
                 res.status(500).send(err.message);
             } else {
-                res.json(stat);
+                res.json(btn1);
             }
         });
     }
@@ -71,6 +68,6 @@ export default class Stat {
             } else {
                 res.sendStatus(200);
             }
-        });
+        })
     }
 }

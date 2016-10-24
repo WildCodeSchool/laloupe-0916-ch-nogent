@@ -8,7 +8,8 @@ class contactService {
     create(data) {
         return this.$http.post('/api/contacts', {
           nom: data.nom,
-          telephone: data.telephone
+          telephone: data.telephone,
+          email: data.email
         });
     }
 
@@ -23,7 +24,8 @@ class contactService {
     update(id, data) {
         return this.$http.put('/api/contacts/' + id, {
           nom: data.nom,
-          telephone: data.telephone
+          telephone: data.telephone,
+          email: data.email
         });
     }
 
