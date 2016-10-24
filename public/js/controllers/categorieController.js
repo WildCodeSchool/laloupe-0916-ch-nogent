@@ -14,7 +14,7 @@ class categorieController {
                 this.categoriesEnfant = res.data; //Xx les enfants de actuelle
             });
             if(this.categorie.parent != "0") {
-                this.categorieService.getOne(this.categorie.parent).then((res) => {
+                this.categorieService.getOne(this.categorie.idparent).then((res) => {
                     this.categorieParent = res.data; //1x le parent de actuelle SI != de 0
                 });
             }

@@ -53,8 +53,8 @@
         <nav>
             <div class="nav-wrapper" id="scrollspy">
 
-                <ul class="left textevue">
-                    <li class="phone textevue">
+                <ul class="left">
+                    <li class="phone">
                         <a>
                             <i class="material-icons phoneIcon left">call</i>
                             02.37.53.75.75</a>
@@ -63,16 +63,16 @@
                         <a class="modal-trigger1 bolder" href="#modal1">Accessibilité</a>
                     </li>
                 </ul>
-                <ul class="right textevue">
+                <ul class="right">
                     <li>
-                        <a class="btn-urgence textevue" ng-click='vm.toggleEmergencies()'>
+                        <a class="btn-urgence " ng-click='vm.toggleEmergencies()'>
                             <i class="material-icons left">airport_shuttle</i>Urgences</a>
                     </li>
                     <!--<li>
-                    <a href="#" class="textevue">Recrutement</a>
+                    <a href="#" class="">Recrutement</a>
                 </li>-->
                     <li>
-                        <a href="/#/contact" class="textevue">Contact</a>
+                        <a href="/#/contact">Contact</a>
                     </li>
                     <li></li>
                 </ul>
@@ -94,7 +94,7 @@
             <ul class="collection with-header">
                 <li class="collection-item card-panel grey lighten-5 z-depth-1">
                     <div>
-                        <blockquote>
+                        <blockquote class="nbblockquote">
                             <i class="medium material-icons">zoom_in</i>
 
                             Augmenter les caractères.
@@ -108,7 +108,7 @@
 
                 <li class="collection-item card-panel grey lighten-5 z-depth-1">
                     <div>
-                        <blockquote>
+                        <blockquote class="nbblockquote">
                             <i class="medium material-icons">zoom_out</i>
 
                             Réduire les caractères.
@@ -122,7 +122,7 @@
 
                 <li class="collection-item card-panel grey lighten-5 z-depth-1">
                     <div>
-                        <blockquote>
+                        <blockquote class="nbblockquote">
                             <i class="medium material-icons">search</i>
                             Caractères par défaut.
                             <kbd class="secondary-content">
@@ -154,45 +154,42 @@
             </li>
         </ul>
         <nav>
-            <div id="navbardeux" class="nav-wrapper textevue">
-                <a href="/#/" class="brand-logo left" id="logo"><img src="assets/img/logo.png" alt=""/>
-                    <span class="darklink">Centre Hospitalier de Nogent-le-Rotrou</span>
-                </a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse darklink">
-                    <i class="material-icons">menu</i>
-                </a>
-                <ul class="right hide-on-med-and-down textevue">
+            <div id="navbardeux" class="nav-wrapper">
+                <a href="/#/" class="brand-logo left" id="logo"><img src="assets/img/logo.png" alt=""/></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse darklink"><i class="material-icons">menu</i></a>
+                <span id="menuTitle" class="darklink">Centre Hospitalier de Nogent-le-Rotrou</span>
+                <ul class="right hide-on-med-and-down ">
                     <li>
-                        <a class="darklink textevue" href="/#/">Accueil</a>
+                        <a class="darklink" href="/#/">Accueil</a>
                     </li>
                     <li>
                         <!-- Dropdown Trigger -->
-                        <a id="dropservice" class="dropdown-button textevue" href="#!" data-activates="dropdown2">
+                        <a id="dropservice" class="dropdown-button " href="#!" data-activates="dropdown2">
                             <i class="material-icons right arrowdropdown">arrow_drop_down</i>
                             <strong>Nos services</strong>
                         </a>
                     </li>
                     <li>
-                        <a class="darklink textevue" href="#actualite">Actualités</a>
+                        <a class="darklink" href="#actualite">Actualités</a>
                     </li>
                     <li>
-                        <a class="darklink textevue" href="#apropos">À propos</a>
+                        <a class="darklink" href="#apropos">À propos</a>
                     </li>
                 </ul>
                 <ul class="side-nav flow-text mobmenu" id="mobile-demo">
                     <li>
-                        <a class="darklink textevue" href="/#/">Accueil</a>
+                        <a class="darklink" href="/#/">Accueil</a>
                     </li>
                     <li>
-                        <a class="dropdown-button textevue" href="#!" data-activates="dropdown1">
+                        <a class="dropdown-button " href="#!" data-activates="dropdown1">
                             <strong>Nos services</strong>
                         </a>
                     </li>
                     <li>
-                        <a class="darklink textevue" href="#actualite">Actualités</a>
+                        <a class="darklink" href="#actualite">Actualités</a>
                     </li>
                     <li>
-                        <a class="darklink textevue" href="#apropos">À propos</a>
+                        <a class="darklink" href="#apropos">À propos</a>
                     </li>
                 </ul>
             </div>
