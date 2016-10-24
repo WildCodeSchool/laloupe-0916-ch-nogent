@@ -376,17 +376,29 @@ nav ul a.btn-urgence:hover {
 
 /* Global view */
 
-.card {
-    margin-top: 2%;
+.description img {
+    margin: 0 10px 0 10px;
 }
 
-.vwtitle {
-    color: black;
-    text-decoration: underline;
+.description {
+    font-size: 1.2rem;
 }
 
-.header {
-    padding-top: 2%;
+.section {
+    min-height: 80vh;
+}
+
+.circle.responsive-img {
+    width: 85%;
+}
+
+/* Navbar view services */
+
+.sidenav img {
+
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-left: 2%;
 }
 
 #cardtext {
@@ -395,32 +407,38 @@ nav ul a.btn-urgence:hover {
     margin-bottom: 2%;
 }
 
-.card-content {
-    text-align: justify;
+.categorietemplate h4 {
+    padding-top: 2%;
+    margin-left: 20%;
 }
 
-.card-content img {
-    padding-right: 2%;
-    padding-top: 1%;
-    padding-left: 2%;
+.categorietemplate h5 a {
+    color: black;
+    text-decoration: underline;
+}
+.categorietemplate .card {
+    margin-top: 2%;
+}
+#sidenavservices {
+    margin-top: 6%;
+    margin-right: 2%;
+    position: fixed;
+    list-style-type: none;
+}
+#sidenavservices a {
+    font-size: 0.6em;
+    color: black;
+
+}
+#sidenavservices a:hover {
+    color: orange;
+    border-left: solid orange 1px;
+
 }
 
-.card-action {
-    margin-left: 38%;
-}
-
-.list {
-    margin-left: 10%;
-}
-
-.box2 {
-    width: 70%;
-    margin-left: 15%;
-}
-
-.box1 {
-    width: 70%;
-    margin-left: 15%;
+#categorieHeight {
+  min-height: 700px;
+  margin-left: 10%;
 }
 
 

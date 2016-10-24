@@ -8,7 +8,20 @@ class navbarController {
         this.$rootScope = $rootScope;
         this.$location = $location;
 
-
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > $('#scrollspy').height()) {
+                $('#push').addClass('navbar-fixed');
+                $('#topFixed').css({
+                    'margin-top': '100px'
+                });
+            }
+            if ($(window).scrollTop() < $('#scrollspy').height()) {
+                $('#push').removeClass('navbar-fixed');
+                $('#topFixed').css({
+                    'margin-top': '0'
+                });
+            }
+        });
 
 
         $rootScope.$on('loginStatusChanged', (event, isLogged) => {

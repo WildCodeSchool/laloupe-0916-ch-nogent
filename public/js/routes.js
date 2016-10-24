@@ -70,7 +70,9 @@ const routes = ($routeProvider, $httpProvider) => {
             templateUrl: 'views/ehpad/ehpad.html',
         })
         .when('/legals', {
-            templateUrl: 'views/mentions/legals.html'
+            templateUrl: 'views/mentions/legals.html',
+            controller: 'aproposController',
+            controllerAs: 'vm'
         })
         .when('/login', {
             templateUrl: 'views/login.html',

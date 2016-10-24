@@ -10,21 +10,6 @@ class mainController {
 
         $(".button-collapse").sideNav();
 
-        $(window).scroll(function() {
-            if ($(window).scrollTop() > $('#scrollspy').height()) {
-                $('#push').addClass('navbar-fixed');
-                $('#topFixed').css({
-                    'margin-top': '100px'
-                });
-            }
-            if ($(window).scrollTop() < $('#scrollspy').height()) {
-                $('#push').removeClass('navbar-fixed');
-                $('#topFixed').css({
-                    'margin-top': '0'
-                });
-            }
-        });
-
         $('.slider').slider({
             full_width: true,
             height: ($(window).height() / 100 * 80)
