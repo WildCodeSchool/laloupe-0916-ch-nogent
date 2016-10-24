@@ -8,22 +8,22 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/admin/contact', {
             templateUrl: 'views/admin/addcontact.html',
-            controller: 'contactController',
+            controller: 'admin/contactController',
             controllerAs: 'vm'
         })
         .when('/admin/actualite', {
             templateUrl: 'views/admin/adminactualite.html',
-            controller: 'actualiteController',
+            controller: 'admin/actualiteController',
             controllerAs: 'vm'
         })
         .when('/admin/stat', {
             templateUrl: 'views/admin/stat.html',
-            controller: 'statController',
+            controller: 'admin/statController',
             controllerAs: 'vm'
         })
         .when('/admin/praticien', {
             templateUrl: 'views/admin/adddoctor.html',
-            controller: 'annuaireController',
+            controller: 'admin/annuaireController',
             controllerAs: 'vm'
         })
         .when('/apropos', {
@@ -33,7 +33,7 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/admin/apropos', {
             templateUrl: 'views/admin/adminapropos.html',
-            controller: 'aproposController',
+            controller: 'admin/aproposController',
             controllerAs: 'vm'
         })
         .when('/annuaire', {
@@ -43,7 +43,7 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/admin/categorie', {
             templateUrl: 'views/admin/addcategorie.html',
-            controller: 'categorieController',
+            controller: 'admin/categorieController',
             controllerAs: 'vm'
         })
         .when('/service/:id', {
@@ -79,22 +79,22 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/btn1', {
             templateUrl: 'views/addMainBtn/btn1.html',
-            controller: 'btn1Controller',
+            controller: 'admin/btn1Controller',
             controllerAs: 'vm'
         })
         .when('/btn2', {
             templateUrl: 'views/addMainBtn/btn2.html',
-            controller: 'btn2Controller',
+            controller: 'admin/btn2Controller',
             controllerAs: 'vm'
         })
         .when('/btn3', {
             templateUrl: 'views/addMainBtn/btn3.html',
-            controller: 'btn3Controller',
+            controller: 'admin/btn3Controller',
             controllerAs: 'vm'
         })
         .when('/btn4', {
             templateUrl: 'views/addMainBtn/btn4.html',
-            controller: 'btn4Controller',
+            controller: 'admin/btn4Controller',
             controllerAs: 'vm'
         })
         .otherwise({

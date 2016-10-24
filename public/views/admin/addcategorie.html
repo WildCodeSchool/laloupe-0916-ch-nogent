@@ -14,3 +14,25 @@
         </form>
     </div>
 </div>
+<table ng-hide="vm.categories.length < 1">
+   <tr>
+       <th>ID</th>
+       <th>Titre</th>
+       <th>Photo</th>
+       <th>Texte</th>
+       <th>Lien</th>
+       <th>Supprimer</th>
+       <th>Editer</th>
+   </tr>
+
+   <tr  ng-repeat='categorie in vm.categories | orderBy:"+categorie"'>
+     <td><input ng-model='categorie.idparent'></td>
+     <td><input ng-model='categorie.titre'></td>
+     <td><input ng-model='categorie.photo'></td>
+     <td><input ng-model='categorie.texte'></td>
+     <td><input ng-model='categorie.lien'></td>
+
+       <td><button ng-click='vm.delete(categorie)' class="btn btn-danger">Delete</button></td>
+       <td><button ng-click='vm.update(categorie)' class="btn btn-danger">Editer</button></td>
+   </tr>
+</table>
