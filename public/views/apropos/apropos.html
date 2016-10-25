@@ -1,4 +1,4 @@
-<div class="container textevue presentation">
+<!--<div class="container textevue presentation">
     <div class="col s12 m7 textevue">
         <h2 class="header center-align textevue">{{vm.aproposs.titre}}</h2>
         <div class="card horizontal">
@@ -7,6 +7,26 @@
                     <p class="flow-text center-align textevue">
                       <div ng-bind-html='vm.aproposs.texte'></div>
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<div id="topFixed"></div>
+<div class="container ">
+    <div class="row" id="categorieHeight">
+        <div class="col s12 m12">
+            <h4 class="header center-align">
+                <i class="material-icons"></i>
+                {{vm.aproposs.titre}}
+            </h4>
+
+            <div class="card horizontal">
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p id="cardtext" class="flow-text justify">{{vm.aproposs.texte}}</p>
+                    </div>
                 </div>
             </div>
         </div>
