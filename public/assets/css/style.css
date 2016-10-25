@@ -448,6 +448,8 @@ nav ul a.btn-urgence:hover {
 
 #categorieHeight {
   min-height: 700px;
+  hyphens: auto;
+  /*word-wrap: break-word;*/
 }
 
 
