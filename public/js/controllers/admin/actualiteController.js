@@ -3,6 +3,11 @@ class adminactualiteController {
     constructor(actualiteService) {
         this.actualiteService = actualiteService;
         this.load();
+        this.tinymceOptions = {
+            toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+            plugins: 'advlist autolink link image lists charmap autoresize textcolor'
+        };
+
         $(document).ready(function() {
             $('.collapsible').collapsible({
                 accordion: false
