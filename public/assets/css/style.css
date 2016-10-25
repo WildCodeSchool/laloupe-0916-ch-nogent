@@ -1,4 +1,4 @@
-            /* First navbar */
+/* First navbar */
 
 .phone a {
     font-size: 1.7em;
@@ -98,13 +98,13 @@ nav ul a.btn-urgence:hover {
 }
 
 #menuTitle {
-  position: absolute;
-  font-size: 1.8em;
-  padding-left: 10px;
-  font-weight: bold;
-  left: 160px;
-  right: 0px;
-  width: 500px;
+    position: absolute;
+    font-size: 1.8em;
+    padding-left: 10px;
+    font-weight: bold;
+    left: 160px;
+    right: 0px;
+    width: 500px;
 }
 
 #logo {
@@ -148,15 +148,17 @@ nav ul a.btn-urgence:hover {
 /* Slider */
 
 .row-slider {
-  height: 85vh;
+    height: 85vh;
 }
 
 .slider {
-  height: 100% !important;
+    height: 100% !important;
 }
+
 .slides {
-  height: 90% !important;
+    height: 90% !important;
 }
+
 .group-btn {
     position: absolute;
     z-index: 20;
@@ -219,13 +221,13 @@ nav ul a.btn-urgence:hover {
 }
 
 
-
 /* Menu sous bouton */
 
 .blocconsultation {
     display: flex;
     width: 100%;
 }
+
 
 /*.blocconsultation #consultation {
     display: flex;
@@ -402,10 +404,10 @@ nav ul a.btn-urgence:hover {
     width: 85%;
 }
 
+
 /* Navbar view services */
 
 .sidenav img {
-
     padding-right: 2%;
     padding-top: 1%;
     padding-left: 2%;
@@ -426,124 +428,135 @@ nav ul a.btn-urgence:hover {
     color: black;
     text-decoration: underline;
 }
+
 .categorietemplate .card {
     margin-top: 2%;
 }
+
 #sidenavservices {
     margin-top: 6%;
     margin-right: 2%;
     position: fixed;
     list-style-type: none;
 }
+
 #sidenavservices a {
     font-size: 0.6em;
     color: black;
-
 }
+
 #sidenavservices a:hover {
     color: orange;
     border-left: solid orange 1px;
-
 }
 
 #categorieHeight {
-  min-height: 700px;
-  margin-left: 10%;
+    min-height: 700px;
+    margin-left: 10%;
 }
 
 
 /* Responsive */
 
+@media screen and (min-width: 994px) and (max-width: 1300px) {
+    #logo {
+        padding-left: 10px;
+    }
+    #menuTitle {
+        width: 30%;
+        line-height: 40px;
+        padding-top: 10px;
+        left: 110px;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 993px) {
-
-  .group-btn {
-    top:55%;
-  }
-
-  .cont-btn, .sliderbtn {
-    margin-top: 2%;
-    height: 130px;
-  }
+    #mainTitle {
+        font-size: 5em;
+    }
+    .group-btn {
+        top: 55%;
+    }
+    .cont-btn, .sliderbtn {
+        margin-top: 2%;
+        height: 130px;
+    }
 }
 
 @media screen and (min-width: 600px) and (max-width: 767px) {
-  #mainTitle {
-    font-size: 4em;
-  }
-
-  .group-btn {
-    top:52%;
-  }
-
-  .cont-btn, .sliderbtn {
-    margin-top: 2%;
-    height: 145px;
-  }
+    #mainTitle {
+        font-size: 4em;
+    }
+    .group-btn {
+        top: 52%;
+    }
+    .cont-btn, .sliderbtn {
+        margin-top: 2%;
+        height: 145px;
+    }
 }
 
 @media screen and (min-width: 401px) and (max-width: 599px) {
-
-  #scrollspy {
-      display: flex;
-      flex-direction: column;
-      height: 100px;
-  }
-  #scrollspy .right {
-      width: 100%;
-  }
-
-  #menuTitle {
-      line-height: 30px;
-      width: 70%;
-}
-  .row-slider, .slider {
-    height: 60vh !important;
-  }
-
-  #mainTitle {
-    font-size: 4em;
-  }
-
-  .group-btn {
-    position: relative;
-  }
-
-  .cont-btn, .sliderbtn {
-    margin-top: 2%;
-    height: 145px;
-  }
+    #scrollspy {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+    }
+    #scrollspy .right {
+        width: 100%;
+    }
+    #menuTitle {
+        line-height: 30px;
+        width: 70%;
+    }
+    .row-slider, .slider {
+        height: 60vh !important;
+    }
+    #mainTitle {
+        font-size: 4em;
+    }
+    .group-btn {
+        position: relative;
+    }
+    .cont-btn, .sliderbtn {
+        margin-top: 2%;
+        height: 145px;
+    }
 }
 
 @media screen and (max-width: 400px) {
-
-  #scrollspy {
-      display: flex;
-      flex-direction: column;
-      height: 100px;
-  }
-  #scrollspy .right {
-      width: 100%;
-  }
-
-  #menuTitle {
-      line-height: 30px;
-      width: 50%;
-      font-size: 1.4em;
-}
-  .row-slider, .slider {
-    height: 60vh !important;
-  }
-
-  #mainTitle {
-    font-size: 3em;
-  }
-
-    .group-btn {
-      position: relative;
+    #scrollspy {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
     }
-
+    #scrollspy .right {
+        width: 100%;
+    }
+    #logo {
+        padding-left: 30px;
+    }
+    #logo img {
+        width: 80px;
+        height: 80px;
+    }
+    #menuTitle {
+        line-height: 30px;
+        width: 60%;
+        font-size: 1.4em;
+        left: 130px;
+    }
+    .row-slider, .slider {
+        height: 60vh !important;
+    }
+    #mainTitle {
+        font-size: 3em;
+    }
+    .group-btn {
+        position: relative;
+    }
     .cont-btn, .sliderbtn {
-      margin-top: 2%;
-      height: 145px;
+        margin-top: 2%;
+        height: 145px;
     }
 }
