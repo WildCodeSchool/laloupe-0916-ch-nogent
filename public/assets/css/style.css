@@ -133,6 +133,7 @@ nav ul a.btn-urgence:hover {
     font-size: 5em;
     color: white;
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    padding-top: 5%;
 }
 
 .presentation h1 {
@@ -451,13 +452,18 @@ nav ul a.btn-urgence:hover {
 }
 
 #categorieHeight {
-  min-height: 700px;
-  hyphens: auto;
-  /*word-wrap: break-word;*/
+    min-height: 700px;
+    hyphens: auto;
+    /*word-wrap: break-word;*/
 }
 
 
 /* Responsive */
+@media screen and (max-height: 770px) {
+  #mainTitle {
+    padding-top: 0;
+  }
+}
 
 @media screen and (min-width: 994px) and (max-width: 1300px) {
     #logo {
@@ -472,6 +478,9 @@ nav ul a.btn-urgence:hover {
 }
 
 @media screen and (min-width: 768px) and (max-width: 993px) {
+    .modal-trigger1 {
+        display: none;
+    }
     #mainTitle {
         font-size: 5em;
     }
@@ -485,6 +494,9 @@ nav ul a.btn-urgence:hover {
 }
 
 @media screen and (min-width: 600px) and (max-width: 767px) {
+    .modal-trigger1 {
+        display: none;
+    }
     #mainTitle {
         font-size: 4em;
     }
@@ -498,20 +510,33 @@ nav ul a.btn-urgence:hover {
 }
 
 @media screen and (min-width: 401px) and (max-width: 599px) {
+
+    .modal-trigger1 {
+        display: none;
+    }
+
+    #numHospital {
+      /*display: none;*/
+      font-size: 0.8em;
+    }
+
     #scrollspy {
         display: flex;
-        flex-direction: column;
-        height: 100px;
+        flex-direction: row;
     }
+
     #scrollspy .right {
-        width: 100%;
+      position: absolute;
+      right: 10px;
+      margin-right: 0;
     }
+
     #menuTitle {
         line-height: 30px;
         width: 70%;
     }
     .row-slider, .slider {
-        height: 60vh !important;
+        height: 45vh !important;
     }
     #mainTitle {
         font-size: 4em;
@@ -523,17 +548,32 @@ nav ul a.btn-urgence:hover {
         margin-top: 2%;
         height: 145px;
     }
+
+    .slider2 .titlecar {
+      font-size: 2em;
+    }
 }
 
 @media screen and (max-width: 400px) {
-    #scrollspy {
-        display: flex;
-        flex-direction: column;
-        height: 100px;
+    .modal-trigger1 {
+        display: none;
     }
-    #scrollspy .right {
-        width: 100%;
-    }
+
+        #numHospital {
+          display: none;
+        }
+
+        #scrollspy {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #scrollspy .right {
+          position: absolute;
+          right: 10px;
+          margin-right: 0;
+        }
+
     #logo {
         padding-left: 30px;
     }
@@ -548,10 +588,10 @@ nav ul a.btn-urgence:hover {
         left: 130px;
     }
     .row-slider, .slider {
-        height: 60vh !important;
+        height: 50vh !important;
     }
     #mainTitle {
-        font-size: 3em;
+        font-size: 2.5em;
     }
     .group-btn {
         position: relative;
