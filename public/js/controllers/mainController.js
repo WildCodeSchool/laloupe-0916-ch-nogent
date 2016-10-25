@@ -12,7 +12,7 @@ class mainController {
 
         $('.slider').slider({
             full_width: true,
-            height: ($(window).height() / 100 * 80)
+            // height: ($(window).height() / 100 * 80)
         });
 
 
