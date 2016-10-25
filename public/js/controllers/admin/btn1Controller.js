@@ -2,6 +2,10 @@ class adminbtn1Controller {
 
     constructor(btn1Service) {
         this.btn1Service = btn1Service;
+        this.tinymceOptions = {
+            toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link ",
+            plugins: 'advlist autolink link image lists charmap autoresize textcolor'
+        };
         this.load();
     }
 
