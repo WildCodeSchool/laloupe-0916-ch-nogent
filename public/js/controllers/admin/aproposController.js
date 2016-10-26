@@ -4,8 +4,8 @@ class adminaproposController {
         this.aproposService = aproposService;
 
         this.tinymceOptions = {
-            plugins: 'link image code',
-            toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
+            toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+            plugins: 'advlist autolink link image lists charmap autoresize textcolor'
         };
         this.load();
     }

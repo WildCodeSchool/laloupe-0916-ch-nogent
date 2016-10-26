@@ -2,6 +2,10 @@ class adminbtn3Controller {
 
     constructor(btn3Service) {
         this.btn3Service = btn3Service;
+        this.tinymceOptions = {
+            toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link ",
+            plugins: 'advlist autolink link image lists charmap autoresize textcolor'
+        };
         this.load();
     }
 
