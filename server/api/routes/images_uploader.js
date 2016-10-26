@@ -13,8 +13,8 @@ module.exports = function(app) {
       */
 
         var
-            wdth = 150,
-            hgth = 150,
+            wdth = 200,
+            hgth = 200,
             new_location = 'public/uploads/';
 
         new formidable.IncomingForm()
@@ -35,7 +35,7 @@ module.exports = function(app) {
                 if (err) {
                     console.log(err);
                 } else {
-                    if (wdth !== 0 && !isNaN(Number(wdth)) && hgth !== 0 && !isNaN(Number(hgth)) && path.indexOf('..') === -1 && path !== '') {
+                    if (wdth !== 0 && !isNaN(Number(wdth)) && hgth !== 0 && !isNaN(Number(hgth))) {
                         fs.copy(temp_path, new_location + file_name, function(err) {
                             if (err) {
                                 console.error(err);
@@ -67,7 +67,7 @@ module.exports = function(app) {
 
         .on('end', function(fields, files) {
             if (!res.headersSent) {
-                res.sendStatus(403);
+                res.sendStatus(200);
             } else {
                 res.end();
             }
