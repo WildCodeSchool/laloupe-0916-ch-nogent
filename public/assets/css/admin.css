@@ -1,0 +1,229 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+figure {
+    color: #fff;
+    font-weight: 400;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+#supModal {
+    padding: 60px;
+}
+#warning {
+    margin-bottom: 40px;
+}
+.warning {
+    color: red;
+}
+.grid-image {
+    position: relative;
+    margin: 0 auto;
+    padding: 1em 0 4em;
+    max-width: 1000px;
+    list-style: none;
+    text-align: center;
+}
+
+
+/* Common style */
+
+.grid-image figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 320px;
+    max-width: 480px;
+    max-height: 360px;
+    width: 48%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid-image figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    backface-visibility: hidden;
+}
+
+.grid-image figure figcaption::before, .grid-image figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid-image figure figcaption, .grid-image figure figcaption>a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Anchor will cover the whole item by default */
+
+
+/* For some effects it will show as a button */
+
+.grid-image figure figcaption>a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.grid-image figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+
+.grid-image figure h2 span {
+    font-weight: 800;
+}
+
+.grid-image figure h2, .grid-image figure p {
+    margin: 0;
+}
+
+.grid-image figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+
+
+/*---------------*/
+
+
+/***** Layla *****/
+
+
+/*---------------*/
+
+figure.effect-layla img {
+    height: 390px;
+}
+
+figure.effect-layla figcaption {
+    padding: 3em;
+}
+
+figure.effect-layla figcaption::before, figure.effect-layla figcaption::after {
+    position: absolute;
+    content: '';
+    opacity: 0;
+}
+
+figure.effect-layla figcaption::before {
+    top: 50px;
+    right: 30px;
+    bottom: 50px;
+    left: 30px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: scale(0, 1);
+    transform-origin: 0 0;
+}
+
+figure.effect-layla figcaption::after {
+    top: 30px;
+    right: 50px;
+    bottom: 30px;
+    left: 50px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    transform: scale(1, 0);
+    transform-origin: 100% 0;
+}
+
+figure.effect-layla h2 {
+    padding-top: 26%;
+    transition: transform 0.35s;
+}
+
+figure.effect-layla p {
+    padding: 0.5em 2em;
+    text-transform: none;
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+}
+
+figure.effect-layla img, figure.effect-layla h2 {
+    transform: translate3d(0, -30px, 0);
+}
+
+figure.effect-layla img, figure.effect-layla figcaption::before, figure.effect-layla figcaption::after, figure.effect-layla p {
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-layla:hover figcaption::before, figure.effect-layla:hover figcaption::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+figure.effect-layla:hover h2, figure.effect-layla:hover p {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+figure.effect-layla:hover figcaption::after, figure.effect-layla:hover h2, figure.effect-layla:hover p, figure.effect-layla:hover img {
+    transition-delay: 0.15s;
+}
+
+h2 {
+    font-family: "Raleway";
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+#panel {
+    background: url('http://demo.geekslabs.com/materialize/v2.2/layout03/images/user-profile-bg.jpg') !important;
+}
+
+.circle {
+    height: 15%;
+    width: 15%;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background: url('../img/noise.png');
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.btn {
+    background-color: #f44336;
+}
+
+.btn-large {
+    background-color: #f44336;
+}
+
+.btn:hover {
+    background-color: #ff7400;
+}
+
+.btn-large:hover {
+    background-color: #ff7400;
+}
+
+#showjs {
+    display: none;
+}
+
+.justification {
+    width: 30vw;
+}
+
+.justificationabout {
+    width: 45vw;
+}

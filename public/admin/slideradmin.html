@@ -1,0 +1,29 @@
+
+<link rel="stylesheet" href="../admin.css">
+
+<div class="row">
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
+        <div class="row">
+            <h1 class="center-align">Ajouter un Contact</h1>
+            <div class="input-field col s6 offset-s3">
+                <i class="material-icons prefix">tag_faces</i>
+                <input type="text" class="form-control" placeholder="Stat 1" ng-model='vm.stats.texte1'>
+            </div>
+            <div class="input-field col s6 offset-s3">
+                <i class="material-icons prefix">home</i>
+                <input type="text" class="form-control" placeholder="Stat 2" ng-model='vm.stats.texte2'>
+            </div>
+            <div class="input-field col s6 offset-s3">
+                <i class="material-icons prefix">hotel</i>
+                <input type="text" class="form-control" placeholder="Stat 3" ng-model='vm.stats.texte3'>
+            </div>
+            <div class="input-field col s6 offset-s3">
+                <i class="material-icons prefix">local_hospital</i>
+                <input type="text" class="form-control" placeholder="Stat 4" ng-model='vm.stats.texte4'>
+            </div>
+        </div>
+        <div class="row">
+            <a class="waves-effect waves-light btn-large col s6 offset-s3" ng-click='vm.create()'>Enregistrer</a>
+        </div>
+    </form>
+</div>
