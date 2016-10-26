@@ -11,12 +11,14 @@ class navbarController {
         $(window).scroll(function() {
             if ($(window).scrollTop() > $('#scrollspy').height()) {
                 $('#push').addClass('navbar-fixed');
+                // $('#urgenceHide').addClass('hide');
                 $('#topFixed').css({
                     'margin-top': '100px'
                 });
             }
             if ($(window).scrollTop() < $('#scrollspy').height()) {
                 $('#push').removeClass('navbar-fixed');
+                // $('#urgenceHide').removeClass('hide');
                 $('#topFixed').css({
                     'margin-top': '0'
                 });
@@ -28,9 +30,24 @@ class navbarController {
             this.isLogged = isLogged;
             this.user = sessionFactory.user;
         });
+
+        $(window).scroll(function() {
+          if ($(window).scrollTop() > 10) {
+            toggleEmergencies();
+            console.log(this.isToggled);
+            // this.isToggled = false;
+          }
+        });
+
         this.isToggled = false;
-        this.toggleEmergencies = function() {
+        this.toggleEmergencies = () => {
             this.isToggled = !this.isToggled;
+            console.log(this.isToggled);
+            if (this.isToggled == true) {
+              $('.group-btn').hide();
+            } else {
+              $('.group-btn').show();
+            }
         };
     }
 
