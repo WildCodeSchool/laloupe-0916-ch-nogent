@@ -1,53 +1,16 @@
-<meta charset="utf-8">
-<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" media="screen,projection"/>
-<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="../admin.css">
 
-<style>
-    #supModal {
-        padding: 60px;
-    }
-    #warning {
-        margin-bottom: 40px;
-    }
-    .warning {
-        color: red;
-    }
-
-</style>
-
-</head>
-<body>
 
 <!-- View -->
 
 <div class="row">
     <div class="col s12 col m12 offset-l2 l8 offset-l2 z-depth-6 card-panel">
-        <div class="row">
-            <h1 class="center-align">À Propos</h1>
-        </div>
         <h3>Titre de la page A propos<input type="text" class="form-control" ng-model='vm.aproposs.titre'></h3>
         <div class="row justificationabout">
           <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.aproposs.texte'></textarea>
-            <a  class="waves-effect waves-light btn col l2 offset-l1" ng-click='vm.create2(aproposs)'>Enregistrer</a>
+            <a  class="waves-effect waves-light btn col l2 offset-l1" ng-click='vm.create2(aproposs)'>Editer</a>
         </div>
     </div>
 
-    <div id="showjs" class="row">
-        <form class="col s12 m12 offset-l2 l8 offset-l2 z-depth-6 card-panel">
-            <div class="row">
-                <h1 class="center-align">Modifier l'À propos</h1>
-                <div class="input-field col s6 offset-s3">
-                    <i class="material-icons prefix">description</i>
-                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                    <label for="icon_prefix2">Texte</label>
-                </div>
-            </div>
-            <div class="row">
-                <a class="waves-effect waves-light btn-large col s6 offset-s3" ng-click='vm.create2(aproposs)'>Enregistrer</a>
-            </div>
-        </form>
-    </div>
 
     <!-- Modal -->
 
