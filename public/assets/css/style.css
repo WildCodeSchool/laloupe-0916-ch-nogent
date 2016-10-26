@@ -79,6 +79,10 @@ nav ul a.btn-urgence:hover {
     position: fixed;
 }
 
+#push {
+    height: 100px;
+}
+
 #push nav {
     height: 100px;
     line-height: 100px;
@@ -221,23 +225,6 @@ nav ul a.btn-urgence:hover {
     top: 5%;
 }
 
-
-/* Menu sous bouton */
-
-.blocconsultation {
-    display: flex;
-    width: 100%;
-}
-
-
-/*.blocconsultation #consultation {
-    display: flex;
-}*/
-
-#consultation, #imagerie, #perinatal {
-    width: 30%;
-}
-
 .annu {
     min-height: 84px;
     padding-left: 72px;
@@ -249,6 +236,9 @@ nav ul a.btn-urgence:hover {
     margin-left: 0.3em;
     margin-right: 0.3em;
 }
+
+
+/* Menu sous bouton */
 
 
 /* div ng-show "j'ai un rendez-vous" */
@@ -386,8 +376,8 @@ nav ul a.btn-urgence:hover {
     text-align: center;
 }
 
-#contactresponsive{
-  margin-top: 30px;
+#contactresponsive {
+    margin-top: 30px;
 }
 
 
@@ -463,10 +453,11 @@ nav ul a.btn-urgence:hover {
 
 
 /* Responsive */
+
 @media screen and (max-height: 770px) {
-  #mainTitle {
-    padding-top: 0;
-  }
+    #mainTitle {
+        padding-top: 0;
+    }
 }
 
 @media screen and (min-width: 994px) and (max-width: 1300px) {
@@ -514,27 +505,22 @@ nav ul a.btn-urgence:hover {
 }
 
 @media screen and (min-width: 401px) and (max-width: 599px) {
-
     .modal-trigger1 {
         display: none;
     }
-
     #numHospital {
-      /*display: none;*/
-      font-size: 0.8em;
+        /*display: none;*/
+        font-size: 0.8em;
     }
-
     #scrollspy {
         display: flex;
         flex-direction: row;
     }
-
     #scrollspy .right {
-      position: absolute;
-      right: 10px;
-      margin-right: 0;
+        position: absolute;
+        right: 10px;
+        margin-right: 0;
     }
-
     #menuTitle {
         line-height: 30px;
         width: 70%;
@@ -552,9 +538,8 @@ nav ul a.btn-urgence:hover {
         margin-top: 2%;
         height: 145px;
     }
-
     .slider2 .titlecar {
-      font-size: 2em;
+        font-size: 2em;
     }
 }
 
@@ -562,22 +547,18 @@ nav ul a.btn-urgence:hover {
     .modal-trigger1 {
         display: none;
     }
-
-        #numHospital {
-          display: none;
-        }
-
-        #scrollspy {
-            display: flex;
-            flex-direction: row;
-        }
-
-        #scrollspy .right {
-          position: absolute;
-          right: 10px;
-          margin-right: 0;
-        }
-
+    #numHospital {
+        display: none;
+    }
+    #scrollspy {
+        display: flex;
+        flex-direction: row;
+    }
+    #scrollspy .right {
+        position: absolute;
+        right: 10px;
+        margin-right: 0;
+    }
     #logo {
         padding-left: 30px;
     }
@@ -588,7 +569,7 @@ nav ul a.btn-urgence:hover {
     #menuTitle {
         line-height: 30px;
         width: 60%;
-        font-size: 1.4em;
+        font-size: 1.3em;
         left: 130px;
     }
     .row-slider, .slider {
