@@ -53,10 +53,19 @@ module.exports = function(app) {
 
         var htmlContent =
             header +
-            '<td style="padding-top:15px;padding-left:10px;"><p>Name: <b>' + req.body.name + '</b>,</p></td>' +
+            '<td style="padding-top:15px;padding-left:10px;"><p>Name: <b>' + req.body.prenom + '</b>,</p></td>' +
             '</tr>' +
             '<tr>' +
-            '<td style="padding-top:15px;padding-left:10px;"><p>Email: <b>' + req.body.email + '</b>,</p></td>' +
+            '<td style="padding-top:15px;padding-left:10px;"><p>Email: <b>' + req.body.nom + '</b>,</p></td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td style="padding-top:15px;padding-left:10px;"><p>Email: <b>' + req.body.mail + '</b>,</p></td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td style="padding-top:15px;padding-left:10px;"><p>Email: <b>' + req.body.tel + '</b>,</p></td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td style="padding-top:15px;padding-left:10px;"><p>Email: <b>' + req.body.contactpar + '</b>,</p></td>' +
             '</tr>' +
             '<tr>' +
             '<td align="left" style="padding-left:10px;"><p> Message: ' + req.body.msg + '</p></td>' +
@@ -65,7 +74,7 @@ module.exports = function(app) {
         send({
             from: userInfos.user, // your email here
             subject: 'Formulaire de contact',
-            to: userInfos.user,
+            to: req.body.dest,
             sender: 'mailer <' + userInfos.user + '>',
             html: htmlContent
         });
