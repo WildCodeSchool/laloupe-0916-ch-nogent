@@ -11,14 +11,15 @@ class navbarController {
         $(window).scroll(function() {
             if ($(window).scrollTop() > $('#scrollspy').height()) {
                 $('#push').addClass('navbar-fixed');
-                // $('#urgenceHide').addClass('hide');
+                $('#urgenceHide').addClass('ng-hide');
+                $('.group-btn').show();
                 $('#topFixed').css({
                     'margin-top': '100px'
                 });
             }
             if ($(window).scrollTop() < $('#scrollspy').height()) {
                 $('#push').removeClass('navbar-fixed');
-                // $('#urgenceHide').removeClass('hide');
+                // $('#urgenceHide').removeClass('ng-hide');
                 $('#topFixed').css({
                     'margin-top': '0'
                 });
@@ -29,14 +30,6 @@ class navbarController {
         $rootScope.$on('loginStatusChanged', (event, isLogged) => {
             this.isLogged = isLogged;
             this.user = sessionFactory.user;
-        });
-
-        $(window).scroll(function() {
-          if ($(window).scrollTop() > 10) {
-            toggleEmergencies();
-            console.log(this.isToggled);
-            // this.isToggled = false;
-          }
         });
 
         this.isToggled = false;
