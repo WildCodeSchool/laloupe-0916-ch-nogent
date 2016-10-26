@@ -502,6 +502,28 @@ nav ul a.btn-urgence:hover {
         margin-top: 2%;
         height: 145px;
     }
+
+    .presentation h2 {
+      width: 90%;
+      padding-top: 10%;
+      margin: 0 auto;
+      font-size: 2.5em;
+    }
+    #carouselh2 {
+      width: 90%;
+      padding-top: 5%;
+      margin: 0 auto;
+      font-size: 1.4em;
+    }
+    #stats a {
+      top: 20%;
+    }
+    .carousel-item p {
+      font-size : 1.2em;
+    }
+    .carousel-item i {
+      font-size : 2em;
+    }
 }
 
 @media screen and (min-width: 401px) and (max-width: 599px) {
@@ -538,8 +560,37 @@ nav ul a.btn-urgence:hover {
         margin-top: 2%;
         height: 145px;
     }
-    .slider2 .titlecar {
-        font-size: 2em;
+    .presentation h2 {
+      width: 90%;
+      padding-top: 10%;
+      margin: 0 auto;
+      font-size: 2.5em;
+    }
+    #carouselh2 {
+      width: 90%;
+      padding-top: 10%;
+      margin: 0 auto;
+      font-size: 1.1em;
+    }
+    #stats a {
+      top: 10%;
+    }
+    .carousel-item p {
+      font-size : 0.9em;
+    }
+    .carousel-item i {
+      font-size : 1.7em;
+    }
+    #bottomNavbar {
+      height: 100px;
+    }
+    #bottomBar {
+      display: flex;
+      flex-direction: column;
+    }
+    #bottomBar li {
+      width: 100%;
+      text-align: center;
     }
 }
 
@@ -584,5 +635,37 @@ nav ul a.btn-urgence:hover {
     .cont-btn, .sliderbtn {
         margin-top: 2%;
         height: 145px;
+    }
+    .presentation h2 {
+      width: 90%;
+      padding-top: 10%;
+      margin: 0 auto;
+      font-size: 2em;
+    }
+    #carouselh2 {
+      width: 90%;
+      padding-top: 10%;
+      margin: 0 auto;
+      font-size: 1em;
+    }
+    #stats a {
+      top: 10%;
+    }
+    .carousel-item p {
+      font-size : 0.7em;
+    }
+    .carousel-item i {
+      font-size : 1.5em;
+    }
+    #bottomNavbar {
+      height: 100px;
+    }
+    #bottomBar {
+      display: flex;
+      flex-direction: column;
+    }
+    #bottomBar li {
+      width: 100%;
+      text-align: center;
     }
 }
