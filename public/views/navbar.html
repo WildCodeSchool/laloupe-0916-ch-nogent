@@ -1,7 +1,7 @@
 <div ng-controller='navbarController as vm'>
 
     <div id="urgencies">
-        <div ng-show='vm.isToggled'>
+        <div id="urgenceHide" ng-show='vm.isToggled'>
             <div class="container">
                 <div class="row">
                     <div class="col s12 m6 l6">
@@ -65,7 +65,7 @@
                 </ul>
                 <ul class="right">
                     <li>
-                        <a class="btn-urgence " ng-click='vm.toggleEmergencies()'>
+                        <a class="btn-urgence " ng-click='toggleEmergencies()'>
                             <i class="material-icons left">airport_shuttle</i>Urgences</a>
                     </li>
                     <!--<li>
