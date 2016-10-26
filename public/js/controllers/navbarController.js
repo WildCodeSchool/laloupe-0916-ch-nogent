@@ -11,12 +11,15 @@ class navbarController {
         $(window).scroll(function() {
             if ($(window).scrollTop() > $('#scrollspy').height()) {
                 $('#push').addClass('navbar-fixed');
+                $('#urgenceHide').addClass('ng-hide');
+                $('.group-btn').show();
                 $('#topFixed').css({
                     'margin-top': '100px'
                 });
             }
             if ($(window).scrollTop() < $('#scrollspy').height()) {
                 $('#push').removeClass('navbar-fixed');
+                // $('#urgenceHide').removeClass('ng-hide');
                 $('#topFixed').css({
                     'margin-top': '0'
                 });
@@ -28,9 +31,16 @@ class navbarController {
             this.isLogged = isLogged;
             this.user = sessionFactory.user;
         });
+
         this.isToggled = false;
-        this.toggleEmergencies = function() {
+        this.toggleEmergencies = () => {
             this.isToggled = !this.isToggled;
+            console.log(this.isToggled);
+            if (this.isToggled == true) {
+              $('.group-btn').hide();
+            } else {
+              $('.group-btn').show();
+            }
         };
     }
 
