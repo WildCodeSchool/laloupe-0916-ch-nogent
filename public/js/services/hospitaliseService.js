@@ -5,19 +5,19 @@ class hospitaliseService {
     }
 
     create(data) {
-        return this.$http.post('/api/btn2s', data )
+        return this.$http.post('/api/hospitalises', data )
     }
 
     getAll() {
-        return this.$http.get('/api/btn2s');
+        return this.$http.get('/api/hospitalises');
     }
 
     getOne(id) {
-        return this.$http.get('/api/btn2s/' + id)
+        return this.$http.get('/api/hospitalises/' + id)
     }
 
     update(id, data) {
-        return this.$http.put('/api/btn2s/' + id, {
+        return this.$http.put('/api/hospitalises/' + id, {
           title1: data.title1,
           title2: data.title2,
           title3: data.title3,
@@ -28,7 +28,7 @@ class hospitaliseService {
     }
 
     delete(id) {
-        return this.$http.delete('/api/btn2s/' + id)
+        return this.$http.delete('/api/hospitalises/' + id)
     }
 
 }

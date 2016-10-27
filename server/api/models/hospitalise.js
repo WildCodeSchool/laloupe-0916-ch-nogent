@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const btn1Schema = new mongoose.Schema({
+const hospitaliseSchema = new mongoose.Schema({
     title1: String,
     title2: String,
     title3: String,
@@ -9,26 +9,26 @@ const btn1Schema = new mongoose.Schema({
     texte3: String
 });
 
-let model = mongoose.model('Btn1', btn1Schema);
+let model = mongoose.model('Hospitalise', hospitaliseSchema);
 
-export default class Btn1 {
+export default class Hospitalise {
 
     findAll(req, res) {
-        model.find({}, (err, btn1s) => {
+        model.find({}, (err, hospitalises) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(btn1s);
+                res.json(hospitalises);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, btn1) => {
-            if (err || !btn1) {
+        model.findById(req.params.id, (err, hospitalise) => {
+            if (err || !hospitalise) {
                 res.sendStatus(403);
             } else {
-                res.json(btn1);
+                res.json(hospitalise);
             }
         });
     }
@@ -42,11 +42,11 @@ export default class Btn1 {
                 texte2: req.body.texte2,
                 texte3: req.body.texte3
             },
-            (err, btn1) => {
+            (err, hospitalise) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(btn1);
+                    res.json(hospitalise);
                 }
             });
     }
@@ -54,11 +54,11 @@ export default class Btn1 {
     update(req, res) {
         model.update({
             _id: req.params.id
-        }, req.body, (err, btn1) => {
-            if (err || !btn1) {
+        }, req.body, (err, hospitalise) => {
+            if (err || !hospitalise) {
                 res.status(500).send(err.message);
             } else {
-                res.json(btn1);
+                res.json(hospitalise);
             }
         });
     }

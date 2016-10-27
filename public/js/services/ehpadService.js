@@ -5,19 +5,19 @@ class ehpadService {
     }
 
     create(data) {
-        return this.$http.post('/api/btn3s', data )
+        return this.$http.post('/api/ehpads', data )
     }
 
     getAll() {
-        return this.$http.get('/api/btn3s');
+        return this.$http.get('/api/ehpads');
     }
 
     getOne(id) {
-        return this.$http.get('/api/btn3s/' + id)
+        return this.$http.get('/api/ehpads/' + id)
     }
 
     update(id, data) {
-        return this.$http.put('/api/btn3s/' + id, {
+        return this.$http.put('/api/ehpads/' + id, {
           title1: data.title1,
           title2: data.title2,
           title3: data.title3,
@@ -30,7 +30,7 @@ class ehpadService {
     }
 
     delete(id) {
-        return this.$http.delete('/api/btn3s/' + id)
+        return this.$http.delete('/api/ehpads/' + id)
     }
 
 }

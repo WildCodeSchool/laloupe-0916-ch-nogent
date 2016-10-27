@@ -1,34 +1,36 @@
 import mongoose from 'mongoose';
 
-const btn2Schema = new mongoose.Schema({
+const ehpadSchema = new mongoose.Schema({
     title1: String,
     title2: String,
     title3: String,
+    title4: String,
     texte1: String,
     texte2: String,
-    texte3: String
+    texte3: String,
+    texte4: String
 });
 
-let model = mongoose.model('Btn2', btn2Schema);
+let model = mongoose.model('Ehpad', ehpadSchema);
 
-export default class Btn2 {
+export default class Ehpad {
 
     findAll(req, res) {
-        model.find({}, (err, btn2s) => {
+        model.find({}, (err, ehpads) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(btn2s);
+                res.json(ehpads);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, btn2) => {
-            if (err || !btn2) {
+        model.findById(req.params.id, (err, ehpad) => {
+            if (err || !ehpad) {
                 res.sendStatus(403);
             } else {
-                res.json(btn2);
+                res.json(ehpad);
             }
         });
     }
@@ -38,15 +40,17 @@ export default class Btn2 {
                 title1: req.body.title1,
                 title2: req.body.title2,
                 title3: req.body.title3,
+                title4: req.body.title4,
                 texte1: req.body.texte1,
                 texte2: req.body.texte2,
-                texte3: req.body.texte3
+                texte3: req.body.texte3,
+                texte4: req.body.texte4
             },
-            (err, btn2) => {
+            (err, ehpad) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(btn2);
+                    res.json(ehpad);
                 }
             });
     }
@@ -54,11 +58,11 @@ export default class Btn2 {
     update(req, res) {
         model.update({
             _id: req.params.id
-        }, req.body, (err, btn2) => {
-            if (err || !btn2) {
+        }, req.body, (err, ehpad) => {
+            if (err || !ehpad) {
                 res.status(500).send(err.message);
             } else {
-                res.json(btn2);
+                res.json(ehpad);
             }
         });
     }
