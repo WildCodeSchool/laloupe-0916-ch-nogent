@@ -11,8 +11,11 @@ nconst routes = ($routeProvider, $httpProvider) => {
         })
         .when('/utilisateurs/ajouter', {
             templateUrl: '../views/admin/utilisateurs/add.html',
-            controller: '',
-            controllerAs: 'vm'
+            controller: 'userController',
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/utilisateurs', {
             templateUrl: '../views/admin/utilisateurs/show.html',
