@@ -145,12 +145,14 @@
     <div id="push">
         <ul id="dropdown1" class="dropdown-content">
             <li ng-repeat='categorie in vm.categories'>
-                <a href="/#/service/{{categorie._id}}">{{categorie.titre}}</a>
+                <a ng-show=categorie.texte != "" href="/#/service/{{categorie._id}}">{{categorie.titre}}</a>
+                <a ng-show=categorie.lien != "" target="_blank" href="{{categorie.lien}}">{{categorie.titre}}</a>
             </li>
         </ul>
         <ul id="dropdown2" class="dropdown-content">
             <li ng-repeat='categorie in vm.categories'>
-                <a href="/#/service/{{categorie._id}}">{{categorie.titre}}</a>
+              <a ng-show=categorie.texte != "" href="/#/service/{{categorie._id}}">{{categorie.titre}}</a>
+              <a ng-show=categorie.lien != "" target="_blank" href="{{categorie.lien}}">{{categorie.titre}}</a>
             </li>
         </ul>
         <nav>

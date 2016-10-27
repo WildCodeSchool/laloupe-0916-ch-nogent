@@ -44,7 +44,7 @@ class admincategorieController {
         this.categorie.photo = urlImage;
 
         if (!this.categorie.texte)
-            this.categorie.texte = "&nbsp;";
+            this.categorie.texte = "";
 
         this.categorieService.create(this.categorie).then(() => {
           this.categorie = {};

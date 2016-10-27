@@ -58,6 +58,7 @@ class navbarController {
     loadCategories() {
         this.categorieService.getChildrenOf('0').then((res) => {
             this.categories = res.data;
+            console.log(this.categories);
             setTimeout(function() {
                 $(".dropdown-button").dropdown();
             }, 0);
