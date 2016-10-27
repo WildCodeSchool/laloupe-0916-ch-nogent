@@ -14,7 +14,7 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/utilisateurs/ajouter', {
             templateUrl: '../views/admin/utilisateurs/add.html',
-            controller: '',
+            controller: 'userController',
             controllerAs: 'vm',
             resolve: {
                 connected: checkIsConnected
@@ -29,7 +29,7 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
         .when('/boutons/ehpad', {
-            templateUrl: '../views/admin/boutons/ephad.html',
+            templateUrl: '../views/admin/boutons/ehpad.html',
             controller: 'ehpadController',
             controllerAs: 'vm',
             resolve: {
@@ -115,6 +115,11 @@ const routes = ($routeProvider, $httpProvider) => {
             resolve: {
                 connected: checkIsConnected
             }
+        })
+        .when('/boutons', {
+            templateUrl: '../views/admin/buttonadmin.html',
+            controller: 'categorieController',
+            controllerAs: 'vm'
         })
         .otherwise({
             redirectTo: '/'
