@@ -1,50 +1,44 @@
-<h4>Je entrer en EHPAD hospitalisé</h4>
+<!-- View -->
+
 <div class="row">
-    <div class="col s12 m6 l3 ehpad1">
-        <h6>Titre1 : <input type="text" ng-model='vm.btn3.title1'></h6>
+    <div class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
         <div class="row">
-            <div class="input-field col s12">
-                <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.btn3.texte1'></textarea>
+            <h1 class="center-align">Je vais entrer en EHPHAD</h1>
+            <div class="row">
+                <div class="col s12 m4 l4 visiter1">
+                    <h5>Titre 1 :<input type="text" ng-model='vm.btn3.title1'></h5>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.btn3.texte1'></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4 l4 visiter2">
+                    <h5>Titre 2 :<input type="text" ng-model='vm.btn3.title2'></h5>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.btn3.texte2'></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4 l4 visiter3">
+                    <h5>Titre 3 :<input type="text" ng-model='vm.btn3.title3'></h5>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.btn3.texte3'></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m4 l2 offset-l9">
+                    <button ng-click='vm.create()' class="btn btn-default right" onclick="Materialize.toast('Contenu ajouté avec succès !', 4000, 'rounded')">Ajouter</button>
+                </div>
             </div>
         </div>
-        <br>
-        <br>
-    </div>
-
-    <div class="col s12 m6 l3 ehpad2">
-        <h6>Titre2 : <input type="text" ng-model='vm.btn3.title2'></h6>
-        <div class="row">
-            <div class="input-field col s12">
-                <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.btn3.texte2'></textarea>
-            </div>
-        </div>
-        <br>
-        <br>
-    </div>
-
-    <div class="col s12 m6 l3 ehpad3">
-        <h6>Titre3 : <input type="text" ng-model='vm.btn3.title3'></h6>
-        <div class="row">
-            <div class="input-field col s12">
-                <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.btn3.texte3'></textarea>
-            </div>
-        </div>
-        <br>
-        <br>
-    </div>
-    <div class="col s12 m6 l3 ehpad4">
-        <h6>Titre4 : <input type="text" ng-model='vm.btn3.title4'></h6>
-        <div class="row">
-            <div class="input-field col s12">
-                <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.btn3.texte4'></textarea>
-            </div>
-        </div>
-        <br>
-        <br>
     </div>
 </div>
-<div class="row">
-    <div class= "col s12 m4 l2 offset-l9">
-        <button ng-click='vm.create()' class="btn btn-default right" onclick="Materialize.toast('Contenu ajouté avec succès !', 4000, 'rounded')">Ajouter</button>
-    </div>
-</div>
+
+<!-- Fin Modal -->
+
+<!-- Fin View-->

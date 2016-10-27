@@ -20,7 +20,7 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
         .when('/boutons/ehpad', {
-            templateUrl: '../views/admin/boutons/ephad.html',
+            templateUrl: '../views/admin/boutons/ehpad.html',
             controller: 'ehpadController',
             controllerAs: 'vm'
         })
@@ -71,6 +71,11 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/services', {
             templateUrl: '../views/admin/services.html',
+            controller: 'categorieController',
+            controllerAs: 'vm'
+        })
+        .when('/boutons', {
+            templateUrl: '../views/admin/buttonadmin.html',
             controller: 'categorieController',
             controllerAs: 'vm'
         })
