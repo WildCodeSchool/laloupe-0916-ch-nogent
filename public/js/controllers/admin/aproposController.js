@@ -1,4 +1,4 @@
-class adminaproposController {
+class aproposController {
 
     constructor(aproposService) {
         this.aproposService = aproposService;

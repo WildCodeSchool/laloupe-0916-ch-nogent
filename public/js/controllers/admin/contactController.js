@@ -1,4 +1,4 @@
-class admincontactController {
+class contactController {
 
     constructor(contactService) {
         this.contactService = contactService;

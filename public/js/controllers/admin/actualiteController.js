@@ -1,4 +1,4 @@
-class adminactualiteController {
+class actualiteController {
 
     constructor(actualiteService) {
         this.actualiteService = actualiteService;

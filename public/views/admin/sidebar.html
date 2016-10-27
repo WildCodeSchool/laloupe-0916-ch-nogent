@@ -1,51 +1,57 @@
-<aside>
+<aside style='position:fixed;top:10px;right:25px;z-index:10000' ng-controller='sidebarController as vm'>
     <div class="container">
         <ul id="slide-out" class="side-nav">
             <li>
                 <div class="userView">
-                    <img class="background" src="http://demo.geekslabs.com/materialize/v2.2/layout03/images/user-profile-bg.jpg">
-                    <a href="#!user"><img class="circle" src="../girl.jpg"></a>
-                    <a href="#!name">
-                        <span class="white-text name">Laëtitia Rousseau</span>
+                    <a>
+                        <span class="name">Panneau d'administration</span>
                     </a>
-                    <a href="#!email">
-                        <span class="white-text email">l.rousseau.ch.laloupe@gmail.com</span>
+                    <a>
+                        <span class="email">Que souhaitez-vous faire ?</span>
                     </a>
                 </div>
             </li>
             <li>
-                <a href="../paneladmin.html">
+                <a href="#/">
                     <i class="material-icons">web</i>Accueil</a>
             </li>
             <li>
-                <a href="listadmin.html">
+                <a href="#/utilisateurs">
                     <i class="material-icons">web</i>Utilisateur</a>
             </li>
             <li>
-                <a href="contactadmin.html">
+                <a href="#/contacts">
                     <i class="material-icons">email</i>Contact</a>
             </li>
             <li>
-                <a href="categorieadmin.html">
+                <a href="#/services">
                     <i class="material-icons">business_center</i>Service</a>
             </li>
             <li>
-                <a href="articleadmin.html">
+                <a href="#/actualite">
                     <i class="material-icons">chat_bubble_outline</i>Article</a>
             </li>
             <li>
-                <a href="aproposadmin.html">
+                <a href="#/annuaire">
+                    <i class="material-icons">timeline</i>Annuaire</a>
+            </li>
+            <li>
+                <a href="#/apropos">
                     <i class="material-icons">timeline</i>À propos</a>
             </li>
             <li>
-                <a href="marcheadmin.html">
+                <a href="#/marches">
                     <i class="material-icons">timeline</i>Marchés</a>
             </li>
             <li>
-                <a href="slideradmin.html">
+                <a href="#/stats">
                     <i class="material-icons">timeline</i>Statistique</a>
             </li>
+            <li>
+                <a href="../">
+                    <i class="material-icons">timeline</i>Retour au site</a>
+            </li>
         </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse waves-effect waves-light btn">menu</a>
+        <a data-activates="slide-out" class="button-collapse waves-effect waves-light btn">menu</a>
     </div>
 </aside>
