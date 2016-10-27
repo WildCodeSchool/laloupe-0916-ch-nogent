@@ -61,7 +61,7 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/marches', {
             templateUrl: '../views/admin/marches.html',
-            controller: 'marchesController',
+            controller: 'marcheController',
             controllerAs: 'vm'
         })
         .when('/stats', {
