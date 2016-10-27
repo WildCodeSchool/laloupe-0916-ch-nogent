@@ -14,15 +14,15 @@ module.exports = (app) => {
 
     app.post('/login', user.connect);
 
-    router.get('/', Auth.isAdministrator, user.findAll);
+    router.get('/', Auth.hasAuthorization, user.findAll);
 
-    router.get('/:id', Auth.isAdministrator, user.findById);
+    router.get('/:id', Auth.hasAuthorization, user.findById);
 
     router.post('/', user.create);
 
-    router.put('/:id', Auth.isAdministrator, user.update);
+    router.put('/:id', Auth.hasAuthorization, user.update);
 
-    router.delete('/:id', Auth.isAdministrator, user.delete);
+    router.delete('/:id', Auth.hasAuthorization, user.delete);
 
     app.use('/users', router);
 
