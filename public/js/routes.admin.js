@@ -14,7 +14,7 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/utilisateurs/ajouter', {
             templateUrl: '../views/admin/utilisateurs/add.html',
-            controller: '',
+            controller: 'userController',
             controllerAs: 'vm',
             resolve: {
                 connected: checkIsConnected
