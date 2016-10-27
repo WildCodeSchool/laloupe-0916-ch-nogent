@@ -1,4 +1,4 @@
-class admincontactController {
+class contactController {
 
     constructor(contactService) {
         this.contactService = contactService;
@@ -10,7 +10,7 @@ class admincontactController {
         });
     }
 
-    create2() {
+    create() {
         this.contactService.create(this.contact).then(() => {
 
             this.contact = {};

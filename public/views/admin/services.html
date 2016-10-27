@@ -1,0 +1,116 @@
+<div class="row">
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
+        <h2>Ajouter un service
+        </h2>
+    </form>
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
+        <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <p><input type="text" class="form-control" placeholder="Nom du service" ng-model='vm.categorie.titre'></p>
+                        <select class="browser-default" ng-model='vm.categorie.idparent'>
+                            <option disabled selected value=''>Service parent...</option>
+                            <option value='0'>Racine du menu "Nos Services"</option>
+                            <option ng-repeat='categorie in vm.categories | orderBy: ["idparent","titre"]' value="{{categorie._id}}">{{categorie.titre}}</option>
+                        </select>
+                        <div class="input-field col s12 m6">
+                          <p><input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'></p>
+                        </div>
+                        <div class="input-field col s12 m6 optionBloc">
+                            <p>
+                                <input name="group1" type="radio" id="test1"/>
+                                <label for="test1"><i class="material-icons">format_align_right</i></label>
+                            </p>
+                            <p>
+                                <input name="group1" type="radio" id="test2"/>
+                                <label for="test2"><i class="material-icons">format_align_center</i></label>
+                            </p>
+                            <p>
+                                <input name="group1" type="radio" id="test3"/>
+                                <label for="test3"><i class="material-icons">format_align_left</i></label>
+                            </p>
+                        </div>
+                        <div class="input-field col s12">
+                          <p>
+                              <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.categorie.texte'></textarea>
+                          </p>
+                      </div>
+                      <div class="input-field col s12">
+                        <p><input type="text" class="form-control" placeholder="Lien du service" ng-model='vm.categorie.lien'></p>
+                      </div>
+                    </div>
+                    <div class="input-field col s12">
+                      <button ng-click='vm.create(categorie)' class="btn btn-default">Ajouter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </form>
+
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
+        <h2>Liste des services
+        </h2>
+    </form>
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='categorie in vm.categories | orderBy:"+categorie"'>
+        <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <p><input type="text" class="form-control" placeholder="Nom du service" ng-model='categorie.titre'></p>
+                        <select class="browser-default" ng-model='categorie.idparent'>
+                            <option disabled selected value=''>Service parent...</option>
+                            <option value='0'>Racine du menu "Nos Services"</option>
+                            <option ng-repeat='categorie in vm.categories | orderBy: ["idparent","titre"]' value="{{categorie._id}}">{{categorie.titre}}</option>
+                        </select>
+                        <p><input type="text" class="form-control" placeholder="Photo du service" ng-model='categorie.photo'></p>
+                        <form action="#">
+                            <p>
+                                <input name="group1" type="radio" id="test1"/>
+                                <label for="test1"><i class="material-icons">format_align_right</i></label>
+                            </p>
+                            <p>
+                                <input name="group1" type="radio" id="test2"/>
+                                <label for="test2"><i class="material-icons">format_align_center</i></label>
+                            </p>
+                            <p>
+                                <input name="group1" type="radio" id="test3"/>
+                                <label for="test3"><i class="material-icons">format_align_left</i></label>
+                            </p>
+                        </form>
+                        <p>
+                            <textarea ui-tinymce="vm.tinymceOptions" ng-model='categorie.texte'></textarea>
+                        </p>
+                        <p><input type="text" class="form-control" placeholder="Lien du service" ng-model='categorie.lien'></p>
+                    </div>
+                    <button ng-click='vm.update(categorie)' class="btn btn-default">Editer</button>
+                    <button ng-click='vm.delete(categorie)' class="btn btn-default" href="#modal-warning">Supprimer</button>
+                </form>
+            </div>
+        </div>
+    </form>
+
+    <!-- Modal -->
+
+    <div>
+        <div id="modal_warning" class="modal">
+            <div class="modal-content" id="supModal">
+                <h4 class="center-align" id="warning">
+                    <i class="small material-icons warning">warning</i>
+                    Attention !
+                    <i class="small material-icons warning">warning</i>
+                </h4>
+                <p class="center-align">La suppression d'un utilisateur est irréversible.<br>
+                    Confirmez-vous la suppression de l'utilisateur ? :</p>
+
+                <p class="center-align">
+                    [E-mail] - [Nom] [Prénom]
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right blue-grey lighten-5">Annuler</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat left red white-text">Confirmer</a>
+            </div>
+        </div>
+    </div>
+</div>

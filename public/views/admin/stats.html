@@ -1,0 +1,26 @@
+<div class="row">
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
+        <div class="row">
+            <h1 class="center-align">Modifier les statistiques de la page d'accueil</h1>
+            <div class="input-field col s6 offset-s3">
+                <i class="material-icons prefix">tag_faces</i>
+                <input type="text" class="form-control" placeholder="Statistique de l'icone SOURIRE" ng-model='vm.stats.texte1'>
+            </div>
+            <div class="input-field col s6 offset-s3">
+                <i class="material-icons prefix">home</i>
+                <input type="text" class="form-control" placeholder="Statistique de l'icone MAISON" ng-model='vm.stats.texte2'>
+            </div>
+            <div class="input-field col s6 offset-s3">
+                <i class="material-icons prefix">hotel</i>
+                <input type="text" class="form-control" placeholder="Statistique de l'icone LIT" ng-model='vm.stats.texte3'>
+            </div>
+            <div class="input-field col s6 offset-s3">
+                <i class="material-icons prefix">local_hospital</i>
+                <input type="text" class="form-control" placeholder="Statistique de l'icone HOPITAL" ng-model='vm.stats.texte4'>
+            </div>
+        </div>
+        <div class="row">
+            <a class="waves-effect waves-light btn-large col s6 offset-s3" ng-click='vm.create()'>Enregistrer</a>
+        </div>
+    </form>
+</div>

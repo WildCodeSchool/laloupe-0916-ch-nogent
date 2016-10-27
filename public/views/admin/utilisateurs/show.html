@@ -1,0 +1,25 @@
+<div class="row">
+    <table class="col offset-l2 l8 offset-l2 z-depth-6 card-panel highlight striped" ng-show="vm.users.length > 0">
+        <tr>
+            <th>Adresse Mail</th>
+            <th>Mot de passe</th>
+            <th>Editer</th>
+            <th>Supprimer</th>
+        </tr>
+
+        <tr ng-repeat='user in vm.users | filter:searchText | orderBy:"+user"'>
+            <td>
+                <input ng-model="user.email"></input>
+            </td>
+            <td>
+                <input type="password" placeholder="Changer de mot de passe" ng-model="user.password"></input>
+            </td>
+            <td>
+                <button ng-click='vm.update(user)' class="centered col offset-l2 l8 offset-l2 btn">Editer</button>
+            </td>
+            <td>
+                <button ng-click='vm.delete(user)' class="centered col offset-l2 l8 offset-l2 btn">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

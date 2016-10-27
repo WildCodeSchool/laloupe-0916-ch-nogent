@@ -1,4 +1,4 @@
-class admincategorieController {
+class categorieController {
 
     constructor(categorieService, $routeParams) {
             this.$routeParams = $routeParams;

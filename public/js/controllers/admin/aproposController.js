@@ -1,4 +1,4 @@
-class adminaproposController {
+class aproposController {
 
     constructor(aproposService) {
         this.aproposService = aproposService;
@@ -15,7 +15,7 @@ class adminaproposController {
             this.aproposs = res.data[0];
         });
     }
-    create2() {
+    create() {
         if (this.apropos.length > 0) this.apropos.forEach((v, i) => {
             this.delete(v);
         });

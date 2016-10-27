@@ -1,0 +1,27 @@
+<div class="row">
+    <form class="col offset-l2 l6 offset-l3 z-depth-6 card-panel">
+        <div class="row">
+            <h1 class="center-align">Administration</h1>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">mail_outline</i>
+                <input class="validate" id="email" type="email" ng-model='vm.email'>
+                <label for="email" data-error="wrong" data-success="Email valide">Email</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">lock_outline</i>
+                <input id="password" type="password" ng-model='vm.password'>
+                <label for="password">Mot de passe</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <a ng-click='vm.login()' class="waves-effect waves-light btn-large col s6 offset-s3">Se connecter</a>
+            </div>
+            <div class="input-field col s12">
+                <a ng-click='vm.createAccount()' class="waves-effect waves-light btn-large col s6 offset-s3">Créer un compte</a>
+            </div>
+        </div>
+    </form>
+</div>

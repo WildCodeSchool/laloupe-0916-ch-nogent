@@ -1,33 +1,46 @@
-class adminannuaireController {
+class annuaireController {
 
     constructor(annuaireService) {
-      this.annuaireService = annuaireService;
-      this.load();
+        this.annuaireService = annuaireService;
+        this.load();
 
-        }
-        load() {
-            this.annuaireService.getAll().then((res) => {
-                this.annuaires = res.data;
-            });
-        }
+        $(document).ready(function() {
+            $('.modal-trigger').leanModal();
+        });
 
-        create() {
-            this.annuaireService.create(this.annuaire).then(() => {
+        $("#addjs").click(function() {
+            $("#showjs").show();
+        });
+        $(".button-collapse").sideNav();
 
-                this.annuaire = {};
-                this.load();
-            });
-        }
+        $(document).ready(function() {
+            $('input#input_text, textarea#textarea1').characterCounter();
+        });
 
-        update(annuaire) {
-            this.annuaireService.update(annuaire._id, annuaire).then(() => {
-                this.load();
-            });
-        }
+    }
+    load() {
+        this.annuaireService.getAll().then((res) => {
+            this.annuaires = res.data;
+        });
+    }
 
-        delete(annuaire) {
-            this.annuaireService.delete(annuaire._id).then(() => {
-                this.load();
-            });
-        }
+    create() {
+        this.annuaireService.create(this.annuaire).then(() => {
+
+            this.annuaire = {};
+            this.load();
+        });
+    }
+
+    update(annuaire) {
+        this.annuaireService.update(annuaire._id, annuaire).then(() => {
+            this.load();
+        });
+    }
+
+    delete(annuaire) {
+        this.annuaireService.delete(annuaire._id).then(() => {
+            this.load();
+        });
+    }
 }

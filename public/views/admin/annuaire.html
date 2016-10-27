@@ -1,0 +1,93 @@
+<!-- View -->
+<div id="topFixed"></div>
+<div class="row">
+    <div class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
+        <div class="row">
+            <h1 class="center-align">Liste des praticiens</h1>
+            <table class="centered highlight striped">
+                <thead>
+                    <tr class="bordered">
+                        <th data-field="name">Nom</th>
+                        <th data-field="lastname">Prénom</th>
+                        <th data-field="numero">Numéro</th>
+                        <th data-field="spécialisation">Spécialisation</th>
+                        <th data-field="email">E-mail</th>
+                        <th data-field="lien">Lien</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr ng-repeat='annuaire in vm.annuaires | filter:searchText | orderBy:"+annuaire"'>
+                        <td>
+                            <input ng-model="annuaire.nom"></input>
+                        </td>
+                        <td>
+                            <input ng-model="annuaire.prenom"></input>
+                        </td>
+                        <td>
+                            <input ng-model="annuaire.telephone"></input>
+                        </td>
+                        <td>
+                            <input ng-model="annuaire.fonction"></input>
+                        </td>
+                        <td>
+                            <input ng-model="annuaire.email"></input>
+                        </td>
+                        <td>
+                            <input ng-model="annuaire.lien"></input>
+                        </td>
+                        <td>
+                        <li>
+                            <a class="btn-floating yellow darken-1" ng-click='vm.update(annuaire)'>
+                                <i class="material-icons">mode_edit</i>
+                            </a>
+                            <a class="btn-floating red">
+                                <i class="material-icons" ng-click='vm.delete(annuaire)'>delete</i>
+                            </a>
+                        </li>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <a id="addjs" class="waves-effect waves-light btn col l2 offset-l1">Ajouter</a>
+    </div>
+</div>
+
+<div id="showjs" class="row">
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
+        <div class="row">
+            <h1 class="center-align">Ajouter un praticien</h1>
+            <div class="input-field col s6 offset-s3">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="annuname" type="text" length="40" ng-model='vm.annuaire.nom'>
+                <label for="annuname">Nom du Service</label>
+            </div>
+            <div class="input-field col s6 offset-s3">
+                <i class="material-icons prefix">phone</i>
+                <input id="annuphone" type="text" length="30" ng-model='vm.annuaire.telephone'>
+                <label for="annuphone">Numéro</label>
+            </div>
+            <div class="input-field col s6 offset-s3">
+                <input id="a1" type="text" length="30" ng-model='vm.annuaire.fonction'>
+                <label for="a1">Fonction</label>
+            </div>
+            <div class="input-field col s6 offset-s3">
+                <input id="a2" type="text" length="14" ng-model='vm.annuaire.telephone'>
+                <label for="a2">Téléphone</label>
+            </div>
+            <div class="input-field col s6 offset-s3">
+                <input id="a3" type="text" length="40" ng-model='vm.annuaire.email'>
+                <label for="a3">E-mail</label>
+            </div>
+            <div class="input-field col s6 offset-s3">
+                <input id="a4" type="text" length="40" ng-model='vm.annuaire.lien'>
+                <label for="a4">Lien</label>
+            </div>
+        </div>
+        <div class="row">
+            <a class="waves-effect waves-light btn-large col s6 offset-s3" ng-click='vm.create()'>Enregistrer</a>
+        </div>
+    </form>
+</div>
