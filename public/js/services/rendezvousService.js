@@ -1,4 +1,4 @@
-class btn1Service {
+class rendezvousService {
 
     constructor($http) {
         this.$http = $http;

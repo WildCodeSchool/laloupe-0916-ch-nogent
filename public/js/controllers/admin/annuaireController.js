@@ -1,4 +1,4 @@
-class adminannuaireController {
+class annuaireController {
 
     constructor(annuaireService) {
       this.annuaireService = annuaireService;

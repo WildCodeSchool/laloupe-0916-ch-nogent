@@ -1,4 +1,4 @@
-class adminstatController {
+class statController {
 
     constructor(statService) {
             this.statService = statService;
