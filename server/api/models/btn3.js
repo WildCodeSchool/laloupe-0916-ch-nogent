@@ -1,6 +1,10 @@
 import mongoose from 'mongoose';
 
 const btn3Schema = new mongoose.Schema({
+    title1: String,
+    title2: String,
+    title3: String,
+    title4: String,
     texte1: String,
     texte2: String,
     texte3: String,
@@ -33,6 +37,10 @@ export default class Btn3 {
 
     create(req, res) {
         model.create({
+                title1: req.body.title1,
+                title2: req.body.title2,
+                title3: req.body.title3,
+                title4: req.body.title4,
                 texte1: req.body.texte1,
                 texte2: req.body.texte2,
                 texte3: req.body.texte3,
@@ -51,6 +59,10 @@ export default class Btn3 {
         model.update({
             _id: req.params.id
         }, {
+            title1: req.body.title1,
+            title2: req.body.title2,
+            title3: req.body.title3,
+            title4: req.body.title4,
             texte1: req.body.texte1,
             text2: req.body.texte2,
             texte: req.body.texte3,
