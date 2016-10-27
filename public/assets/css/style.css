@@ -116,12 +116,11 @@ nav ul a.btn-urgence:hover {
 }
 
 #logo {
-    padding-left: 50px;
+    /*padding-left: 50px;*/
     height: 100px;
 }
 
 #logo img {
-    padding-top: 5px;
     width: 100px;
     height: 100px;
 }
@@ -474,6 +473,7 @@ nav ul a.btn-urgence:hover {
         padding-top: 10px;
         left: 110px;
     }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 993px) {
@@ -490,6 +490,14 @@ nav ul a.btn-urgence:hover {
         margin-top: 2%;
         height: 130px;
     }
+
+    nav .button-collapse i {
+        margin-top: 20px;
+    }
+
+    #menuTitle {
+        left: 110px;
+    }
 }
 
 @media screen and (min-width: 600px) and (max-width: 767px) {
@@ -499,6 +507,15 @@ nav ul a.btn-urgence:hover {
     #mainTitle {
         font-size: 4em;
     }
+
+    nav .button-collapse i {
+        margin-top: 20px;
+    }
+
+    #menuTitle {
+        left: 110px;
+    }
+
     .group-btn {
         top: 52%;
     }
@@ -550,6 +567,8 @@ nav ul a.btn-urgence:hover {
     #menuTitle {
         line-height: 30px;
         width: 70%;
+        left: 110px;
+        margin-top: 20px;
     }
     .row-slider, .slider {
         height: 45vh !important;
@@ -557,6 +576,11 @@ nav ul a.btn-urgence:hover {
     #mainTitle {
         font-size: 4em;
     }
+
+    nav .button-collapse i {
+        margin-top: 20px;
+    }
+
     .group-btn {
         position: relative;
     }
@@ -614,18 +638,24 @@ nav ul a.btn-urgence:hover {
         right: 10px;
         margin-right: 0;
     }
-    #logo {
+    /*#logo {
         padding-left: 30px;
-    }
+    }*/
     #logo img {
         width: 80px;
         height: 80px;
+        margin-top: 10px;
     }
     #menuTitle {
         line-height: 30px;
         width: 60%;
         font-size: 1.3em;
-        left: 130px;
+        left: 90px;
+        margin-top: 15px;
+    }
+
+    nav .button-collapse i {
+        margin-top: 20px;
     }
     .row-slider, .slider {
         height: 50vh !important;
