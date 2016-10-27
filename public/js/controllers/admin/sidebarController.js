@@ -12,7 +12,9 @@ class sidebarController {
         $rootScope.$on('loginStatusChanged', (event, isLogged) => {
             this.isLogged = isLogged;
             this.user = sessionFactory.user;
+            $('#main').css({'padding-left':(this.isLogged?'300px':'0')});
         });
+
 
     }
 

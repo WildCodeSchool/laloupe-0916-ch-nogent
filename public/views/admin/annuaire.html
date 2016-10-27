@@ -7,25 +7,42 @@
             <table class="centered highlight striped">
                 <thead>
                     <tr class="bordered">
-                        <th data-field="lastname">Nom et prenom</th>
-                        <th data-field="name">Numéro</th>
-                        <th data-field="id">Spécialisation</th>
-                        <th data-field="checkbox">Sélection</th>
+                        <th data-field="name">Nom</th>
+                        <th data-field="lastname">Prénom</th>
+                        <th data-field="numero">Numéro</th>
+                        <th data-field="spécialisation">Spécialisation</th>
+                        <th data-field="email">E-mail</th>
+                        <th data-field="lien">Lien</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr ng-repeat='annuaire in vm.annuaires | filter:searchText | orderBy:"+annuaire"'>
-                      <td><input ng-model="annuaire.nom"></input></td>
-                     <td><input ng-model="annuaire.telephone"></input></td>
-                     <td><input ng-model="annuaire.fonction"></input></td>
+                        <td>
+                            <input ng-model="annuaire.nom"></input>
+                        </td>
+                        <td>
+                            <input ng-model="annuaire.prenom"></input>
+                        </td>
+                        <td>
+                            <input ng-model="annuaire.telephone"></input>
+                        </td>
+                        <td>
+                            <input ng-model="annuaire.fonction"></input>
+                        </td>
+                        <td>
+                            <input ng-model="annuaire.email"></input>
+                        </td>
+                        <td>
+                            <input ng-model="annuaire.lien"></input>
+                        </td>
                         <td>
                         <li>
-                            <a class="btn-floating yellow darken-1"  ng-click='vm.update(annuaire)'>
+                            <a class="btn-floating yellow darken-1" ng-click='vm.update(annuaire)'>
                                 <i class="material-icons">mode_edit</i>
                             </a>
                             <a class="btn-floating red">
-                                <i class="material-icons"  ng-click='vm.delete(annuaire)'>delete</i>
+                                <i class="material-icons" ng-click='vm.delete(annuaire)'>delete</i>
                             </a>
                         </li>
                     </td>
@@ -43,19 +60,28 @@
         <div class="row">
             <h1 class="center-align">Ajouter un praticien</h1>
             <div class="input-field col s6 offset-s3">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="input_text" type="text" length="40" ng-model='vm.annuaire.nom'>
-                <label for="input_text">Nom du Service</label>
+                <input id="input_text" type="text" length="30" ng-model='vm.annuaire.nom'>
+                <label for="input_text">Nom</label>
             </div>
             <div class="input-field col s6 offset-s3">
-                <i class="material-icons prefix">phone</i>
-                <input id="input_text" type="text" length="30" ng-model='vm.annuaire.telephone'>
-                <label for="input_text">Numéro</label>
+                <input id="input_text" type="text" length="30" ng-model='vm.annuaire.prenom'>
+                <label for="input_text">Prénom</label>
             </div>
-
             <div class="input-field col s6 offset-s3">
-                <input id="input_text" type="text"  ng-model='vm.annuaire.fonction'>
-                <label for="input_text">Nom du service</label>
+                <input id="input_text" type="text" length="30" ng-model='vm.annuaire.fonction'>
+                <label for="input_text">Fonction</label>
+            </div>
+            <div class="input-field col s6 offset-s3">
+                <input id="input_text" type="text" length="14" ng-model='vm.annuaire.telephone'>
+                <label for="input_text">Téléphone</label>
+            </div>
+            <div class="input-field col s6 offset-s3">
+                <input id="input_text" type="text" length="40" ng-model='vm.annuaire.email'>
+                <label for="input_text">E-mail</label>
+            </div>
+            <div class="input-field col s6 offset-s3">
+                <input id="input_text" type="text" length="40" ng-model='vm.annuaire.lien'>
+                <label for="input_text">Lien</label>
             </div>
         </div>
         <div class="row">
@@ -63,13 +89,3 @@
         </div>
     </form>
 </div>
-<script>
-$(document).ready(function() {
-    $('.modal-trigger').leanModal();
-});
-
-$("#addjs").click(function() {
-    $("#showjs").show();
-});
-$(".button-collapse").sideNav();
-</script>
