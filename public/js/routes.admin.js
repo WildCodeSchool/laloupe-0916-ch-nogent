@@ -22,11 +22,11 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/utilisateurs', {
             templateUrl: '../views/admin/utilisateurs/show.html',
-            controller: '',
-            controllerAs: 'vm',
             resolve: {
                 connected: checkIsConnected
-            }
+            },
+            controller: 'userController',
+            controllerAs: 'vm'
         })
         .when('/boutons/ehpad', {
             templateUrl: '../views/admin/boutons/ephad.html',
@@ -94,7 +94,7 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/marches', {
             templateUrl: '../views/admin/marches.html',
-            controller: 'marchesController',
+            controller: 'marcheController',
             controllerAs: 'vm',
             resolve: {
                 connected: checkIsConnected
