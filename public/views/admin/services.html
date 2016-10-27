@@ -1,25 +1,3 @@
-<meta charset="utf-8">
-<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" media="screen,projection"/>
-<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="../admin.css">
-
-<style>
-    #supModal {
-        padding: 60px;
-    }
-    #warning {
-        margin-bottom: 40px;
-    }
-    .warning {
-        color: red;
-    }
-
-</style>
-
-</head>
-<body>
-
-<!-- View -->
 <div class="row">
     <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
         <h2>Ajouter un service
@@ -103,42 +81,3 @@
             </div>
         </div>
     </form>
-
-    <!-- Modal -->
-
-    <div>
-        <div id="modal_warning" class="modal">
-            <div class="modal-content" id="supModal">
-                <h4 class="center-align" id="warning">
-                    <i class="small material-icons warning">warning</i>
-                    Attention !
-                    <i class="small material-icons warning">warning</i>
-                </h4>
-                <p class="center-align">La suppression d'un utilisateur est irréversible.<br>
-                    Confirmez-vous la suppression de l'utilisateur ? :</p>
-
-                <p class="center-align">
-                    [E-mail] - [Nom] [Prénom]
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right blue-grey lighten-5">Annuler</a>
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat left red white-text">Confirmer</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Fin Modal -->
-
-<!-- Fin View-->
-<script>
-    $(document).ready(function() {
-        $('.modal-trigger').leanModal();
-    });
-
-    $("#addjs").click(function() {
-        $("#showjs").show();
-    });
-    $(".button-collapse").sideNav();
-</script>

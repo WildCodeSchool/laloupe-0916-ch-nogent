@@ -44,18 +44,18 @@
             <h1 class="center-align">Ajouter un praticien</h1>
             <div class="input-field col s6 offset-s3">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="input_text" type="text" length="40" ng-model='vm.annuaire.nom'>
-                <label for="input_text">Nom du Service</label>
+                <input id="annuname" type="text" length="40" ng-model='vm.annuaire.nom'>
+                <label for="annuname">Nom du Service</label>
             </div>
             <div class="input-field col s6 offset-s3">
                 <i class="material-icons prefix">phone</i>
-                <input id="input_text" type="text" length="30" ng-model='vm.annuaire.telephone'>
-                <label for="input_text">Numéro</label>
+                <input id="annuphone" type="text" length="30" ng-model='vm.annuaire.telephone'>
+                <label for="annuphone">Numéro</label>
             </div>
 
             <div class="input-field col s6 offset-s3">
-                <input id="input_text" type="text"  ng-model='vm.annuaire.fonction'>
-                <label for="input_text">Nom du service</label>
+                <input id="annufonction" type="text"  ng-model='vm.annuaire.fonction'>
+                <label for="annufontcion">Nom du service</label>
             </div>
         </div>
         <div class="row">
@@ -71,5 +71,4 @@ $(document).ready(function() {
 $("#addjs").click(function() {
     $("#showjs").show();
 });
-$(".button-collapse").sideNav();
 </script>
