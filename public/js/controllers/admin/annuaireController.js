@@ -1,42 +1,46 @@
 class annuaireController {
 
     constructor(annuaireService) {
-      this.annuaireService = annuaireService;
-      this.load();
+        this.annuaireService = annuaireService;
+        this.load();
 
-          $(document).ready(function() {
-              $('.modal-trigger').leanModal();
-          });
+        $(document).ready(function() {
+            $('.modal-trigger').leanModal();
+        });
 
-          $("#addjs").click(function() {
-              $("#showjs").show();
-          });
-          $(".button-collapse").sideNav();
+        $("#addjs").click(function() {
+            $("#showjs").show();
+        });
+        $(".button-collapse").sideNav();
 
-        }
-        load() {
-            this.annuaireService.getAll().then((res) => {
-                this.annuaires = res.data;
-            });
-        }
+        $(document).ready(function() {
+            $('input#input_text, textarea#textarea1').characterCounter();
+        });
 
-        create() {
-            this.annuaireService.create(this.annuaire).then(() => {
+    }
+    load() {
+        this.annuaireService.getAll().then((res) => {
+            this.annuaires = res.data;
+        });
+    }
 
-                this.annuaire = {};
-                this.load();
-            });
-        }
+    create() {
+        this.annuaireService.create(this.annuaire).then(() => {
 
-        update(annuaire) {
-            this.annuaireService.update(annuaire._id, annuaire).then(() => {
-                this.load();
-            });
-        }
+            this.annuaire = {};
+            this.load();
+        });
+    }
 
-        delete(annuaire) {
-            this.annuaireService.delete(annuaire._id).then(() => {
-                this.load();
-            });
-        }
+    update(annuaire) {
+        this.annuaireService.update(annuaire._id, annuaire).then(() => {
+            this.load();
+        });
+    }
+
+    delete(annuaire) {
+        this.annuaireService.delete(annuaire._id).then(() => {
+            this.load();
+        });
+    }
 }
