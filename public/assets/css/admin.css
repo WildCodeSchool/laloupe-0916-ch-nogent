@@ -231,3 +231,10 @@ h1 {
 .justificationabout {
     width: 45vw;
 }
+
+/* admin categorie */
+
+.optionBloc {
+  display: flex;
+  flex-direction: row;
+}
