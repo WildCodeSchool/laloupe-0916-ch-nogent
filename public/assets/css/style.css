@@ -79,6 +79,10 @@ nav ul a.btn-urgence:hover {
     position: fixed;
 }
 
+#push {
+    height: 100px;
+}
+
 #push nav {
     height: 100px;
     line-height: 100px;
@@ -87,6 +91,10 @@ nav ul a.btn-urgence:hover {
 #push nav li a {
     font-size: 1.8em;
     color: black;
+}
+
+.arrowdropdown {
+    margin-top: 18px
 }
 
 #navbardeux {
@@ -108,12 +116,11 @@ nav ul a.btn-urgence:hover {
 }
 
 #logo {
-    padding-left: 50px;
+    /*padding-left: 50px;*/
     height: 100px;
 }
 
 #logo img {
-    padding-top: 5px;
     width: 100px;
     height: 100px;
 }
@@ -221,23 +228,6 @@ nav ul a.btn-urgence:hover {
     top: 5%;
 }
 
-
-/* Menu sous bouton */
-
-.blocconsultation {
-    display: flex;
-    width: 100%;
-}
-
-
-/*.blocconsultation #consultation {
-    display: flex;
-}*/
-
-#consultation, #imagerie, #perinatal {
-    width: 30%;
-}
-
 .annu {
     min-height: 84px;
     padding-left: 72px;
@@ -249,6 +239,9 @@ nav ul a.btn-urgence:hover {
     margin-left: 0.3em;
     margin-right: 0.3em;
 }
+
+
+/* Menu sous bouton */
 
 
 /* div ng-show "j'ai un rendez-vous" */
@@ -386,8 +379,8 @@ nav ul a.btn-urgence:hover {
     text-align: center;
 }
 
-#contactresponsive{
-  margin-top: 30px;
+#contactresponsive {
+    margin-top: 30px;
 }
 
 
@@ -463,10 +456,11 @@ nav ul a.btn-urgence:hover {
 
 
 /* Responsive */
+
 @media screen and (max-height: 770px) {
-  #mainTitle {
-    padding-top: 0;
-  }
+    #mainTitle {
+        padding-top: 0;
+    }
 }
 
 @media screen and (min-width: 994px) and (max-width: 1300px) {
@@ -479,6 +473,7 @@ nav ul a.btn-urgence:hover {
         padding-top: 10px;
         left: 110px;
     }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 993px) {
@@ -495,6 +490,14 @@ nav ul a.btn-urgence:hover {
         margin-top: 2%;
         height: 130px;
     }
+
+    nav .button-collapse i {
+        margin-top: 20px;
+    }
+
+    #menuTitle {
+        left: 110px;
+    }
 }
 
 @media screen and (min-width: 600px) and (max-width: 767px) {
@@ -504,6 +507,15 @@ nav ul a.btn-urgence:hover {
     #mainTitle {
         font-size: 4em;
     }
+
+    nav .button-collapse i {
+        margin-top: 20px;
+    }
+
+    #menuTitle {
+        left: 110px;
+    }
+
     .group-btn {
         top: 52%;
     }
@@ -511,33 +523,52 @@ nav ul a.btn-urgence:hover {
         margin-top: 2%;
         height: 145px;
     }
+
+    .presentation h2 {
+      width: 90%;
+      padding-top: 10%;
+      margin: 0 auto;
+      font-size: 2.5em;
+    }
+    #carouselh2 {
+      width: 90%;
+      padding-top: 5%;
+      margin: 0 auto;
+      font-size: 1.4em;
+    }
+    #stats a {
+      top: 20%;
+    }
+    .carousel-item p {
+      font-size : 1.2em;
+    }
+    .carousel-item i {
+      font-size : 2em;
+    }
 }
 
 @media screen and (min-width: 401px) and (max-width: 599px) {
-
     .modal-trigger1 {
         display: none;
     }
-
     #numHospital {
-      /*display: none;*/
-      font-size: 0.8em;
+        /*display: none;*/
+        font-size: 0.8em;
     }
-
     #scrollspy {
         display: flex;
         flex-direction: row;
     }
-
     #scrollspy .right {
-      position: absolute;
-      right: 10px;
-      margin-right: 0;
+        position: absolute;
+        right: 10px;
+        margin-right: 0;
     }
-
     #menuTitle {
         line-height: 30px;
         width: 70%;
+        left: 110px;
+        margin-top: 20px;
     }
     .row-slider, .slider {
         height: 45vh !important;
@@ -545,6 +576,11 @@ nav ul a.btn-urgence:hover {
     #mainTitle {
         font-size: 4em;
     }
+
+    nav .button-collapse i {
+        margin-top: 20px;
+    }
+
     .group-btn {
         position: relative;
     }
@@ -552,9 +588,37 @@ nav ul a.btn-urgence:hover {
         margin-top: 2%;
         height: 145px;
     }
-
-    .slider2 .titlecar {
-      font-size: 2em;
+    .presentation h2 {
+      width: 90%;
+      padding-top: 10%;
+      margin: 0 auto;
+      font-size: 2.5em;
+    }
+    #carouselh2 {
+      width: 90%;
+      padding-top: 10%;
+      margin: 0 auto;
+      font-size: 1.1em;
+    }
+    #stats a {
+      top: 10%;
+    }
+    .carousel-item p {
+      font-size : 0.9em;
+    }
+    .carousel-item i {
+      font-size : 1.7em;
+    }
+    #bottomNavbar {
+      height: 100px;
+    }
+    #bottomBar {
+      display: flex;
+      flex-direction: column;
+    }
+    #bottomBar li {
+      width: 100%;
+      text-align: center;
     }
 }
 
@@ -562,34 +626,36 @@ nav ul a.btn-urgence:hover {
     .modal-trigger1 {
         display: none;
     }
-
-        #numHospital {
-          display: none;
-        }
-
-        #scrollspy {
-            display: flex;
-            flex-direction: row;
-        }
-
-        #scrollspy .right {
-          position: absolute;
-          right: 10px;
-          margin-right: 0;
-        }
-
-    #logo {
-        padding-left: 30px;
+    #numHospital {
+        display: none;
     }
+    #scrollspy {
+        display: flex;
+        flex-direction: row;
+    }
+    #scrollspy .right {
+        position: absolute;
+        right: 10px;
+        margin-right: 0;
+    }
+    /*#logo {
+        padding-left: 30px;
+    }*/
     #logo img {
         width: 80px;
         height: 80px;
+        margin-top: 10px;
     }
     #menuTitle {
         line-height: 30px;
         width: 60%;
-        font-size: 1.4em;
-        left: 130px;
+        font-size: 1.3em;
+        left: 90px;
+        margin-top: 15px;
+    }
+
+    nav .button-collapse i {
+        margin-top: 20px;
     }
     .row-slider, .slider {
         height: 50vh !important;
@@ -603,5 +669,37 @@ nav ul a.btn-urgence:hover {
     .cont-btn, .sliderbtn {
         margin-top: 2%;
         height: 145px;
+    }
+    .presentation h2 {
+      width: 90%;
+      padding-top: 10%;
+      margin: 0 auto;
+      font-size: 2em;
+    }
+    #carouselh2 {
+      width: 90%;
+      padding-top: 10%;
+      margin: 0 auto;
+      font-size: 1em;
+    }
+    #stats a {
+      top: 10%;
+    }
+    .carousel-item p {
+      font-size : 0.7em;
+    }
+    .carousel-item i {
+      font-size : 1.5em;
+    }
+    #bottomNavbar {
+      height: 100px;
+    }
+    #bottomBar {
+      display: flex;
+      flex-direction: column;
+    }
+    #bottomBar li {
+      width: 100%;
+      text-align: center;
     }
 }

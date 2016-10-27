@@ -1,3 +1,4 @@
+<div id="topFixed"></div>
 <div class="row">
     <div class="col-xs-12 col-md-10 col-md-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
         <h2>Ajouter un service
@@ -10,11 +11,11 @@
                   <option value='0'>Racine du menu "Nos Services"</option>
                   <option ng-repeat='categorie in vm.categories | orderBy: ["idparent","titre"]' value="{{categorie._id}}">{{categorie.titre}}</option>
                 </select>
-                <p><input type="text" class="form-control" placeholder="Photo du service" ng-model='vm.categorie.photo'></p>
+                <p><input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'></p>
                 <p><textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.categorie.texte'></textarea></p>
                 <p><input type="text" class="form-control" placeholder="Lien du service" ng-model='vm.categorie.lien'></p>
             </div>
-            <button ng-click='vm.create()' class="btn btn-default">Ajouter</button>
+            <button ng-click='vm.create(categorie)' class="btn btn-default">Ajouter</button>
         </form>
     </div>
 </div>
@@ -32,7 +33,7 @@
    <tr  ng-repeat='categorie in vm.categories | orderBy:"+categorie"'>
      <td><select class="browser-default" ng-model='categorie.idparent'>
           <option value='0'>Racine du menu "Nos Services"</option>
-          <option ng-repeat='categorie in vm.categories | orderBy: ["idparent","titre"]' value="{{categorie._id}}">{{categorie.titre}}</option>
+          <option ng-repeat='c in vm.categories | orderBy: ["idparent","titre"]' value="{{c._id}}">{{c.titre}}</option>
           </select>
      </td>
      <td><input ng-model='categorie.titre'></td>

@@ -1,21 +1,21 @@
-
-
-
-
+<div id="topFixed"></div>
 <div class="container">
   <div class="row col s8">
-    <h4 style="text-align:center;color:red">Rechercher un praticien</h4>
+    <h4 style="text-align:center">Rechercher un praticien</h4>
     <label> <input placeholder="Nom,prenom ou spécialité du praticien" ng-model="searchText" style="width:30%;margin-left:35%"></label>
   </div>
 <div class="row">
-  <div class="col s3 offset-s1 panel panel-default" ng-repeat='annuaire in vm.annuaires | filter:searchText | orderBy:"+annuaire"'>
+  <div class="col s10 offset-s1 m3 offset-m1 l2 offset-1 panel panel-default" ng-repeat='annuaire in vm.annuaires | filter:searchText | orderBy:"+annuaire"'>
       <div class="panel-body">
           <form class="form-inline">
               <div class="form-group">
-                  <i class="large material-icons">contact_phone</i>
-                  <p>Nom : {{annuaire.nom}}</p>
-                  <p>Spécialité : {{annuaire.fonction}}</p>
-                  <p>Numero : {{annuaire.telephone}}</p>
+                  <i class="large material-icons cyan-text center">contact_phone</i>
+                  <p>Nom : <br>
+                    {{annuaire.nom}}</p>
+                  <p>Spécialité :<br>
+                    {{annuaire.fonction}}</p>
+                  <p>Numero :<br>
+                    {{annuaire.telephone}}</p>
               </div>
               <br>
               <hr/>

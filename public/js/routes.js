@@ -99,6 +99,82 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'admin/btn4Controller',
             controllerAs: 'vm'
         })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .when('/administration', {
+            templateUrl: 'views/adminmain.html',
+            controller: '',
+            controllerAs: 'vm'
+        })
+        .when('/admin/annuaire', {
+            templateUrl: 'admin/annuaire.html',
+            controller: 'admin/annuaireController',
+            controllerAs: 'vm'
+        })
+        .when('/admin/adduser', {
+            templateUrl: 'admin/addadmin.html',
+            controller: '',
+            controllerAs: 'vm'
+        })
+        .when('/admin', {
+            templateUrl: 'admin/loginadmin.html',
+            controller: '',
+            controllerAs: 'vm'
+        })
+        .when('/admin/stat', {
+            templateUrl: 'admin/slideradmin.html',
+            controller: 'admin/statController',
+            controllerAs: 'vm'
+        })
+        .when('/admin/apropos1', {
+            templateUrl: 'admin/aproposadmin.html',
+            controller: 'admin/aproposController',
+            controllerAs: 'vm'
+        })
+        .when('/admin/article', {
+            templateUrl: 'admin/articleadmin.html',
+            controller: 'admin/actualiteController',
+            controllerAs: 'vm'
+        })
+        .when('/admin/categorie1', {
+            templateUrl: 'admin/categorieadmin.html',
+            controller: 'admin/categorieController',
+            controllerAs: 'vm'
+        })
+        .when('/admin/contact1', {
+            templateUrl: 'admin/contactadmin.html',
+            controller: 'admin/contactController',
+            controllerAs: 'vm'
+        })
+        .when('/admin/listuser', {
+            templateUrl: 'admin/listadmin.html',
+            controller: '',
+            controllerAs: 'vm'
+        })
+
+
+
+
+
+
+
+
+
+
+
+
         .otherwise({
             redirectTo: '/'
         });
