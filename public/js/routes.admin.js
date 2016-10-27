@@ -1,11 +1,8 @@
-const routes = ($routeProvider, $httpProvider) => {
+nconst routes = ($routeProvider, $httpProvider) => {
 
     $routeProvider
         .when('/', {
-            templateUrl: '../views/admin/main.html',
-            resolve: {
-                connected: checkIsConnected
-            }
+            templateUrl: '../views/admin/main.html'
         })
         .when('/login', {
             templateUrl: '../views/admin/login.html',
@@ -15,106 +12,67 @@ const routes = ($routeProvider, $httpProvider) => {
         .when('/utilisateurs/ajouter', {
             templateUrl: '../views/admin/utilisateurs/add.html',
             controller: '',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            controllerAs: 'vm'
         })
         .when('/utilisateurs', {
             templateUrl: '../views/admin/utilisateurs/show.html',
-            resolve: {
-                connected: checkIsConnected
-            },
-            controller: 'userController',
+            controller: '',
             controllerAs: 'vm'
         })
         .when('/boutons/ehpad', {
             templateUrl: '../views/admin/boutons/ehpad.html',
             controller: 'ehpadController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            controllerAs: 'vm'
         })
         .when('/boutons/hospitalise', {
             templateUrl: '../views/admin/boutons/hospitalise.html',
             controller: 'hospitaliseController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            controllerAs: 'vm'
         })
         .when('/boutons/rendezvous', {
             templateUrl: '../views/admin/boutons/rendezvous.html',
             controller: 'rendezvousController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            controllerAs: 'vm'
         })
         .when('/boutons/visite', {
             templateUrl: '../views/admin/boutons/visite.html',
             controller: 'visiteController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            controllerAs: 'vm'
         })
         .when('/actualite', {
             templateUrl: '../views/admin/actualite.html',
             controller: 'actualiteController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            controllerAs: 'vm'
         })
         .when('/annuaire', {
             templateUrl: '../views/admin/annuaire.html',
             controller: 'annuaireController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            controllerAs: 'vm'
         })
         .when('/apropos', {
             templateUrl: '../views/admin/apropos.html',
             controller: 'aproposController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            controllerAs: 'vm'
         })
         .when('/contacts', {
             templateUrl: '../views/admin/contacts.html',
             controller: 'contactController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            controllerAs: 'vm'
         })
         .when('/marches', {
             templateUrl: '../views/admin/marches.html',
-            controller: 'marcheController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            controller: 'marchesController',
+            controllerAs: 'vm'
         })
         .when('/stats', {
             templateUrl: '../views/admin/stats.html',
             controller: 'statController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            controllerAs: 'vm'
         })
         .when('/services', {
             templateUrl: '../views/admin/services.html',
             controller: 'categorieController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            controllerAs: 'vm'
         })
         .when('/boutons', {
             templateUrl: '../views/admin/buttonadmin.html',
