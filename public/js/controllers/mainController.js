@@ -1,10 +1,10 @@
 class mainController {
 
-    constructor(btn1Service, btn2Service, btn3Service, btn4Service, statService) {
-        this.btn1Service = btn1Service;
-        this.btn2Service = btn2Service;
-        this.btn3Service = btn3Service;
-        this.btn4Service = btn4Service;
+    constructor(rendezvousService, hospitaliseService, ehpadService, visiteService, statService) {
+        this.rendezvousService = rendezvousService;
+        this.hospitaliseService = hospitaliseService;
+        this.ehpadService = ehpadService;
+        this.visiteService = visiteService;
             this.statService = statService;
         this.load();
 
@@ -145,19 +145,19 @@ class mainController {
             this.stat = res.data;
             this.stats = res.data[0];
         });
-        this.btn1Service.getAll().then((res) => {
+        this.rendezvousService.getAll().then((res) => {
             this.btn1s = res.data;
             this.btn1 = this.btn1s[0];
         });
-        this.btn2Service.getAll().then((res) => {
+        this.hospitaliseService.getAll().then((res) => {
             this.btn2s = res.data;
             this.btn2 = this.btn2s[0];
         });
-        this.btn3Service.getAll().then((res) => {
+        this.ehpadService.getAll().then((res) => {
             this.btn3s = res.data;
             this.btn3 = this.btn3s[0];
         });
-        this.btn4Service.getAll().then((res) => {
+        this.visiteService.getAll().then((res) => {
             this.btn4s = res.data;
             this.btn4 = this.btn4s[0];
         });

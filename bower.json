@@ -13,7 +13,8 @@
     "bootstrap": "^3.3.6",
     "angular-sanitize": "^1.5.8",
     "tinymce": "^4.4.3",
-    "angular-ui-tinymce": "^0.0.17"
+    "angular-ui-tinymce": "^0.0.17",
+    "materialize": "^0.97.7"
   },
   "ignore": [
     "**/.*",

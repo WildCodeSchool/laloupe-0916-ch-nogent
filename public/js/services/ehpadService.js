@@ -1,4 +1,4 @@
-class btn3Service {
+class ehpadService {
 
     constructor($http) {
         this.$http = $http;

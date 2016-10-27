@@ -1,7 +1,7 @@
-class adminbtn3Controller {
+class ehpadController {
 
-    constructor(btn3Service) {
-        this.btn3Service = btn3Service;
+    constructor(ehpadService) {
+        this.ehpadService = ehpadService;
         this.tinymceOptions = {
             toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link ",
             plugins: 'advlist autolink link image lists charmap autoresize textcolor'
@@ -10,7 +10,7 @@ class adminbtn3Controller {
     }
 
     load() {
-        this.btn3Service.getAll().then((res) => {
+        this.ehpadService.getAll().then((res) => {
             this.btn3s = res.data;
             this.btn3 = this.btn3s[0];
         });
@@ -20,7 +20,7 @@ class adminbtn3Controller {
         if(this.btn3s.length > 0) this.btn3s.forEach((v,i) => {
           this.delete(v);
         });
-        this.btn3Service.create(this.btn3).then(() => {
+        this.ehpadService.create(this.btn3).then(() => {
             this.btn3 = {};
             this.load();
 
@@ -28,13 +28,13 @@ class adminbtn3Controller {
     }
 
     update(btn3) {
-        this.btn3Service.update(btn3._id, btn3).then(() => {
+        this.ehpadService.update(btn3._id, btn3).then(() => {
             this.load();
         });
     }
 
     delete(btn3) {
-        this.btn3Service.delete(btn3._id).then(() => {
+        this.ehpadService.delete(btn3._id).then(() => {
             this.load();
         });
     }
