@@ -386,6 +386,10 @@ nav ul a.btn-urgence:hover {
 
 /* Global view */
 
+.tilesidenavbar{
+  text-decoration: underline;
+}
+
 .description img {
     margin: 0 10px 0 10px;
 }
@@ -417,9 +421,10 @@ nav ul a.btn-urgence:hover {
     margin-bottom: 2%;
 }
 
-.categorietemplate h4 {
+.categorietemplate h4 a {
     padding-top: 2%;
-    margin-left: 20%;
+    color: black;
+    text-decoration: underline;
 }
 
 .categorietemplate h5 a {
@@ -434,12 +439,11 @@ nav ul a.btn-urgence:hover {
 #sidenavservices {
     margin-top: 6%;
     margin-right: 2%;
-    position: fixed;
     list-style-type: none;
 }
 
 #sidenavservices a {
-    font-size: 0.6em;
+    font-size: 1em;
     color: black;
 }
 
