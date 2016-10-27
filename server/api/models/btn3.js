@@ -58,16 +58,7 @@ export default class Btn3 {
     update(req, res) {
         model.update({
             _id: req.params.id
-        }, {
-            title1: req.body.title1,
-            title2: req.body.title2,
-            title3: req.body.title3,
-            title4: req.body.title4,
-            texte1: req.body.texte1,
-            text2: req.body.texte2,
-            texte: req.body.texte3,
-            texte: req.body.texte4
-        }, (err, btn3) => {
+        }, req.body, (err, btn3) => {
             if (err || !btn3) {
                 res.status(500).send(err.message);
             } else {
