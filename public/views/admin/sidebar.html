@@ -1,6 +1,6 @@
-<aside style='position:fixed;top:10px;right:25px;z-index:10000' ng-controller='sidebarController as vm'>
-    <div class="container">
-        <ul id="slide-out" class="side-nav">
+<aside style='position:fixed;top:10px;right:25px;z-index:1000' ng-controller='sidebarController as vm'>
+    <div class="container" ng-show='vm.isLogged'>
+        <ul class="side-nav fixed">
             <li>
                 <div class="userView">
                     <a>
@@ -48,10 +48,13 @@
                     <i class="material-icons">timeline</i>Statistique</a>
             </li>
             <li>
+                <a ng-click='vm.logout()'>
+                    <i class="material-icons">timeline</i>Se déconnecter</a>
+            </li>
+            <li>
                 <a href="../">
                     <i class="material-icons">timeline</i>Retour au site</a>
             </li>
         </ul>
-        <a data-activates="slide-out" class="button-collapse waves-effect waves-light btn">menu</a>
     </div>
 </aside>

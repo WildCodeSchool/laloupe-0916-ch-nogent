@@ -14,7 +14,9 @@
     <body>
 
         <ng-include src="'../views/admin/sidebar.html'"></ng-include>
-        <ng-view autoscroll="true"></ng-view>
+        <div id='main'>
+            <ng-view autoscroll="true"></ng-view>
+        </div>
 
         <script src="../vendor/jquery/dist/jquery.min.js"></script>
         <script src="../vendor/materialize/dist/js/materialize.min.js"></script>
