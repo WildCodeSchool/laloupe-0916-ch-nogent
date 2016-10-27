@@ -22,5 +22,6 @@ angular.module('app', ['ngRoute', 'ngSanitize', 'ui.tinymce'])
     .controller('ehpadController', ehpadController)
     .controller('visiteController', visiteController)
     .controller('statController', statController)
+    .controller('sidebarController', sidebarController)
     .config(routes)
     .run(loginStatus);
