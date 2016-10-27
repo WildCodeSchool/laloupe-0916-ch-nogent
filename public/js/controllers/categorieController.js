@@ -13,7 +13,7 @@ class categorieController {
             this.categorieService.getChildrenOf(this.categorie._id).then((res) => {
                 this.categoriesEnfant = res.data; //Xx les enfants de actuelle
             });
-            if(this.categorie.parent != "0") {
+            if(this.categorie.idparent != "0") {
                 this.categorieService.getOne(this.categorie.idparent).then((res) => {
                     this.categorieParent = res.data; //1x le parent de actuelle SI != de 0
                 });
