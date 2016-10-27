@@ -11,65 +11,17 @@
             <div class="row">
                 <h1 class="center-align">Ajouter un Administrateur</h1>
                 <div class="input-field col s6 offset-s3">
-                    <input id="input_text" type="text" length="40">
+                    <input id="input_text" type="text" length="40" ng-model="vm.user.email">
                     <label for="input_text">E-mail</label>
                 </div>
                 <div class="input-field col s6 offset-s3">
-                    <input id="input_text" type="text" length="30">
-                    <label for="input_text">Nom</label>
-                </div>
-                <div class="input-field col s6 offset-s3">
-                    <input id="input_text" type="text" length="30">
-                    <label for="input_text">Prénom</label>
-                </div>
-                <div class="input-field col s6 offset-s3">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="input_text" type="text" length="8">
+                    <input id="input_text" type="password" length="8" ng-model="vm.user.password">
                     <label for="input_text">Mot de passe</label>
                 </div>
             </div>
             <div class="row">
-                <a class="waves-effect waves-light btn-large col s6 offset-s3">Enregistrer</a>
+                <a class="waves-effect waves-light btn-large col s6 offset-s3" ng-click="vm.create2()">Enregistrer</a>
             </div>
         </form>
     </div>
-
-    <div class="row">
-        <table class="col offset-l2 l8 offset-l2 z-depth-6 card-panel highlight striped" ng-hide="vm.contacts.length < 1">
-            <tr>
-                <th>Nom</th>
-                <th>Numéro</th>
-                <th>Adresse Email</th>
-                <th>Sélectionner</th>
-            </tr>
-
-            <tr ng-repeat='contact in vm.contacts | filter:searchText | orderBy:"+contact"'>
-                <td>
-                    <input ng-model="contact.nom"></input>
-                </td>
-                <td>
-                    <input ng-model="contact.telephone"></input>
-                </td>
-                <td>
-                    <input ng-model="contact.email"></input>
-                </td>
-                <td>
-                    <input type="checkbox" id="myCheckbox" class="centered filled-in"/>
-                    <label for="myCheckbox"></label>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button ng-click='vm.delete(contact)' class="centered col offset-l2 l8 offset-l2 btn">Delete</button>
-                </td>
-                <td>
-                    <button ng-click='vm.update(contact)' class="centered col offset-l2 l8 offset-l2 btn">Editer</button>
-                </td>
-            </tr>
-        </table>
-    </div>
-</div>
-<!-- Fin View-->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>

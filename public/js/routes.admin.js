@@ -11,12 +11,12 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/utilisateurs/ajouter', {
             templateUrl: '../views/admin/utilisateurs/add.html',
-            controller: '',
+            controller: 'userController',
             controllerAs: 'vm'
         })
         .when('/utilisateurs', {
             templateUrl: '../views/admin/utilisateurs/show.html',
-            controller: '',
+            controller: 'userController',
             controllerAs: 'vm'
         })
         .when('/boutons/ehpad', {
