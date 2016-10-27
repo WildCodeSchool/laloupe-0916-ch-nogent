@@ -52,7 +52,7 @@
         <div ng-show='vm.isLoad'>
             <div class="row consults">
                 <div class="blocconsultation">
-                    <div class="col s12 m4 l4">
+                    <div class="col s12 m4 l4" ng-show="vm.btn1.title1.length > 0 || vm.btn1.texte1.length > 0">
                         <div class="card cardconsults green">
                             <div class="card-content white-text">
                                 <h6 class="black-text flow-text">{{vm.btn1.title1}}</h6>
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4">
+                    <div class="col s12 m4 l4" ng-show="vm.btn1.title2.length > 0 || vm.btn1.texte2.length > 0">
                         <div class="card cardconsults green">
                             <div class="card-content white-text">
                                 <h6 class="black-text flow-text">{{vm.btn1.title2}}</h6>
@@ -72,7 +72,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4">
+                    <div class="col s12 m4 l4" ng-show="vm.btn1.title3.length > 0 || vm.btn1.texte3.length > 0">
                         <div class="card cardconsults green">
                             <div class="card-content white-text">
                                 <h6 class="black-text flow-text">{{vm.btn1.title3}}</h6>
@@ -92,7 +92,7 @@
         <div ng-show='vm.isLoad1'>
             <div class="row hospitalise">
                 <div class="blochospitalise">
-                    <div class="col s12 m4 l4">
+                    <div class="col s12 m4 l4" ng-show="vm.btn2.title1.length > 0 || vm.btn2.texte1.length > 0">
                         <div class="card cardconsults purple lighten-1">
                             <div class="card-content text white-text">
                                 <h6 class="black-text flow-text">{{vm.btn2.title1}}</h6>
@@ -102,7 +102,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4">
+                    <div class="col s12 m4 l4" ng-show="vm.btn2.title2.length > 0 || vm.btn2.texte2.length > 0">
                         <div class="card cardconsults purple lighten-1">
                             <div class="card-content text white-text">
                                 <h6 class="black-text flow-text">{{vm.btn2.title2}}</h6>
@@ -113,7 +113,7 @@
                         </div>
                     </div>
                     <div class="col s12 m4 l4">
-                        <div class="card cardconsults purple lighten-1">
+                        <div class="card cardconsults purple lighten-1" ng-show="vm.btn2.title3.length > 0 || vm.btn2.texte3.length > 0">
                             <div class="card-content text white-text">
                                 <h6 class="black-text flow-text">{{vm.btn2.title3}}</h6>
                                 <p class="hosp3">
@@ -131,7 +131,7 @@
         <div ng-show='vm.isLoad2'>
             <div class="row ehpad">
                 <div class="blocehpad">
-                    <div class="col s12 m6 l3">
+                    <div class="col s12 m6 l3" ng-show="vm.btn3.title1.length > 0 || vm.btn3.texte1.length > 0">
                         <div class="card cardconsults orange lighten-1">
                             <div class="card-content text white-text">
                                 <h6 class="black-text flow-text">{{vm.btn3.title1}}</h6>
@@ -141,7 +141,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m6 l3">
+                    <div class="col s12 m6 l3" ng-show="vm.btn3.title2.length > 0 || vm.btn3.texte2.length > 0">
                         <div class="card cardconsults orange lighten-1">
                             <div class="card-content text white-text">
                                 <h6 class="black-text flow-text">{{vm.btn3.title2}}</h6>
@@ -151,7 +151,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m6 l3">
+                    <div class="col s12 m6 l3" ng-show="vm.btn3.title3.length > 0 || vm.btn3.texte3.length > 0">
                         <div class="card cardconsults orange lighten-1">
                             <div class="card-content text white-text">
                                 <h6 class="black-text flow-text">{{vm.btn3.title3}}</h6>
@@ -161,7 +161,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m6 l3">
+                    <div class="col s12 m6 l3" ng-show="vm.btn3.title4.length > 0 || vm.btn3.texte4.length > 0">
                         <div class="card cardconsults orange lighten-1">
                             <div class="card-content text white-text">
                                 <h6 class="black-text flow-text">{{vm.btn3.title4}}</h6>
@@ -180,7 +180,7 @@
         <div ng-show='vm.isLoad3'>
             <div class="row patient">
                 <div class="blocpatient">
-                    <div class="col s12 m4 l4">
+                    <div class="col s12 m4 l4" ng-show="vm.btn4.title1.length > 0 || vm.btn4.texte1.length > 0">
                         <div class="card cardconsults teal lighten-1">
                             <div class="card-content white-text">
                                 <h6 class="black-text flow-text">{{vm.btn4.title1}}</h6>
@@ -190,7 +190,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4">
+                    <div class="col s12 m4 l4" ng-show="vm.btn4.title2.length > 0 || vm.btn4.texte2.length > 0">
                         <div class="card cardconsults teal lighten-1">
                             <div class="card-content white-text">
                                 <h6 class="black-text flow-text">{{vm.btn4.title2}}</h6>
@@ -200,7 +200,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4">
+                    <div class="col s12 m4 l4" ng-show="vm.btn4.title3.length > 0 || vm.btn4.texte3.length > 0">
                         <div class="card cardconsults teal lighten-1">
                             <div class="card-content white-text">
                                 <h6 class="black-text flow-text">{{vm.btn4.title3}}</h6>
