@@ -11,10 +11,8 @@ class navbarController {
         $(window).scroll(function() {
             if ($(window).scrollTop() > $('#scrollspy').height()) {
                 $('#push').addClass('navbar-fixed');
-                if ($('#urgenceHide').hasClass('ng-hide')) {
                   $('#urgenceHide').addClass('ng-hide');
                   $('.group-btn').show();
-                }
                 $('#topFixed').css({
                     'margin-top': '100px'
                 });
@@ -58,6 +56,7 @@ class navbarController {
     loadCategories() {
         this.categorieService.getChildrenOf('0').then((res) => {
             this.categories = res.data;
+            console.log(this.categories);
             setTimeout(function() {
                 $(".dropdown-button").dropdown();
             }, 0);

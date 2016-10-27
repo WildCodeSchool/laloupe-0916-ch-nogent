@@ -5,7 +5,7 @@ class contactController {
         this.load();
         $(document).ready(function() {
             $('.collapsible').collapsible({
-                accordion: false
+                accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
             });
             $(document).ready(function() {
                 $('select').material_select();
@@ -16,6 +16,12 @@ class contactController {
     load() {
         this.contactService.getAll().then((res) => {
             this.contacts = res.data;
+            console.log(this.contacts);
         });
     }
+
+    sendEmail() {
+      this.contactService.sendMail(this.contact);
+    }
+
 }
