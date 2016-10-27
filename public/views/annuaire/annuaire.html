@@ -5,17 +5,21 @@
     <label> <input placeholder="Nom,prenom ou spécialité du praticien" ng-model="searchText" style="width:30%;margin-left:35%"></label>
   </div>
 <div class="row">
-  <div class="col s10 offset-s1 m3 offset-m1 l2 offset-1 panel panel-default" ng-repeat='annuaire in vm.annuaires | filter:searchText | orderBy:"+annuaire"'>
+  <div class="col s10 offset-s1 m3 offset-m1 l3 offset-1 panel panel-default" ng-repeat='annuaire in vm.annuaires | filter:searchText | orderBy:"+annuaire"'>
       <div class="panel-body">
           <form class="form-inline">
               <div class="form-group">
                   <i class="large material-icons cyan-text center">contact_phone</i>
                   <p>Nom : <br>
-                    {{annuaire.nom}}</p>
+                    {{annuaire.nom}} {{annuaire.prenom}}</p>
                   <p>Spécialité :<br>
                     {{annuaire.fonction}}</p>
-                  <p>Numero :<br>
+                  <p>E-mail :<br>
+                    {{annuaire.email}}</p>
+                  <p>téléphone :<br>
                     {{annuaire.telephone}}</p>
+                  <p>lien :<br>
+                    {{annuaire.lien}}</p>
               </div>
               <br>
               <hr/>

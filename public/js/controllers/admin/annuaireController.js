@@ -4,6 +4,15 @@ class annuaireController {
       this.annuaireService = annuaireService;
       this.load();
 
+          $(document).ready(function() {
+              $('.modal-trigger').leanModal();
+          });
+
+          $("#addjs").click(function() {
+              $("#showjs").show();
+          });
+          $(".button-collapse").sideNav();
+
         }
         load() {
             this.annuaireService.getAll().then((res) => {
