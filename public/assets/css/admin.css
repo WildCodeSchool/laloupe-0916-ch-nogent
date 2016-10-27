@@ -232,9 +232,63 @@ h1 {
     width: 45vw;
 }
 
+
 /* admin categorie */
 
 .optionBloc {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
+}
+
+.btn1 {
+    background: rgba(96, 142, 58, 0.8);
+    height: 30vh;
+    width: 10vw;
+    margin: 1% 0% 1% 0%;
+    font-size: 1.8em;
+}
+
+.btn1:hover {
+    background: rgba(96, 142, 58, 1);
+}
+
+.btn2 {
+    background: rgba(155, 79, 150, 0.8);
+    height: 30vh;
+    width: 10vw;
+    margin: 1% 0% 1% 0%;
+    font-size: 1.8em;
+}
+
+.btn2:hover {
+    background-color: rgba(155, 79, 150, 1);
+}
+
+.btn3 {
+    background: rgba(221, 89, 0, 0.8);
+    height: 30vh;
+    width: 10vw;
+    margin: 1% 0% 1% 0%;
+    font-size: 1.8em;
+}
+
+.btn3:hover {
+    background: rgba(221, 89, 0, 1);
+}
+
+.btn4 {
+    background-color: rgba(0, 158, 160, 0.8);
+    height: 30vh;
+    width: 10vw;
+    margin: 1% 0% 1% 0%;
+    font-size: 1.8em;
+}
+
+.btn4:hover {
+    background-color: rgba(0, 158, 160, 1);
+}
+
+.large-i {
+    font-size: 3em !important;
+    margin: 7%;
 }
