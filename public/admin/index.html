@@ -14,7 +14,9 @@
     <body>
 
         <ng-include src="'../views/admin/sidebar.html'"></ng-include>
-        <ng-view autoscroll="true"></ng-view>
+        <div id='main'>
+            <ng-view autoscroll="true"></ng-view>
+        </div>
 
         <script src="../vendor/jquery/dist/jquery.min.js"></script>
         <script src="../vendor/materialize/dist/js/materialize.min.js"></script>
@@ -38,8 +40,10 @@
         <script src="../js/services/hospitaliseService.js"></script>
         <script src="../js/services/ehpadService.js"></script>
         <script src="../js/services/visiteService.js"></script>
+        <script src="../js/services/marcheService.js"></script>
 
         <script src="../js/controllers/admin/contactController.js"></script>
+        <script src="../js/controllers/admin/userController.js"></script>
         <script src="../js/controllers/admin/annuaireController.js"></script>
         <script src="../js/controllers/admin/categorieController.js"></script>
         <script src="../js/controllers/admin/aproposController.js"></script>
@@ -50,6 +54,8 @@
         <script src="../js/controllers/admin/visiteController.js"></script>
         <script src="../js/controllers/admin/statController.js"></script>
         <script src="../js/controllers/admin/loginController.js"></script>
+        <script src="../js/controllers/admin/sidebarController.js"></script>
+        <script src="../js/controllers/admin/marcheController.js"></script>
 
         <script src="../js/routes.admin.js"></script>
 

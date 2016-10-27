@@ -5,7 +5,8 @@ const categorieSchema = new mongoose.Schema({
     photo: String,
     texte: String,
     idparent: String,
-    lien: String
+    lien: String,
+    position: String
 });
 
 let model = mongoose.model('Categorie', categorieSchema);
@@ -51,7 +52,8 @@ export default class Categorie {
                 photo: req.body.photo,
                 texte: req.body.texte,
                 idparent: req.body.idparent,
-                lien: req.body.lien
+                lien: req.body.lien,
+                position: req.body.pos
             },
             (err, categorie) => {
                 if (err) {

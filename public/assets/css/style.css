@@ -383,11 +383,15 @@ nav ul a.btn-urgence:hover {
     margin-top: 30px;
 }
 
-
 /* Global view */
 
+.sidbar {
+    margin-top: 4%;
+    padding-left: 2%;
+}
+
 .tilesidenavbar{
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .description img {
@@ -406,6 +410,9 @@ nav ul a.btn-urgence:hover {
     width: 85%;
 }
 
+#imgCatCenter {
+  height : 500px;
+}
 
 /* Navbar view services */
 
@@ -445,6 +452,7 @@ nav ul a.btn-urgence:hover {
 #sidenavservices a {
     font-size: 1em;
     color: black;
+    margin-left: 7%;
 }
 
 #sidenavservices a:hover {

@@ -10,7 +10,7 @@ class contactController {
         });
     }
 
-    create2() {
+    create() {
         this.contactService.create(this.contact).then(() => {
 
             this.contact = {};

@@ -50,12 +50,7 @@ export default class Stat {
     update(req, res) {
         model.update({
             _id: req.params.id
-        }, {
-          texte1: req.body.texte1,
-          texte2: req.body.texte2,
-          texte3: req.body.texte3,
-          texte4: req.body.texte4
-        }, (err, stat) => {
+        },  req.body, (err, stat) => {
             if (err || !stat) {
                 res.status(500).send(err.message);
             } else {

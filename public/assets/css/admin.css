@@ -7,15 +7,19 @@ figure {
     font-weight: 400;
     font-family: 'Raleway', Arial, sans-serif;
 }
+
 #supModal {
     padding: 60px;
 }
+
 #warning {
     margin-bottom: 40px;
 }
+
 .warning {
     color: red;
 }
+
 .grid-image {
     position: relative;
     margin: 0 auto;
@@ -179,7 +183,7 @@ h2 {
 }
 
 #panel {
-    background: url('http://demo.geekslabs.com/materialize/v2.2/layout03/images/user-profile-bg.jpg') !important;
+    background: #2bbbad!important;
 }
 
 .circle {
@@ -226,4 +230,11 @@ h1 {
 
 .justificationabout {
     width: 45vw;
+}
+
+/* admin categorie */
+
+.optionBloc {
+  display: flex;
+  flex-direction: row;
 }

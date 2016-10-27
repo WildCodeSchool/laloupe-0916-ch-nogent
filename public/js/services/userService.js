@@ -25,7 +25,7 @@ class userService {
     }
 
     delete(id) {
-        return this.$http.put('/api/users/' + id);
+        return this.$http.delete('/api/users/' + id);
     }
 
 }

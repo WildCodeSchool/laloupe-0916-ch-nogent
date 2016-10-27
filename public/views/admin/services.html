@@ -1,25 +1,3 @@
-<meta charset="utf-8">
-<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" media="screen,projection"/>
-<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="../admin.css">
-
-<style>
-    #supModal {
-        padding: 60px;
-    }
-    #warning {
-        margin-bottom: 40px;
-    }
-    .warning {
-        color: red;
-    }
-
-</style>
-
-</head>
-<body>
-
-<!-- View -->
 <div class="row">
     <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
         <h2>Ajouter un service
@@ -36,8 +14,10 @@
                             <option value='0'>Racine du menu "Nos Services"</option>
                             <option ng-repeat='categorie in vm.categories | orderBy: ["idparent","titre"]' value="{{categorie._id}}">{{categorie.titre}}</option>
                         </select>
-                        <p><input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'></p>
-                        <form action="#">
+                        <div class="input-field col s12 m6">
+                          <p><input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'></p>
+                        </div>
+                        <div class="input-field col s12 m6 optionBloc">
                             <p>
                                 <input name="group1" type="radio" id="test1"/>
                                 <label for="test1"><i class="material-icons">format_align_right</i></label>
@@ -47,16 +27,22 @@
                                 <label for="test2"><i class="material-icons">format_align_center</i></label>
                             </p>
                             <p>
-                                <input class="with-gap" name="group1" type="radio" id="test3"/>
+                                <input name="group1" type="radio" id="test3"/>
                                 <label for="test3"><i class="material-icons">format_align_left</i></label>
                             </p>
-                        </form>
-                        <p>
-                            <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.categorie.texte'></textarea>
-                        </p>
+                        </div>
+                        <div class="input-field col s12">
+                          <p>
+                              <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.categorie.texte'></textarea>
+                          </p>
+                      </div>
+                      <div class="input-field col s12">
                         <p><input type="text" class="form-control" placeholder="Lien du service" ng-model='vm.categorie.lien'></p>
+                      </div>
                     </div>
-                    <button ng-click='vm.create(categorie)' class="btn btn-default">Ajouter</button>
+                    <div class="input-field col s12">
+                      <button ng-click='vm.create(categorie)' class="btn btn-default">Ajouter</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -88,7 +74,7 @@
                                 <label for="test2"><i class="material-icons">format_align_center</i></label>
                             </p>
                             <p>
-                                <input class="with-gap" name="group1" type="radio" id="test3"/>
+                                <input name="group1" type="radio" id="test3"/>
                                 <label for="test3"><i class="material-icons">format_align_left</i></label>
                             </p>
                         </form>
@@ -128,17 +114,3 @@
         </div>
     </div>
 </div>
-
-<!-- Fin Modal -->
-
-<!-- Fin View-->
-<script>
-    $(document).ready(function() {
-        $('.modal-trigger').leanModal();
-    });
-
-    $("#addjs").click(function() {
-        $("#showjs").show();
-    });
-    $(".button-collapse").sideNav();
-</script>

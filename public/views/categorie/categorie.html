@@ -8,7 +8,9 @@
             <div class="card horizontal" id="categorieHeight">
                 <div class="card-stacked">
                     <div class="card-content sidenav">
-                        <img class="left responsive-img" ng-src="{{ vm.categorie.photo }}" alt="photo de l'hopital"/>
+                        <div ng-show="vm.categorie.pos == 1"class="container-fluid responsive-img" id="imgCatCenter" style="background-image:url({{ vm.categorie.photo }});background-size:cover"></div>
+                        <img ng-show="vm.categorie.pos == 2" class="left responsive-img" ng-src="{{ vm.categorie.photo }}" alt="photo de l'hopital"/>
+                        <img ng-show="vm.categorie.pos == 3" class="right responsive-img" ng-src="{{ vm.categorie.photo }}" alt="photo de l'hopital"/>
                         <p id="cardtext" class="flow-text justify">
                             <div ng-bind-html='vm.categorie.texte'></div>
                         </p>
@@ -17,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <div class="col s12 m2 offset-m1 sidbar">
+        <div class="col s12 m3  sidbar">
             <div class="card-stacked" id="sidenavservices">
                 <div class="card-content flow-text justify">
                     <div>
@@ -29,7 +31,8 @@
                             <a class="section scrollspy" href="/#/service/{{vm.categorieParent._id}}">{{vm.categorieParent.titre}}</a>
                         </li>
                         <li ng-repeat='categorie in vm.categoriesEnfant'>
-                            <a class="section scrollspy" href="/#/service/{{categorie._id}}">{{categorie.titre}}</a>
+                            <a ng-show="categorie.texte" class="section scrollspy" href="/#/service/{{categorie._id}}">{{categorie.titre}}</a>
+                            <a ng-show="categorie.lien" target="_blank" class="section scrollspy" href="{{categorie.lien}}">{{categorie.titre}}</a>
                         </li>
                     </ul>
                 </div>
