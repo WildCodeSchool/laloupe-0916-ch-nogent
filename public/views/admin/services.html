@@ -1,90 +1,138 @@
-<div class="row">
-    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
-        <h2>Ajouter un service
-        </h2>
-    </form>
+  <div class="row">
     <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
         <div class="row">
-            <div class="col-xs-12 col-md-10 col-md-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+            <div>
+                <form class="form-inline">
+                  <div class=" center col s12">
+                    <h2>Ajouter ou mettre à jours les services</h2>
+                  </div>
+                    <div class="form-group col s12">
+                      <label>Selectionner ou créer un service</label>
+                      <select class="browser-default" ng-model='vm.categorie.idparent' id="serviceSelect" ng-change="vm.showService()">
+                            <option disabled selected value=''>Service...</option>
+                            <option value='ajout-0'>Créer un service</option>
+                            <option ng-repeat='categorie in vm.categories | orderBy: ["idparent","titre"]' value="{{categorie._id}}">{{categorie.titre}}</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </form>
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel serviceUpdate" id='ajout-0'>
+        <div class="row">
+          <h2>Ajouter un service</h2>
+            <div>
                 <form class="form-inline">
                     <div class="form-group">
-                        <p><input type="text" class="form-control" placeholder="Nom du service" ng-model='vm.categorie.titre'></p>
+                        <p><input type="text" class="form-control " placeholder="Nom du service" ng-model='vm.categorie.titre'></p>
                         <select class="browser-default" ng-model='vm.categorie.idparent'>
                             <option disabled selected value=''>Service parent...</option>
                             <option value='0'>Racine du menu "Nos Services"</option>
                             <option ng-repeat='categorie in vm.categories | orderBy: ["idparent","titre"]' value="{{categorie._id}}">{{categorie.titre}}</option>
                         </select>
-                        <div class="input-field col s12 m6">
-                          <p><input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'></p>
+                        <br>
+                        <div class="col s12 m6 imgUploaded">
+                          <img ng-src="{{ vm.UploadImg }}" alt="" />
                         </div>
-                        <div class="input-field col s12 m6 optionBloc">
+                        <div class="col s12 m6">
+                          <div class="input-field col s12">
+                              <input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'><br><br>
+                              <button ng-click='vm.uplodFileChangeImage()' class="btn btn-default">Envoyer l'image</button>
+                          </div>
+                          <div class="input-field col s12 optionBlocImg">
+                                    <img src="../assets/img/left.gif" alt="" />
+
+                                    <img src="../assets/img/mid.gif" alt="" />
+
+                                    <img src="../assets/img/right.gif" alt="" />
+                          </div>
+                          <div class="input-field col s12 optionBloc">
+                                  <input name="group1" type="radio" id="testC" value="1" ng-model='vm.categorie.position'/>
+                                  <label for="testC">
+                                  </label>
+
+                                  <input name="group1" type="radio" id="testB" value="2" ng-model='vm.categorie.position'/>
+                                  <label for="testB">
+                                  </label>
+
+                                  <input name="group1" type="radio" id="testA" value="3" ng-model='vm.categorie.position'/>
+                                  <label for="testA">
+                                  </label>
+                          </div>
+                        </div>
+                        <div class="input-field col s12">
                             <p>
-                                <input name="group1" type="radio" id="test1"/>
-                                <label for="test1"><i class="material-icons">format_align_right</i></label>
-                            </p>
-                            <p>
-                                <input name="group1" type="radio" id="test2"/>
-                                <label for="test2"><i class="material-icons">format_align_center</i></label>
-                            </p>
-                            <p>
-                                <input name="group1" type="radio" id="test3"/>
-                                <label for="test3"><i class="material-icons">format_align_left</i></label>
+                                <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.categorie.texte'></textarea>
                             </p>
                         </div>
                         <div class="input-field col s12">
-                          <p>
-                              <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.categorie.texte'></textarea>
-                          </p>
-                      </div>
-                      <div class="input-field col s12">
-                        <p><input type="text" class="form-control" placeholder="Lien du service" ng-model='vm.categorie.lien'></p>
-                      </div>
+                            <p><input type="text" class="form-control" placeholder="Lien du service" ng-model='vm.categorie.lien'></p>
+                        </div>
                     </div>
                     <div class="input-field col s12">
-                      <button ng-click='vm.create(categorie)' class="btn btn-default">Ajouter</button>
+                        <button ng-click='vm.create(vm.categorie)' class="btn btn-default">Ajouter</button>
                     </div>
                 </form>
             </div>
         </div>
     </form>
 
-    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
-        <h2>Liste des services
-        </h2>
-    </form>
-    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='categorie in vm.categories | orderBy:"+categorie"'>
-        <div class="row">
-            <div class="col-xs-12 col-md-10 col-md-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <p><input type="text" class="form-control" placeholder="Nom du service" ng-model='categorie.titre'></p>
-                        <select class="browser-default" ng-model='categorie.idparent'>
-                            <option disabled selected value=''>Service parent...</option>
-                            <option value='0'>Racine du menu "Nos Services"</option>
-                            <option ng-repeat='categorie in vm.categories | orderBy: ["idparent","titre"]' value="{{categorie._id}}">{{categorie.titre}}</option>
-                        </select>
-                        <p><input type="text" class="form-control" placeholder="Photo du service" ng-model='categorie.photo'></p>
-                        <form action="#">
-                            <p>
-                                <input name="group1" type="radio" id="test1"/>
-                                <label for="test1"><i class="material-icons">format_align_right</i></label>
-                            </p>
-                            <p>
-                                <input name="group1" type="radio" id="test2"/>
-                                <label for="test2"><i class="material-icons">format_align_center</i></label>
-                            </p>
-                            <p>
-                                <input name="group1" type="radio" id="test3"/>
-                                <label for="test3"><i class="material-icons">format_align_left</i></label>
-                            </p>
-                        </form>
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel serviceUpdate" ng-repeat='categorie in vm.categories | orderBy:"+categorie"' id='{{categorie._id}}'>
+      <div class="row">
+        <h2>Liste des services</h2>
+          <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <p><input type="text" class="form-control" placeholder="Nom du service" ng-model='categorie.titre'></p>
+                    <select class="browser-default" ng-model='categorie.idparent'>
+                        <option disabled selected value=''>Service parent...</option>
+                        <option value='0'>Racine du menu "Nos Services"</option>
+                        <option ng-repeat='c in vm.categories | orderBy: ["idparent","titre"]' value="{{c._id}}">{{categorie.titre}}</option>
+                    </select>
+                    <br>
+                    <div class="col s12 m6 imgUploaded">
+                      <img ng-src="{{ categorie.photo }}" alt="" />
+                    </div>
+                    <div class="col s12 m6">
+                      <div class="input-field col s12">
+                          <p><input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'>
+                            <button ng-click='vm.uplodFileChangeImage()' class="btn btn-default">Envoyer l'image</button>
+                          </p>
+                      </div>
+                      <div class="input-field col s12 optionBloc">
+                          <p>
+                              <input name="group{{$index}}" id='banane{{$index}}' type="radio" ng-model='categorie.position' value="1"/>
+                              <label for='banane{{$index}}'>
+                                  <i class="material-icons">format_align_right</i>
+                              </label>
+                          </p>
+                          <p>
+                              <input name="group{{$index}}" id='banane{{$index}}B' type="radio" ng-model='categorie.position' value="2"/>
+                              <label for='banane{{$index}}B'>
+                                  <i class="material-icons">format_align_center</i>
+                              </label>
+                          </p>
+                          <p>
+                              <input name="group{{$index}}" id='banane{{$index}}C' type="radio" ng-model='categorie.position' value="3"/>
+                              <label for='banane{{$index}}C'>
+                                  <i class="material-icons">format_align_left</i>
+                              </label>
+                          </p>
+                      </div>
+                    </div>
+                    <div class="input-field col s12">
                         <p>
                             <textarea ui-tinymce="vm.tinymceOptions" ng-model='categorie.texte'></textarea>
                         </p>
+                    </div>
+                    <div class="input-field col s12">
                         <p><input type="text" class="form-control" placeholder="Lien du service" ng-model='categorie.lien'></p>
                     </div>
+                </div>
+                  <div class="input-field col s12">
                     <button ng-click='vm.update(categorie)' class="btn btn-default">Editer</button>
                     <button ng-click='vm.delete(categorie)' class="btn btn-default" href="#modal-warning">Supprimer</button>
+                  </div>
                 </form>
             </div>
         </div>

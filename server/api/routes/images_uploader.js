@@ -13,8 +13,8 @@ module.exports = function(app) {
       */
 
         var
-            wdth = 200,
-            hgth = 200,
+            wdth = 500,
+            hgth = 500,
             new_location = 'public/uploads/';
 
         new formidable.IncomingForm()

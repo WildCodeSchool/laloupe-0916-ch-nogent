@@ -235,6 +235,14 @@ h1 {
 
 /* admin categorie */
 
+.optionBlocImg img {
+  margin:0 20px 0 20px;
+}
+
+.optionBloc label {
+  margin:0 14px 0 14px;
+}
+
 .optionBloc {
     display: flex;
     flex-direction: row;

@@ -32,19 +32,29 @@ class categorieController {
                 }
             }, false);
     }
+    showService() {
+      $(".serviceUpdate").hide();
+      var select = document.getElementById("serviceSelect");
+      var choice = select.selectedIndex;
+      var valeur = select.options[choice].value;
+      console.log(valeur);
+      $("#" + valeur).show();
+    }
+
+    uplodFileChangeImage() {
+      this.UploadImg = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+    }
     load() {
       this.categorieService.getAll().then((res) => {
           this.categories = res.data;
+          var ServiceSelect = document.getElementById('serviceSelect').value;
+          console.log(document.getElementById('serviceSelect').value);
       });
     }
 
     create(categorie) {
       var urlImage = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-        console.log(urlImage);
         this.categorie.photo = urlImage;
-
-        if (!this.categorie.texte)
-            this.categorie.texte = "";
 
         this.categorieService.create(this.categorie).then(() => {
           this.categorie = {};
