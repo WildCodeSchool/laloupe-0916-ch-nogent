@@ -4,7 +4,6 @@ class rendezvousController {
         this.rendezvousService = rendezvousService;
         this.load();
     }
-
     load() {
         this.rendezvousService.getAll().then((res) => {
             this.btn1s = res.data;
