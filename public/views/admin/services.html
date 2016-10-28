@@ -95,29 +95,27 @@
                     </div>
                     <div class="col s12 m6">
                       <div class="input-field col s12">
-                          <p><input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'>
+                          <p><input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'><br><br>
                             <button ng-click='vm.uplodFileChangeImage()' class="btn btn-default">Envoyer l'image</button>
                           </p>
                       </div>
+                      <div class="input-field col s12 optionBlocImg">
+                                <img src="../assets/img/left.gif" alt="" />
+
+                                <img src="../assets/img/mid.gif" alt="" />
+
+                                <img src="../assets/img/right.gif" alt="" />
+                      </div>
                       <div class="input-field col s12 optionBloc">
-                          <p>
                               <input name="group{{$index}}" id='banane{{$index}}' type="radio" ng-model='categorie.position' value="1"/>
                               <label for='banane{{$index}}'>
-                                  <i class="material-icons">format_align_right</i>
                               </label>
-                          </p>
-                          <p>
                               <input name="group{{$index}}" id='banane{{$index}}B' type="radio" ng-model='categorie.position' value="2"/>
                               <label for='banane{{$index}}B'>
-                                  <i class="material-icons">format_align_center</i>
                               </label>
-                          </p>
-                          <p>
                               <input name="group{{$index}}" id='banane{{$index}}C' type="radio" ng-model='categorie.position' value="3"/>
                               <label for='banane{{$index}}C'>
-                                  <i class="material-icons">format_align_left</i>
                               </label>
-                          </p>
                       </div>
                     </div>
                     <div class="input-field col s12">
