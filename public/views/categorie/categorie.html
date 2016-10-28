@@ -8,9 +8,9 @@
             <div class="card horizontal" id="categorieHeight">
                 <div class="card-stacked">
                     <div class="card-content sidenav">
-                        <div ng-show="vm.categorie.pos == 1"class="container-fluid responsive-img" id="imgCatCenter" style="background-image:url({{ vm.categorie.photo }});background-size:cover"></div>
-                        <img ng-show="vm.categorie.pos == 2" class="left responsive-img" ng-src="{{ vm.categorie.photo }}" alt="photo de l'hopital"/>
-                        <img ng-show="vm.categorie.pos == 3" class="right responsive-img" ng-src="{{ vm.categorie.photo }}" alt="photo de l'hopital"/>
+                        <div ng-show="vm.categorie.position == 2"class="container-fluid responsive-img" id="imgCatCenter" style="background-image:url({{ vm.categorie.photoFull }});background-size:cover"></div>
+                        <img ng-show="vm.categorie.position == 3" class="left responsive-img" ng-src="{{ vm.categorie.photo }}" alt="photo de l'hopital"/>
+                        <img ng-show="vm.categorie.position == 1" class="right responsive-img" ng-src="{{ vm.categorie.photo }}" alt="photo de l'hopital"/>
                         <p id="cardtext" class="flow-text justify">
                             <div ng-bind-html='vm.categorie.texte'></div>
                         </p>

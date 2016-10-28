@@ -11,7 +11,9 @@ class categorieService {
           photo: data.photo,
           texte: data.texte,
           lien: data.lien,
-          idparent: data.idparent
+          idparent: data.idparent,
+          position: data.position
+
         });
     }
 
@@ -33,7 +35,8 @@ class categorieService {
           photo: data.photo,
           texte: data.texte,
           lien: data.lien,
-          idparent: data.idparent
+          idparent: data.idparent,
+          position: data.position
         });
     }
 

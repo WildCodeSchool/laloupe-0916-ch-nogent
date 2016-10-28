@@ -54,11 +54,7 @@ class categorieController {
 
     create(categorie) {
       var urlImage = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-        console.log(urlImage);
         this.categorie.photo = urlImage;
-
-        if (!this.categorie.texte)
-            this.categorie.texte = "";
 
         this.categorieService.create(this.categorie).then(() => {
           this.categorie = {};

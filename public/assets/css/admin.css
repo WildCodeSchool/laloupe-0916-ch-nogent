@@ -234,9 +234,20 @@ h1 {
 
 /* admin categorie */
 
+.optionBlocImg img {
+  margin:0 20px 0 20px;
+}
+
+.optionBloc label {
+  margin:0 14px 0 14px;
+}
+
 .optionBloc {
   display: flex;
   flex-direction: row;
+  padding-top: 0;
+  height: 30px;
+  margin-top: 0;
 }
 
 .imgUploaded {
@@ -248,4 +259,8 @@ h1 {
 
 .serviceUpdate {
   display: none;
+}
+
+.optionBlocImg {
+
 }

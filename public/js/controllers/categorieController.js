@@ -10,6 +10,7 @@ class categorieController {
     load() {
         this.categorieService.getOne(this.$routeParams.id).then((res) => {
             this.categorie = res.data; //1x actuelle
+            this.categorie.photoFull = this.categorie.photo.replace("img_","");
             this.categorieService.getChildrenOf(this.categorie._id).then((res) => {
                 this.categoriesEnfant = res.data; //Xx les enfants de actuelle
             });
