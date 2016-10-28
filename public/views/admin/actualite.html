@@ -7,4 +7,9 @@
           <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.actualites.texte'></textarea>
             <a  class="waves-effect waves-light btn col l2 offset-l1" ng-click='vm.create2(aproposs)'>Editer</a>
         </div>
+        <div class="input-field col s12 m6">
+          <h5>Bouton d'upload des images :</h5>
+          <p><input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'></p>
+          <h5>Source à intégrer dans l'éditeur : </h5><p id='chemin'></p>
+        </div>
     </div>

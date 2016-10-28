@@ -17,6 +17,31 @@ class actualiteController {
             });
 
         });
+
+        function uploadFile(file) {
+            var url = '/api/picture';
+            var xhr = new XMLHttpRequest();
+            var fd = new FormData();
+            xhr.open("POST", url, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Every thing ok, file uploaded
+                    document.getElementById('chemin').innerHTML = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+                    alert('Votre image a bien été enregistrée.')
+                    console.log(xhr.responseText); // handle response.
+                }
+            };
+            fd.append("upload_file", file);
+            xhr.send(fd);
+        }
+
+        var uploadfiles = document.querySelector('#uploadImage');
+        uploadfiles.addEventListener('change', function() {
+            var files = this.files;
+            for (var i = 0; i < files.length; i++) {
+                uploadFile(this.files[i]); // call the function to upload the file
+            }
+        }, false);
     }
     load() {
         this.actualiteService.getAll().then((res) => {
