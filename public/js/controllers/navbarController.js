@@ -4,7 +4,7 @@ class navbarController {
         this.categorieService = categorieService;
         this.loadCategories();
 
-        $(window).scroll(function() {
+        $(window).scroll(() => {
             if ($(window).scrollTop() > $('#scrollspy').height()) {
                 $('#push').addClass('navbar-fixed');
                   $('#urgenceHide').addClass('ng-hide');

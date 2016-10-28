@@ -32,9 +32,23 @@ class categorieController {
                 }
             }, false);
     }
+    showService() {
+      $(".serviceUpdate").hide();
+      var select = document.getElementById("serviceSelect");
+      var choice = select.selectedIndex;
+      var valeur = select.options[choice].value;
+      console.log(valeur);
+      $("#" + valeur).show();
+    }
+
+    uplodFileChangeImage() {
+      this.UploadImg = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+    }
     load() {
       this.categorieService.getAll().then((res) => {
           this.categories = res.data;
+          var ServiceSelect = document.getElementById('serviceSelect').value;
+          console.log(document.getElementById('serviceSelect').value);
       });
     }
 
