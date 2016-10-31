@@ -238,6 +238,27 @@ h1 {
 .optionBloc {
     display: flex;
     flex-direction: row;
+    padding-top: 0;
+    height: 30px;
+    margin-top: 0;
+}
+
+.optionBloc label {
+  margin: 0 16px 0 15px;
+}
+
+.optionBlocImg img {
+  margin: 0 20px 0 20px;
+}
+
+.imgUploaded {
+    width: 300px;
+    height: 200px;
+    border: solid 1px black;
+}
+
+.serviceUpdate {
+    display: none;
 }
 
 .btn1 {

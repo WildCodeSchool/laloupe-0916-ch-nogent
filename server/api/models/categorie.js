@@ -53,7 +53,7 @@ export default class Categorie {
                 texte: req.body.texte,
                 idparent: req.body.idparent,
                 lien: req.body.lien,
-                position: req.body.pos
+                position: req.body.position
             },
             (err, categorie) => {
                 if (err) {
