@@ -12,11 +12,18 @@ class aproposController {
             });
 
         });
+        this.jsScrollTo = function(id) { // Au clic sur un élément
+            var page = '#'+id; // Page cible
+            var speed = 500; // Durée de l'animation (en ms)
+            $('html, body').animate({
+                scrollTop: $(page).offset().top - 100
+            }, speed); // Go
+            return false;
+        };
     }
     load() {
         this.aproposService.getAll().then((res) => {
-            this.apropos = res.data;
-            this.aproposs = res.data[0];
+            this.aproposs = res.data;
         });
     }
 }

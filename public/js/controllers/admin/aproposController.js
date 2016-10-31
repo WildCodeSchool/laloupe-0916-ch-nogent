@@ -11,17 +11,12 @@ class aproposController {
     }
     load() {
         this.aproposService.getAll().then((res) => {
-            this.apropos = res.data;
-            this.aproposs = res.data[0];
+            this.aproposs = res.data;
         });
     }
     create() {
-        if (this.apropos.length > 0) this.apropos.forEach((v, i) => {
-            this.delete(v);
-        });
-        this.aproposService.create(this.aproposs).then(() => {
-
-            this.aproposs = {};
+        this.aproposService.create(this.apropos).then(() => {
+            this.apropos = {};
             this.load();
         });
     }

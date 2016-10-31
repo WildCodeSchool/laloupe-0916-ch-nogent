@@ -1,17 +1,34 @@
 <div id="topFixed"></div>
 <div class="container ">
     <div class="row" id="categorieHeight">
-        <div class="col s12 m12">
-            <h4 class="header center-align">
+        <div class="col s12 m9">
+          <div  ng-repeat='actualite in vm.actualites | orderBy:"$index":true'>
+            <h4 class="header center-align" id='{{actualite._id}}'>
                 <i class="material-icons"></i>
-                {{vm.actualites.titre}}
+                {{actualite.titre}}
             </h4>
-
             <div class="card horizontal">
                 <div class="card-stacked">
                     <div class="card-content">
-                        <p id="cardtext" class="flow-text justify" ng-bind-html="vm.actualites.texte"></p>
+                        <p id="cardtext" class="flow-text justify" ng-bind-html='actualite.texte'></p>
                     </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m3  sidbar">
+            <div class="card-stacked" id="sidenavservices">
+                <div class="card-content flow-text justify">
+                    <div>
+                        <i class="material-icons">subject</i>
+                        <span class="tilesidenavbar">Navigation</span>
+                    </div>
+                    <ul>
+                        <li ng-repeat='actualite in vm.actualites | orderBy:"$index":true'>
+                            <a class="section scrollspy" ng-click="vm.jsScrollTo(actualite._id)">{{actualite.titre}}</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

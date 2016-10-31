@@ -1,9 +1,74 @@
-
 <div class="row">
-    <div class="col s12 col m12 offset-l2 l8 offset-l2 z-depth-6 card-panel">
-        <h3>Titre de la page A propos<input type="text" class="form-control" ng-model='vm.aproposs.titre'></h3>
-        <div class="row justificationabout">
-          <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.aproposs.texte'></textarea>
-            <a  class="waves-effect waves-light btn col l2 offset-l1" ng-click='vm.create(aproposs)'>Editer</a>
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
+        <h2>Ajouter un A propos
+        </h2>
+    </form>
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
+        <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                <form class="form-inline">
+                    <div class="form-group">
+
+
+                        <div class="input-field col s12">
+                          <h3>Titre de l'A propos<input type="text" class="form-control" ng-model='vm.apropos.titre'></h3>
+                          <h3> Contenu de l'article </h3>
+                          <p>
+                              <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.apropos.texte'></textarea>
+                          </p>
+                      </div>
+                    </div>
+                    <div class="input-field col s12">
+                      <button ng-click='vm.create(vm.apropos)' class="btn btn-default">Ajouter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </form>
+
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
+        <h2>Liste des A propos
+        </h2>
+    </form>
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='apropos in vm.aproposs | orderBy:"$index":true'>
+        <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <h3>Titre de l' A propos<input type="text" class="form-control" ng-model='apropos.titre'></h3>
+                        <h3> Contenu de l'article </h3>
+                        <p>
+                            <textarea ui-tinymce="vm.tinymceOptions" ng-model='apropos.texte'></textarea>
+                        </p>
+                    </div>
+                    <button ng-click='vm.update(apropos)' class="btn btn-default">Editer</button>
+                    <button ng-click='vm.delete(apropos)' class="btn btn-default" href="#modal-warning">Supprimer</button>
+                </form>
+            </div>
+        </div>
+    </form>
+
+    <!-- Modal -->
+
+    <div>
+        <div id="modal_warning" class="modal">
+            <div class="modal-content" id="supModal">
+                <h4 class="center-align" id="warning">
+                    <i class="small material-icons warning">warning</i>
+                    Attention !
+                    <i class="small material-icons warning">warning</i>
+                </h4>
+                <p class="center-align">La suppression d'un utilisateur est irréversible.<br>
+                    Confirmez-vous la suppression de l'utilisateur ? :</p>
+
+                <p class="center-align">
+                    [E-mail] - [Nom] [Prénom]
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right blue-grey lighten-5">Annuler</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat left red white-text">Confirmer</a>
+            </div>
         </div>
     </div>
+</div>

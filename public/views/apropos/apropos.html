@@ -1,17 +1,34 @@
 <div id="topFixed"></div>
 <div class="container ">
     <div class="row" id="categorieHeight">
-        <div class="col s12 m12">
-            <h4 class="header center-align">
+        <div class="col s12 m9">
+          <div  ng-repeat='apropos in vm.aproposs | orderBy:"$index":true'>
+            <h4 class="header center-align" id='{{apropos._id}}'>
                 <i class="material-icons"></i>
-                {{vm.aproposs.titre}}
+                {{apropos.titre}}
             </h4>
-
             <div class="card horizontal">
                 <div class="card-stacked">
                     <div class="card-content">
-                        <p id="cardtext" class="flow-text justify" ng-bind-html="vm.aproposs.texte"></p>
+                        <p id="cardtext" class="flow-text justify" ng-bind-html='apropos.texte'></p>
                     </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m3  sidbar">
+            <div class="card-stacked" id="sidenavservices">
+                <div class="card-content flow-text justify">
+                    <div>
+                        <i class="material-icons">subject</i>
+                        <span class="tilesidenavbar">Navigation</span>
+                    </div>
+                    <ul>
+                        <li ng-repeat='apropos in vm.aproposs | orderBy:"$index":true'>
+                            <a class="section scrollspy" ng-click="vm.jsScrollTo(apropos._id)">{{apropos.titre}}</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
