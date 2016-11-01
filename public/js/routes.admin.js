@@ -22,7 +22,7 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/utilisateurs', {
             templateUrl: '../views/admin/utilisateurs/show.html',
-            controller: '',
+            controller: 'listuserController',
             controllerAs: 'vm',
             resolve: {
                 connected: checkIsConnected
