@@ -97,8 +97,8 @@
                             <div class="card-content text white-text">
                                 <h6 class="black-text flow-text">{{vm.btn2.title1}}</h6>
                                 <p class="hosp1">
-                                      <div ng-bind-html='vm.btn2.texte1'></div>
-                              </p>
+                                    <div ng-bind-html='vm.btn2.texte1'></div>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                                 <h6 class="black-text flow-text">{{vm.btn2.title2}}</h6>
                                 <p class="hosp2">
                                     <div ng-bind-html='vm.btn2.texte2'></div>
-                              </p>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -118,7 +118,7 @@
                                 <h6 class="black-text flow-text">{{vm.btn2.title3}}</h6>
                                 <p class="hosp3">
                                     <div ng-bind-html='vm.btn2.texte3'></div>
-                              </p>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -137,7 +137,7 @@
                                 <h6 class="black-text flow-text">{{vm.btn3.title1}}</h6>
                                 <p class="ehpad1">
                                     <div ng-bind-html='vm.btn3.texte1'></div>
-                              </p>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -147,7 +147,7 @@
                                 <h6 class="black-text flow-text">{{vm.btn3.title2}}</h6>
                                 <p class="ehpad2">
                                     <div ng-bind-html='vm.btn3.texte2'></div>
-                              </p>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                                 <h6 class="black-text flow-text">{{vm.btn3.title3}}</h6>
                                 <p class="ehpad3">
                                     <div ng-bind-html='vm.btn3.texte3'></div>
-                              </p>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -174,8 +174,8 @@
                         <div class="card cardconsults teal lighten-1">
                             <div class="card-content white-text">
                                 <h6 class="black-text flow-text">{{vm.btn4.title1}}</h6>
-                                  <p class="visiter1">
-                                      <div ng-bind-html='vm.btn4.texte1'></div>
+                                <p class="visiter1">
+                                    <div ng-bind-html='vm.btn4.texte1'></div>
                                 </p>
                             </div>
                         </div>
@@ -184,8 +184,8 @@
                         <div class="card cardconsults teal lighten-1">
                             <div class="card-content white-text">
                                 <h6 class="black-text flow-text">{{vm.btn4.title2}}</h6>
-                                <p class= "visiter2">
-                                      <div ng-bind-html='vm.btn4.texte2'></div>
+                                <p class="visiter2">
+                                    <div ng-bind-html='vm.btn4.texte2'></div>
                                 </p>
                             </div>
                         </div>
@@ -194,61 +194,64 @@
                         <div class="card cardconsults teal lighten-1">
                             <div class="card-content white-text">
                                 <h6 class="black-text flow-text">{{vm.btn4.title3}}</h6>
-                                <p class= "visiter2">
-                                      <div ng-bind-html='vm.btn4.texte3'></div>
+                                <p class="visiter2">
+                                    <div ng-bind-html='vm.btn4.texte3'></div>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-          </div>
         </div>
-        <!-- Fin Slider -->
+    </div>
+    <!-- Fin Slider -->
 
-        <!-- Début Description -->
-        <div class="container textevue presentation">
-            <div class="col s12 m7 textevue">
-                <h2 class="header center-align textevue">Centre Hospitalier de Nogent-le-Rotrou</h2>
-                <div class="card horizontal">
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <p class="flow-text center-align textevue">
-
-                            </p>
-                        </div>
+    <!-- Début Description -->
+    <div class="container textevue presentation">
+        <div class="col s12 m7 textevue">
+            <div class="card horizontal">
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p class="flow-text center-align textevue">
+                            Madame, Mademoiselle, Monsieur,
+                            <br>
+                            Vous entrez au Centre Hospitalier de La Loupe. Soyez assuré que tout sera mis en oeuvre pour que votre séjour se passe dans les meilleures conditions.
+                            <br>
+                            Le personnel de l'hôpital sera à vos côtés, disponible et attentif à vos demandes. Il mettra en oeuvre toutes ses compétences et son expérience pour que votre séjour soit le plus agréable possible.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Fin Description -->
+    <!-- Fin Description -->
 
-        <!-- Slider Stats -->
-        <div ng-controller='statController as vm'>
-            <div class="container white-text center-align" id="stats">
-                <div id="slider2" class="carousel textevue">
-                    <h2 id="carouselh2">Le centre hospitalier en quelques chiffres</h2>
-                    <a class="carousel-item" href="#one!">
-                        <i class="large material-icons white-text">tag_faces</i>
-                        <p class="white-text textevue">{{vm.stats.texte1}}</p>
-                    </a>
-                    <a class="carousel-item" href="#two!!">
-                        <i class="large material-icons white-text">home</i>
-                        <p class="white-text textevue">{{vm.stats.texte2}}
-                        </p>
-                    </a>
-                    <a class="carousel-item" href="#three!">
-                        <i class="large material-icons white-text">hotel</i>
-                        <p class="white-text textevue">{{vm.stats.texte3}}</p>
-                    </a>
-                    <a class="carousel-item" href="#five!">
-                        <i class="large material-icons white-text">local_hospital</i>
-                        <p class="white-text textevue">{{vm.stats.texte4}}
-                        </p>
-                    </a>
-                </div>
+    <!-- Slider Stats -->
+    <div ng-controller='statController as vm'>
+        <div class="container white-text center-align" id="stats">
+            <div id="slider2" class="carousel textevue">
+                <h2 id="carouselh2">Le centre hospitalier en quelques chiffres</h2>
+                <a class="carousel-item" href="#one!">
+                    <i class="large material-icons white-text">tag_faces</i>
+                    <p class="white-text textevue">{{vm.stats.texte1}}</p>
+                </a>
+                <a class="carousel-item" href="#two!!">
+                    <i class="large material-icons white-text">home</i>
+                    <p class="white-text textevue">{{vm.stats.texte2}}
+                    </p>
+                </a>
+                <a class="carousel-item" href="#three!">
+                    <i class="large material-icons white-text">hotel</i>
+                    <p class="white-text textevue">{{vm.stats.texte3}}</p>
+                </a>
+                <a class="carousel-item" href="#five!">
+                    <i class="large material-icons white-text">local_hospital</i>
+                    <p class="white-text textevue">{{vm.stats.texte4}}
+                    </p>
+                </a>
             </div>
         </div>
     </div>
-    <hr>
+</div>
+<hr>
