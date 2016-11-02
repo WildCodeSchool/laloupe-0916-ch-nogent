@@ -41,12 +41,12 @@ class categorieController {
       $("#" + valeur).show();
     }
 
-    uplodFileChangeImage() {
+    uploadFileChangeImage() {
       this.UploadImg = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
       console.log(document.getElementById('uploadImage').value);
     }
 
-    uplodFileChangeImageUpdate(index) {
+    uploadFileChangeImageUpdate(index) {
       this.UploadImgUpdate = '/uploads/img_' + document.getElementById('uploadImageUpdate' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
       console.log(this.UploadImgUpdate);
     }
