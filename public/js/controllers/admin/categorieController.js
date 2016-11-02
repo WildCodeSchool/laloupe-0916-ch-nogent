@@ -71,7 +71,8 @@ class categorieController {
 
     update(categorie) {
         this.categorieService.update(categorie._id, categorie).then(() => {
-            this.load();
+          console.log(categorie.photo);
+          this.load();
         });
     }
 

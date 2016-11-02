@@ -98,7 +98,7 @@
                     <br>
                     <div class="col s12 m6 imgUploaded">
                       <img ng-show='vm.UploadImgUpdate == Undefined' ng-src="{{ categorie.photo }}" alt="" />
-                      <img ng-src="{{ vm.UploadImgUpdate }}" alt="" />
+                      <img ng-src="{{ vm.UploadImgUpdate }}" ng-model='categorie.photo' alt="" />
                     </div>
                     <div class="col s12 m6">
                       <div class="input-field col s12">
@@ -141,8 +141,8 @@
                     </div>
                 </div>
                   <div class="input-field col s12">
-                    <button ng-click='vm.update(vm.categorie)' class="btn btn-default">Enregistrer</button>
-                    <button ng-click='vm.delete(vm.categorie)' class="btn btn-default" href="#modal-warning">Supprimer</button>
+                    <button ng-click='vm.update(categorie)' class="btn btn-default">Enregistrer</button>
+                    <button ng-click='vm.delete(categorie)' class="btn btn-default" href="#modal-warning">Supprimer</button>
                   </div>
                 </form>
             </div>
