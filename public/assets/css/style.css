@@ -291,13 +291,6 @@ nav ul a.btn-urgence:hover {
     padding-right: 3%;
 }
 
-.blocpatient p {
-    padding-top: 3%;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-bottom: 3%;
-}
-
 .blocpatient a {
     padding-left: 4%;
 }
@@ -315,7 +308,6 @@ nav ul a.btn-urgence:hover {
     font-weight: bold;
     text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black
 }
-
 
 /* carousel stats */
 
