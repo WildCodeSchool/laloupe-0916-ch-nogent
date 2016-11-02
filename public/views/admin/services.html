@@ -101,8 +101,8 @@
                     </div>
                     <div class="col s12 m6">
                       <div class="input-field col s12">
-                          <p><input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'><br><br>
-                            <button ng-click='vm.uplodFileChangeImage()' class="btn btn-default">Envoyer l'image</button>
+                          <p><input file-upload type="file" placeholder="Photo du service" id="uploadImageUpdate" name='file'><br><br>
+                            <button ng-click='vm.uplodFileChangeImageUpdate()' class="btn btn-default">Envoyer l'image</button>
                           </p>
                       </div>
                       <div class="input-field col s12 optionBlocImg">
@@ -130,7 +130,7 @@
                       </h5>
                       <br>
                         <p>Ci-dessous le lien à coller dans l'éditeur de texte (Veulliez uploader l'image avant) : </p>
-                        <p><input type="text" class="form-control " placeholder="lien de l'image" ng-model='vm.UploadImg'></p>
+                        <p><input type="text" class="form-control " placeholder="lien de l'image" ng-model='vm.UploadImgUpdate'></p>
                         <p>
                             <textarea ui-tinymce="vm.tinymceOptions" ng-model='categorie.texte'></textarea>
                         </p>
@@ -140,7 +140,7 @@
                     </div>
                 </div>
                   <div class="input-field col s12">
-                    <button ng-click='vm.update(categorie)' class="btn btn-default">Editer</button>
+                    <button ng-click='vm.update(categorie)' class="btn btn-default">Enregistrer</button>
                     <button ng-click='vm.delete(categorie)' class="btn btn-default" href="#modal-warning">Supprimer</button>
                   </div>
                 </form>

@@ -37,6 +37,10 @@ class aproposController {
       this.UploadImg = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
     }
 
+    uplodFileChangeImageUpdate() {
+      this.UploadImgUpdate = '/uploads/img_' + document.getElementById('uploadImageUpdate').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+    }
+
     load() {
         this.aproposService.getAll().then((res) => {
             this.aproposs = res.data;
