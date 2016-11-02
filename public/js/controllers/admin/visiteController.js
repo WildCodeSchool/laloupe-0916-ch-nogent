@@ -3,7 +3,7 @@ class visiteController {
     constructor(visiteService) {
         this.visiteService = visiteService;
         this.tinymceOptions = {
-            toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+            toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link",
             plugins: 'advlist fullscreen autolink link image lists charmap autoresize textcolor'
         };
         this.load();
