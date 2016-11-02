@@ -33,11 +33,11 @@ class aproposController {
         }, false);
     }
 
-    uplodFileChangeImage() {
+    uploadFileChangeImage() {
       this.UploadImg = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
     }
 
-    uplodFileChangeImageUpdate() {
+    uploadFileChangeImageUpdate() {
       this.UploadImgUpdate = '/uploads/img_' + document.getElementById('uploadImageUpdate').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
     }
 

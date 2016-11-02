@@ -37,7 +37,7 @@
                         <div class="col s12 m6">
                           <div class="input-field col s12">
                               <input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'><br><br>
-                              <button ng-click='vm.uplodFileChangeImage()' class="btn btn-default">Envoyer l'image</button>
+                              <button ng-click='vm.uploadFileChangeImage()' class="btn btn-default">Envoyer l'image</button>
                           </div>
                           <div class="input-field col s12 optionBlocImg">
                                     <img src="../assets/img/left.gif" alt="" />
@@ -101,8 +101,8 @@
                     </div>
                     <div class="col s12 m6">
                       <div class="input-field col s12">
-                          <p><input file-upload type="file" placeholder="Photo du service" id="uploadImageUpdate" name='file'><br><br>
-                            <button ng-click='vm.uplodFileChangeImageUpdate()' class="btn btn-default">Envoyer l'image</button>
+                          <p><input file-upload type="file" placeholder="Photo du service" id="uploadImageUpdate{{$index}}" name='file'><br><br>
+                            <button ng-click='vm.uploadFileChangeImageUpdate({{$index}})' class="btn btn-default">Envoyer l'image</button>
                           </p>
                       </div>
                       <div class="input-field col s12 optionBlocImg">
