@@ -9,4 +9,15 @@ class listuserController {
             this.users = res.data;
         });
     }
+    update(user) {
+        this.userService.update(user._id, user).then(() => {
+            this.load();
+        });
+    }
+
+    delete(user) {
+        this.userService.delete(user._id).then(() => {
+            this.load();
+        });
+    }
 }
