@@ -3,8 +3,8 @@ class rendezvousController {
     constructor(rendezvousService) {
         this.rendezvousService = rendezvousService;
         this.tinymceOptions = {
-            toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link ",
-            plugins: 'advlist autolink link image lists charmap autoresize textcolor'
+            toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+            plugins: 'advlist fullscreen autolink link image lists charmap autoresize textcolor'
         };
         this.load();
     }
