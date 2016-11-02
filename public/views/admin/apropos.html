@@ -19,6 +19,15 @@
                       </div>
                     </div>
                     <div class="input-field col s12">
+                      <div class="input-field col s6">
+                        <input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'><br><br>
+                      </div>
+                      <div class="input-field col s6">
+                        <button ng-click='vm.uplodFileChangeImage()' class="btn btn-default">Envoyer l'image</button>
+                      </div>
+                    </div>
+                    <div class="input-field col s12">
+                      <p><input type="text" class="form-control " placeholder="lien de l'image" ng-model='vm.UploadImg'></p>
                       <button ng-click='vm.create(vm.apropos)' class="btn btn-default">Ajouter</button>
                     </div>
                 </form>
@@ -41,7 +50,7 @@
                             <textarea ui-tinymce="vm.tinymceOptions" ng-model='apropos.texte'></textarea>
                         </p>
                     </div>
-                    <button ng-click='vm.update(apropos)' class="btn btn-default">Editer</button>
+                    <button ng-click='vm.update(apropos)' class="btn btn-default">Enregistrer</button>
                     <button ng-click='vm.delete(apropos)' class="btn btn-default" href="#modal-warning">Supprimer</button>
                 </form>
             </div>
