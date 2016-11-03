@@ -97,8 +97,7 @@
                     </select>
                     <br>
                     <div class="col s12 m6 imgUploaded">
-                      <img ng-show='vm.UploadImgUpdate == Undefined' ng-src="{{ categorie.photo }}" alt="" />
-                      <img ng-src="{{ vm.UploadImgUpdate }}" ng-model='categorie.photo' alt="" />
+                      <img ng-src="{{vm.UploadImgUpdate == Undefined ? categorie.photo : categorie.photo = vm.UploadImgUpdate}}" ng-model='categorie.photo' alt="" />
                     </div>
                     <div class="col s12 m6">
                       <div class="input-field col s12">
