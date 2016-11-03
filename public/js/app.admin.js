@@ -24,6 +24,5 @@ angular.module('app', ['ngRoute', 'ngSanitize', 'ui.tinymce'])
     .controller('statController', statController)
     .controller('sidebarController', sidebarController)
     .controller('userController', userController)
-    .controller('listuserController', listuserController)
     .config(routes)
     .run(loginStatus);

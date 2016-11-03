@@ -3,6 +3,13 @@ class userController {
     constructor(userService) {
         this.userService = userService;
         this.load();
+
+        $("#addjs").click(function() {
+            $("#showjs").show();
+        });
+        $("#savejs").click(function() {
+            $("#showjs").hide();
+        });
     }
     load() {
       console.log("load");

@@ -62,16 +62,17 @@ class categorieController {
     create(categorie) {
       var urlImage = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
         this.categorie.photo = urlImage;
+        console.log(categorie.position);
         this.categorieService.create(this.categorie).then(() => {
           this.categorie = {};
           this.load();
+          $("#ajout-0").hide();
         });
     }
 
     update(categorie) {
         this.categorieService.update(categorie._id, categorie).then(() => {
-          console.log(categorie.photo);
-          this.load();
+            this.load();
         });
     }
 

@@ -1,5 +1,7 @@
+<!-- Liste des users -->
 <div class="row">
-    <table class="col offset-l2 l8 offset-l2 z-depth-6 card-panel highlight striped" ng-show="vm.users.length > 0">
+  <div class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
+    <table class="z-depth-6 card-panel highlight striped" ng-show="vm.users.length > 0">
         <tr>
             <th>Adresse Mail</th>
             <th>Mot de passe</th>
@@ -26,6 +28,31 @@
             </td>
         </tr>
     </table>
-    <a class="centered col offset-l2 l8 offset-l2 btn" href="#/utilisateurs/ajouter">
-        Ajouter un utilisateur</a>
+    <div class="row">
+      <a id="addjs" class="waves-effect waves-light btn col l2 offset-l1">Ajouter un utilisateur</a>
+    </div>
+  </div>
 </div>
+
+<!-- Add users -->
+<div id="showjs" class="row">
+    <div class="row">
+        <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
+            <div class="row">
+                <h1 class="center-align">Ajouter un Administrateur</h1>
+                <div class="input-field col s6 offset-s3">
+                    <i class="material-icons prefix">email</i>
+                    <input id="input_text" type="text" length="40" ng-model="vm.user.email">
+                    <label for="input_text">E-mail</label>
+                </div>
+                <div class="input-field col s6 offset-s3">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="input_text" type="password" length="8" ng-model="vm.user.password">
+                    <label for="input_text">Mot de passe</label>
+                </div>
+            </div>
+            <div class="row">
+                <a id="savejs" class="waves-effect waves-light btn-large col s6 offset-s3" ng-click="vm.create2()" onclick="Materialize.toast('Utilisateur enregistré', 4000,'rounded')">Enregistrer</a>
+            </div>
+        </form>
+    </div>

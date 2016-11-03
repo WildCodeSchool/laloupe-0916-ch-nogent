@@ -3,6 +3,20 @@ class contactController {
     constructor(contactService) {
         this.contactService = contactService;
         this.load();
+
+        $(document).ready(function() {
+            $('.modal-trigger').leanModal();
+        });
+
+        $("#addjs").click(function() {
+            $("#showjs").show();
+        });
+        $("#savejs").click(function() {
+            $("#showjs").hide();
+        });
+        
+        $(".button-collapse").sideNav();
+
     }
     load() {
         this.contactService.getAll().then((res) => {

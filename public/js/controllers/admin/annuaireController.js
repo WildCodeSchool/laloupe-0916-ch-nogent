@@ -11,6 +11,10 @@ class annuaireController {
         $("#addjs").click(function() {
             $("#showjs").show();
         });
+        $("#savejs").click(function() {
+            $("#showjs").hide();
+        });
+
         $(".button-collapse").sideNav();
 
         $(document).ready(function() {
