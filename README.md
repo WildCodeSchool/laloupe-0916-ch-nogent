@@ -23,7 +23,7 @@ Frontend : es2015 native
 
 ```bash
 git clone git@github.com/WildCodeSchool/laloupe-0916-ch-nogent.git
-cd mean-starter-es6
+cd laloupe-0916-ch-nogent
 npm install
 bower install
 ```
