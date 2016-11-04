@@ -7,8 +7,8 @@ class navbarController {
         $(window).scroll(() => {
             if ($(window).scrollTop() > $('#scrollspy').height()) {
                 $('#push').addClass('navbar-fixed');
-                  $('#urgenceHide').addClass('ng-hide');
-                  $('.group-btn').show();
+                $('#urgenceHide').addClass('ng-hide');
+                $('.group-btn').show();
                 $('#topFixed').css({
                     'margin-top': '100px'
                 });
