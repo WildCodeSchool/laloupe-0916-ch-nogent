@@ -73,7 +73,7 @@ class mainController {
             if (this.isLoad) {
                 setTimeout(function() {
                     $('html, body').animate({
-                        scrollTop: $("#scroll1").offset().top
+                        scrollTop: $("#scroll1").offset().top - 70
                     }, 500);
                 }, 100);
             } else {
@@ -93,7 +93,7 @@ class mainController {
             if (this.isLoad1) {
                 setTimeout(function() {
                     $('html, body').animate({
-                        scrollTop: $("#scroll2").offset().top
+                        scrollTop: $("#scroll2").offset().top - 70
                     }, 500);
                 }, 100);
             } else {
@@ -113,7 +113,7 @@ class mainController {
             if (this.isLoad2) {
                 setTimeout(function() {
                     $('html, body').animate({
-                        scrollTop: $("#scroll3").offset().top
+                        scrollTop: $("#scroll3").offset().top - 70
                     }, 500);
                 }, 100);
             } else {
@@ -133,7 +133,7 @@ class mainController {
             if (this.isLoad3) {
                 setTimeout(function() {
                     $('html, body').animate({
-                        scrollTop: $("#scroll4").offset().top
+                        scrollTop: $("#scroll4").offset().top - 70
                     }, 500);
                 }, 100);
             } else {
