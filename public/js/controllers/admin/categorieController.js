@@ -6,6 +6,9 @@ class categorieController {
                 toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
                 plugins: 'advlist fullscreen autolink link image lists charmap autoresize textcolor'
             };
+              this.categorie = {
+                "idparent":""
+              };
             this.categorieService = categorieService;
             this.load();
 
@@ -64,7 +67,9 @@ class categorieController {
         this.categorie.photo = urlImage;
         console.log(categorie.position);
         this.categorieService.create(this.categorie).then(() => {
-          this.categorie = {};
+          this.categorie = {
+            "idparent":""
+          };
           this.load();
           $("#ajout-0").hide();
         });
