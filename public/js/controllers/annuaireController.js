@@ -1,13 +1,13 @@
-class annuaireController {
+function annuaireController (annuaireService) {
 
-    constructor(annuaireService) {
         this.annuaireService = annuaireService;
-        this.load();
 
-    }
-    load() {
+    this.load = () => {
         this.annuaireService.getAll().then((res) => {
             this.annuaires = res.data;
         });
-    }
+    };
+
+    this.load();
+    
 }

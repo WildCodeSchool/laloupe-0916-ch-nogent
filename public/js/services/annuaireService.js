@@ -1,10 +1,8 @@
-class annuaireService {
+function annuaireService ($http) {
 
-    constructor($http) {
         this.$http = $http;
-    }
 
-    create(data) {
+    this.create = (data) => {
         return this.$http.post('/api/annuaires', {
           nom: data.nom,
           prenom: data.prenom,
@@ -13,17 +11,17 @@ class annuaireService {
           telephone: data.telephone,
           lien: data.lien
         });
-    }
+    };
 
-    getAll() {
+    this.getAll = () => {
         return this.$http.get('/api/annuaires');
-    }
+    };
 
-    getOne(id) {
+    this.getOne = (id) => {
         return this.$http.get('/api/annuaires/' + id);
-    }
+    };
 
-    update(id, data) {
+    this.update = (id, data) => {
         return this.$http.put('/api/annuaires/' + id, {
           nom: data.nom,
           prenom: data.prenom,
@@ -32,10 +30,10 @@ class annuaireService {
           telephone: data.telephone,
           lien: data.lien
         });
-    }
+    };
 
-    delete(id) {
+    this.delete = (id) => {
         return this.$http.delete('/api/annuaires/' + id);
-    }
+    };
 
 }

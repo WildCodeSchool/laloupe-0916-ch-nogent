@@ -1,13 +1,9 @@
-class categorieController {
+function categorieController (categorieService, $routeParams) {
 
-    constructor(categorieService, $routeParams) {
         this.$routeParams = $routeParams;
-
         this.categorieService = categorieService;
-        this.load();
 
-    }
-    load() {
+    this.load = () => {
         this.categorieService.getOne(this.$routeParams.id).then((res) => {
             this.categorie = res.data; //1x actuelle
             this.categorie.photoFull = this.categorie.photo.replace("img_","");
@@ -20,5 +16,8 @@ class categorieController {
                 });
             }
         });
-    }
+    };
+
+    this.load();
+
 }

@@ -1,12 +1,10 @@
-class mainController {
+function mainController (rendezvousService, hospitaliseService, ehpadService, visiteService, statService) {
 
-    constructor(rendezvousService, hospitaliseService, ehpadService, visiteService, statService) {
         this.rendezvousService = rendezvousService;
         this.hospitaliseService = hospitaliseService;
         this.ehpadService = ehpadService;
         this.visiteService = visiteService;
-            this.statService = statService;
-        this.load();
+        this.statService = statService;
 
         $('.button-collapse').sideNav({
             menuWidth: 300, // Default is 240
@@ -145,8 +143,7 @@ class mainController {
             }
         };
 
-    }
-    load() {
+    this.load = () => {
         this.statService.getAll().then((res) => {
             this.stat = res.data;
             this.stats = res.data[0];
@@ -168,8 +165,9 @@ class mainController {
             this.btn4 = this.btn4s[0];
         });
 
-    }
-    create() {
+    };
+
+    this.create = () => {
         if (this.stat.length > 0) this.stat.forEach((v, i) => {
             this.delete(v);
         });
@@ -178,16 +176,20 @@ class mainController {
             this.stats = {};
             this.load();
         });
-    }
-    update(stat) {
+    };
+
+    this.update = (stat) => {
         this.statService.update(stat._id, stat).then(() => {
             this.load();
         });
-    }
+    };
 
-    delete(stat) {
+    this.delete = (stat) => {
         this.statService.delete(stat._id).then(() => {
             this.load();
         });
-    }
+    };
+
+    this.load();
+
 }

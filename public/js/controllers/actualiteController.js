@@ -1,8 +1,7 @@
-class actualiteController {
+function actualiteController () {
 
-    constructor(actualiteService) {
         this.actualiteService = actualiteService;
-        this.load();
+
         $(document).ready(function() {
             $('.collapsible').collapsible({
                 accordion: false
@@ -11,7 +10,7 @@ class actualiteController {
                 $('select').material_select();
             });
         });
-        this.jsScrollTo = function(id) { // Au clic sur un élément
+        this.jsScrollTo = (id) => { // Au clic sur un élément
             var page = '#'+id; // Page cible
             var speed = 500; // Durée de l'animation (en ms)
             $('html, body').animate({
@@ -19,10 +18,12 @@ class actualiteController {
             }, speed); // Go
             return false;
         };
-    }
-    load() {
+
+    this.load = () => {
         this.actualiteService.getAll().then((res) => {
             this.actualites = res.data;
         });
-    }
+    };
+    
+    this.load();
 }

@@ -1,8 +1,6 @@
-class navbarController {
+function navbarController (categorieService) {
 
-    constructor(categorieService) {
         this.categorieService = categorieService;
-        this.loadCategories();
 
         $(window).scroll(() => {
             if ($(window).scrollTop() > $('#scrollspy').height()) {
@@ -30,15 +28,16 @@ class navbarController {
               $('.group-btn').show();
             }
         };
-    }
 
-    loadCategories() {
+    this.loadCategories = () => {
         this.categorieService.getChildrenOf('0').then((res) => {
             this.categories = res.data;
             setTimeout(function() {
                 $(".dropdown-button").dropdown();
             }, 0);
         });
-    }
+    };
+
+    this.loadCategories();
 
 }

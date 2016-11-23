@@ -1,8 +1,6 @@
-class aproposController {
+function aproposController (aproposService) {
 
-    constructor(aproposService) {
         this.aproposService = aproposService;
-        this.load();
         $(document).ready(function() {
             $('.collapsible').collapsible({
                 accordion: false
@@ -20,10 +18,13 @@ class aproposController {
             }, speed); // Go
             return false;
         };
-    }
-    load() {
+
+    this.load = () => {
         this.aproposService.getAll().then((res) => {
             this.aproposs = res.data;
         });
-    }
+    };
+
+    this.load();
+
 }

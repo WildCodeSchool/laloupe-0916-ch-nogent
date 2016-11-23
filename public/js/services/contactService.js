@@ -1,36 +1,34 @@
 
-class contactService {
+function contactService ($http) {
 
-    constructor($http) {
         this.$http = $http;
-    }
 
-    create(data) {
+    this.create = (data) => {
         return this.$http.post('/api/contacts', {
           nom: data.nom,
           telephone: data.telephone,
           email: data.email
         });
-    }
+    };
 
-    getAll() {
+    this.getAll = () => {
         return this.$http.get('/api/contacts');
-    }
+    };
 
-    getOne(id) {
+    this.getOne = (id) => {
         return this.$http.get('/api/contacts/' + id);
-    }
+    };
 
-    update(id, data) {
+    this.update = (id, data) => {
         return this.$http.put('/api/contacts/' + id, {
           nom: data.nom,
           telephone: data.telephone,
           email: data.email
         });
-    }
+    };
 
-    delete(id) {
+    this.delete = (id) => {
         return this.$http.delete('/api/contacts/' + id);
-    }
+    };
 
 }

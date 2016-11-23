@@ -1,8 +1,6 @@
-class actualiteController {
+function actualiteController () {
 
-    constructor(actualiteService) {
         this.actualiteService = actualiteService;
-        this.load();
         this.tinymceOptions = {
             toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
             plugins: 'advlist fullscreen autolink link image lists charmap autoresize textcolor'
@@ -41,38 +39,39 @@ class actualiteController {
             }
         }, false);
 
-    }
-
-    uploadFileChangeImage() {
+    function uploadFileChangeImage() {
       this.UploadImg = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
     }
 
-    uploadFileChangeImageUpdate() {
+    function uploadFileChangeImageUpdate() {
       this.UploadImgUpdate = '/uploads/img_' + document.getElementById('uploadImageUpdate').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
     }
 
-    load() {
+    this.load = () => {
         this.actualiteService.getAll().then((res) => {
             this.actualites = res.data;
         });
-    }
-    create() {
+    };
+
+    this.create = () => {
         this.actualiteService.create(this.actualite).then(() => {
             this.actualite = {};
             this.load();
         });
-    }
+    };
 
-    update(actualite) {
+    this.update = (actualite) => {
         this.actualiteService.update(actualite._id, actualite).then(() => {
             this.load();
         });
-    }
+    };
 
-    delete(actualite) {
+    this.delete = (actualite) => {
         this.actualiteService.delete(actualite._id).then(() => {
             this.load();
         });
-    }
+    };
+
+    this.load();
 
 }

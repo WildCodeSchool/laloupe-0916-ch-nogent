@@ -1,22 +1,20 @@
-class ehpadService {
+function ehpadService ($http) {
 
-    constructor($http) {
         this.$http = $http;
-    }
 
-    create(data) {
-        return this.$http.post('/api/btn3s', data )
-    }
+    this.create = (data) => {
+        return this.$http.post('/api/btn3s', data );
+    };
 
-    getAll() {
+    this.getAll = () => {
         return this.$http.get('/api/btn3s');
-    }
+    };
 
-    getOne(id) {
-        return this.$http.get('/api/btn3s/' + id)
-    }
+    this.getOne = (id) => {
+        return this.$http.get('/api/btn3s/' + id);
+    };
 
-    update(id, data) {
+    this.update = (id, data) => {
         return this.$http.put('/api/btn3s/' + id, {
           title1: data.title1,
           title2: data.title2,
@@ -26,11 +24,11 @@ class ehpadService {
           texte2: data.texte2,
           texte3: data.texte3,
           texte4: data.texte4
-        })
-    }
+        });
+    };
 
-    delete(id) {
-        return this.$http.delete('/api/btn3s/' + id)
-    }
+    this.delete = (id) => {
+        return this.$http.delete('/api/btn3s/' + id);
+    };
 
 }

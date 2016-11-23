@@ -1,6 +1,5 @@
-class sidebarController {
+function sidebarController (sessionFactory, $rootScope, $window, $location, categorieService) {
 
-    constructor(sessionFactory, $rootScope, $window, $location, categorieService) {
         this.categorieService = categorieService;
         this.isLogged = sessionFactory.isLogged;
         this.sessionFactory = sessionFactory;
@@ -15,17 +14,14 @@ class sidebarController {
             $('#main').css({'padding-left':(this.isLogged?'300px':'0')});
         });
 
-
-    }
-
-    logout() {
+    this.logout = () => {
         this.sessionFactory.isLogged = false;
         this.sessionFactory.user = {};
         this.sessionFactory.token = null;
         this.$rootScope.$emit('loginStatusChanged', false);
         this.isLogged = false;
         this.$location.path('/login');
-    }
+    };
 
 
 }

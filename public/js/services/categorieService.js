@@ -1,11 +1,9 @@
 
-class categorieService {
+function categorieService ($http) {
 
-    constructor($http) {
         this.$http = $http;
-    }
 
-    create(data) {
+    this.create = (data) => {
         return this.$http.post('/api/categories', {
           titre: data.titre,
           photo: data.photo,
@@ -15,21 +13,21 @@ class categorieService {
           position: data.position
 
         });
-    }
+    };
 
-    getAll() {
+    this.getAll = () => {
         return this.$http.get('/api/categories');
-    }
+    };
 
-    getOne(id) {
+    this.getOne = (id) => {
         return this.$http.get('/api/categories/' + id);
-    }
+    };
 
-    getChildrenOf(idparent) {
+    this.getChildrenOf = (idparent) => {
         return this.$http.get('/api/categories/by-parent/' + idparent);
-    }
+    };
 
-    update(id, data) {
+    this.update = (id, data) =>{
         return this.$http.put('/api/categories/' + id, {
           titre: data.titre,
           photo: data.photo,
@@ -38,10 +36,10 @@ class categorieService {
           idparent: data.idparent,
           position: data.position
         });
-    }
+    };
 
-    delete(id) {
+    this.delete = (id) => {
         return this.$http.delete('/api/categories/' + id);
-    }
+    };
 
 }
