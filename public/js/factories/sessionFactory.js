@@ -1,5 +1,6 @@
 function sessionFactory () {
-
-        this.user = {};
-        this.token = null;
-    }
+        return {
+                user: {},
+                token: null
+        }
+}
