@@ -1,28 +1,28 @@
 function actualiteService ($http) {
 
-        return {
-                create: function(data) {
-                        return $http.post('/api/actualites', data);
-                },
+        this.$http = $http;
 
-                getAll: function() {
-                        return $http.get('/api/actualites');
-                },
+    this.create = (data) => {
+        return this.$http.post('/api/actualites', data);
+    };
 
-                getOne: function(id) {
-                        return $http.get('/api/actualites/' + id);
-                },
+    this.getAll = () => {
+        return this.$http.get('/api/actualites');
+    };
 
-                update: function(id, data) {
-                        return $http.put('/api/actualites/' + id, {
-                          titre: data.titre,
-                          texte: data.texte
-                        });
-                },
+    this.getOne = (id) => {
+        return this.$http.get('/api/actualites/' + id);
+    };
 
-                delete: function(id) {
-                        return $http.delete('/api/actualites/' + id);
-                }
-        }
+    this.update = (id, data) => {
+        return this.$http.put('/api/actualites/' + id, {
+          titre: data.titre,
+          texte: data.texte
+        });
+    };
+
+    this.delete = (id) => {
+        return this.$http.delete('/api/actualites/' + id);
+    };
 
 }
