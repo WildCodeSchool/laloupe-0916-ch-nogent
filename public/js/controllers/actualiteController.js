@@ -1,4 +1,4 @@
-function actualiteController () {
+function actualiteController (actualiteService) {
 
         this.actualiteService = actualiteService;
 
