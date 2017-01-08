@@ -1,4 +1,4 @@
-function categorieController ($routeParams) {
+function categorieController (categorieService, $routeParams) {
 
             this.$routeParams = $routeParams;
             this.tinymceOptions = {
